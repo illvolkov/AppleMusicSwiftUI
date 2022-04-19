@@ -11,7 +11,7 @@ import SwiftUI
 struct AppleMusicSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            TabView()
+            TabViewContent()
         }
     }
 }
