@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct TabViewContent: View {
+    
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.clear
+
+    }
+    
     var body: some View {
         TabView {
             Text("LibraryView")
