@@ -29,7 +29,7 @@ struct Player: View {
     @State var isPlayInactive = true
         
     var body: some View {
-        VStack {
+        VStack(spacing: 1) {
             HStack {
                 Image(randomSong?.icon ?? "not.performed")
                     .resizable()
@@ -61,9 +61,8 @@ struct Player: View {
                 }
                 .padding(.trailing, 20)
             }
-            .background(.clear)
+            .background(Color.clear)
             Divider()
-                .padding(.top, -13)
         }
     }
 }
