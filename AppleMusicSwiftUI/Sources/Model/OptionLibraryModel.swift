@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct OptionLibrary {
+struct OptionLibrary: Identifiable {
     let icon: String
     let title: String
+    let id = UUID()
 }
 
 struct OptionLibraryModel {

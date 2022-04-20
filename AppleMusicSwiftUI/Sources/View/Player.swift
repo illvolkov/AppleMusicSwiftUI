@@ -9,10 +9,10 @@ import SwiftUI
 
 struct Player: View {
     
-    let model = SongModel.createSongModel()
+    let song = SongModel.createSongModel()
         
     func createSong() -> Song {
-        let randomSong = model.randomElement()!
+        let randomSong = song.randomElement()!
         return randomSong
     }
     
