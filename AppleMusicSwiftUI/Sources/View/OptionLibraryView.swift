@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OptionLibraryView: View {
     
-    let options = OptionLibraryModel.createOptionLibraryModel()
+    @State var options = OptionLibraryModel.createOptionLibraryModel()
     
     var body: some View {
         VStack {
@@ -25,6 +25,9 @@ struct OptionLibraryView: View {
                             .font(.system(size: 22))
                     }
                     .frame(height: 45)
+                }
+                .onMove { indexSet, index in
+                    self.options.move(fromOffsets: indexSet, toOffset: index)
                 }
             }
             .listStyle(PlainListStyle())
