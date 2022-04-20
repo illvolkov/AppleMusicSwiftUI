@@ -16,7 +16,7 @@ struct TabViewContent: View {
     
     var body: some View {
         TabView {
-            Text("LibraryView")
+            LibraryView()
                 .tabItem {
                     Image(systemName: "music.note.house.fill")
                     Text("Медиатека")

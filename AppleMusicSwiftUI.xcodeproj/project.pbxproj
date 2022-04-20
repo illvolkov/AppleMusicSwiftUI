@@ -16,6 +16,7 @@
 		047D04A32810167D00891D4E /* MediaLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04A22810167D00891D4E /* MediaLibraryView.swift */; };
 		047D04A72810244100891D4E /* OptionLibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04A62810244100891D4E /* OptionLibraryModel.swift */; };
 		047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04A8281027F500891D4E /* OptionLibraryView.swift */; };
+		047D04AB28103DE900891D4E /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04AA28103DE900891D4E /* LibraryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		047D04A22810167D00891D4E /* MediaLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaLibraryView.swift; sourceTree = "<group>"; };
 		047D04A62810244100891D4E /* OptionLibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionLibraryModel.swift; sourceTree = "<group>"; };
 		047D04A8281027F500891D4E /* OptionLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionLibraryView.swift; sourceTree = "<group>"; };
+		047D04AA28103DE900891D4E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				047D049E280F1CDD00891D4E /* Player.swift */,
 				047D04A22810167D00891D4E /* MediaLibraryView.swift */,
 				047D04A8281027F500891D4E /* OptionLibraryView.swift */,
+				047D04AA28103DE900891D4E /* LibraryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */,
 				047D04A72810244100891D4E /* OptionLibraryModel.swift in Sources */,
 				047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */,
+				047D04AB28103DE900891D4E /* LibraryView.swift in Sources */,
 				047D049F280F1CDD00891D4E /* Player.swift in Sources */,
 				047D04A1280FFF8F00891D4E /* SongModel.swift in Sources */,
 				047D048C280ED2C100891D4E /* AppleMusicSwiftUIApp.swift in Sources */,
