@@ -12,21 +12,25 @@ struct OptionLibraryView: View {
     let options = OptionLibraryModel.createOptionLibraryModel()
     
     var body: some View {
-        List {
-            ForEach(options) { item in
-                HStack {
-                    Image(systemName: item.icon)
-                        .foregroundColor(.red)
-                        .font(.system(size: 23))
-                        .frame(width: 30, height: 30, alignment: .center)
-                    Text(item.title)
-                        .padding(.leading, 7)
-                        .font(.system(size: 22))
+        VStack {
+            List {
+                ForEach(options) { item in
+                    HStack {
+                        Image(systemName: item.icon)
+                            .foregroundColor(.red)
+                            .font(.system(size: 23))
+                            .frame(width: 30, height: 30, alignment: .center)
+                        Text(item.title)
+                            .padding(.leading, 7)
+                            .font(.system(size: 22))
+                    }
+                    .frame(height: 45)
                 }
-                .frame(height: 45)
             }
+            .listStyle(PlainListStyle())
+            Spacer()
+            Player()
         }
-        .listStyle(PlainListStyle())
     }
 }
 
