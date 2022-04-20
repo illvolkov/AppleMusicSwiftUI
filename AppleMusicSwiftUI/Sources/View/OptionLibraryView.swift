@@ -10,10 +10,11 @@ import SwiftUI
 struct OptionLibraryView: View {
     
     @State var options = OptionLibraryModel.createOptionLibraryModel()
+    @State var multiSelection = Set<UUID>()
     
     var body: some View {
         VStack {
-            List {
+            List(selection: $multiSelection) {
                 ForEach(options) { item in
                     HStack {
                         Image(systemName: item.icon)
@@ -24,7 +25,7 @@ struct OptionLibraryView: View {
                             .padding(.leading, 7)
                             .font(.system(size: 22))
                     }
-                    .frame(height: 45)
+                    .frame(height: 40)
                 }
                 .onMove { indexSet, index in
                     self.options.move(fromOffsets: indexSet, toOffset: index)

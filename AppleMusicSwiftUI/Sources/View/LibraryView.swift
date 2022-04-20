@@ -20,7 +20,7 @@ struct LibraryView: View {
     }
     
     private func changeButtonTitle() -> String {
-        isMediaLibraryView ? "Править" : "Готов"
+        isMediaLibraryView ? "Править" : "Готово"
     }
     
     var body: some View {
