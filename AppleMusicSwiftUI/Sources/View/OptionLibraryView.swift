@@ -25,7 +25,7 @@ struct OptionLibraryView: View {
                             .padding(.leading, 7)
                             .font(.system(size: 21))
                     }
-                    .frame(height: 40)
+                    .frame(height: 42.5)
                 }
                 .onMove { indexSet, index in
                     self.options.move(fromOffsets: indexSet, toOffset: index)
@@ -33,8 +33,9 @@ struct OptionLibraryView: View {
             }
             .listStyle(PlainListStyle())
             Spacer()
-            Player()
+                .frame(height: 47)
         }
+        .listStyle(PlainListStyle())
     }
 }
 

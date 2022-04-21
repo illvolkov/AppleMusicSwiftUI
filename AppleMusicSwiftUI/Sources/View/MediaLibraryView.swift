@@ -12,20 +12,15 @@ struct MediaLibraryView: View {
     //MARK: - Body
     
     var body: some View {
-        VStack {
-            Spacer()
-            VStack(spacing: 2) {
-                Text("Ищете свою музыку?")
-                    .font(.system(size: 23))
-                    .fontWeight(.semibold)
-                Text("Здесь появится купленная Вами в iTunes Store музыка.")
-                    .font(.system(size: 17, weight: .light))
-                    .multilineTextAlignment(.center)
-                    .frame(width: 269)
-                    .opacity(0.6)
-            }
-            Spacer()
-            Player()
+        VStack(spacing: 2) {
+            Text("Ищете свою музыку?")
+                .font(.system(size: 23))
+                .fontWeight(.semibold)
+            Text("Здесь появится купленная Вами в iTunes Store музыка.")
+                .font(.system(size: 17, weight: .light))
+                .multilineTextAlignment(.center)
+                .frame(width: 269)
+                .opacity(0.6)
         }
     }
 }

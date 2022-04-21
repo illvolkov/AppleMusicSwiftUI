@@ -10,29 +10,35 @@ import SwiftUI
 struct TabViewContent: View {
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.clear
-
+        UITabBar.appearance().backgroundColor = UIColor.systemGray6
     }
     
     var body: some View {
-        TabView {
-            LibraryView()
-                .tabItem {
-                    Image(systemName: "music.note.house.fill")
-                    Text("Медиатека")
-                }
-            Text("RadioView")
-                .tabItem {
-                    Image(systemName: "dot.radiowaves.left.and.right")
-                    Text("Радио")
-                }
-            Text("SearchView")
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Поиск")
-                }
+        ZStack {
+            TabView {
+                LibraryView()
+                    .tabItem {
+                        Image(systemName: "music.note.house.fill")
+                        Text("Медиатека")
+                    }
+                Text("RadioView")
+                    .tabItem {
+                        Image(systemName: "dot.radiowaves.left.and.right")
+                        Text("Радио")
+                    }
+                Text("SearchView")
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Поиск")
+                    }
+            }
+            .accentColor(.red)
+            VStack {
+                Spacer()
+                Player()
+                    .padding(.bottom, 47)
+            }
         }
-        .accentColor(.red)
     }
 }
 

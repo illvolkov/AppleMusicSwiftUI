@@ -70,8 +70,7 @@ struct Player: View {
                 }
                 .padding(.trailing, 20)
             }
-            .padding(.top, -8)
-            .background(Color.clear)
+            .background(Color(uiColor: UIColor.systemGray6))
             Divider()
         }
     }
@@ -79,6 +78,6 @@ struct Player: View {
 
 struct Player_Previews: PreviewProvider {
     static var previews: some View {
-        TabViewContent()
+        Player()
     }
 }
