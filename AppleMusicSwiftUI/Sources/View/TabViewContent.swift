@@ -21,12 +21,12 @@ struct TabViewContent: View {
                     Image(systemName: "music.note.house.fill")
                     Text("Медиатека")
                 }
-            RadioView()
+            Text("RadioView")
                 .tabItem {
                     Image(systemName: "dot.radiowaves.left.and.right")
                     Text("Радио")
                 }
-            SearchView()
+            Text("SearchView")
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Поиск")
