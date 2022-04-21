@@ -9,7 +9,11 @@ import SwiftUI
 
 struct Player: View {
     
+    //MARK: - Song model
+    
     let song = SongModel.createSongModel()
+    
+    //MARK: - Functions
         
     func createSong() -> Song {
         let randomSong = song.randomElement()!
@@ -25,8 +29,12 @@ struct Player: View {
         Song(icon: "not.performed", name: "Не исполняется") : createSong()
     }
     
+    //MARK: - Mutational properties
+    
     @State var randomSong: Song?
     @State var isPlayInactive = true
+    
+    //MARK: - Body
         
     var body: some View {
         VStack(spacing: 1) {

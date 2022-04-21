@@ -9,7 +9,11 @@ import SwiftUI
 
 struct LibraryView: View {
     
+    //MARK: - Mutational properties
+    
     @State var isMediaLibraryView = true
+    
+    //MARK: - Setup dislay
     
     @ViewBuilder var viewToggle: some View {
         if isMediaLibraryView {
@@ -19,9 +23,13 @@ struct LibraryView: View {
         }
     }
     
+    //MARK: - Functions
+    
     private func changeButtonTitle() -> String {
         isMediaLibraryView ? "Править" : "Готово"
     }
+    
+    //MARK: - Body
     
     var body: some View {
         NavigationView {
@@ -36,7 +44,6 @@ struct LibraryView: View {
                 }
                 .environment(\.editMode, .constant(isMediaLibraryView ?
                                                    EditMode.inactive : EditMode.active))
-            
         }
     }
 }

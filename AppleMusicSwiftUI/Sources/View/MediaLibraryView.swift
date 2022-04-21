@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MediaLibraryView: View {
+    
+    //MARK: - Body
+    
     var body: some View {
         VStack {
             Spacer()

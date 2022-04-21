@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RadioView: View {
+    
+    //MARK: - Body
+    
     var body: some View {
         NavigationView {
             VStack {

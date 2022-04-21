@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SearchView: View {
+    
+    //MARK: - Body
+    
     var body: some View {
         NavigationView {
             VStack {
