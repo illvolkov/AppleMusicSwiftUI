@@ -26,7 +26,7 @@ struct TabViewContent: View {
                     Image(systemName: "dot.radiowaves.left.and.right")
                     Text("Радио")
                 }
-             Text("SearchView")
+            Text("SearchView")
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Поиск")

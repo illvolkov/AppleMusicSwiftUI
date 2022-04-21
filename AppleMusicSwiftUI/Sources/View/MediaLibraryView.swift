@@ -20,7 +20,6 @@ struct MediaLibraryView: View {
                     .multilineTextAlignment(.center)
                     .frame(width: 269)
                     .opacity(0.6)
-                    
             }
             Spacer()
             Player()

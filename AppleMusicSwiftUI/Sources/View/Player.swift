@@ -34,6 +34,7 @@ struct Player: View {
                 Image(randomSong?.icon ?? "not.performed")
                     .resizable()
                     .clipShape(RoundedRectangle(cornerRadius: 5))
+                    .shadow(color: .gray, radius: 5, x: 2, y: 3)
                     .frame(width: 54, height: 54)
                     .padding(.leading, 20)
                     .padding(.trailing, 5)
@@ -61,6 +62,7 @@ struct Player: View {
                 }
                 .padding(.trailing, 20)
             }
+            .padding(.top, -8)
             .background(Color.clear)
             Divider()
         }
@@ -69,6 +71,6 @@ struct Player: View {
 
 struct Player_Previews: PreviewProvider {
     static var previews: some View {
-        Player()
+        TabViewContent()
     }
 }

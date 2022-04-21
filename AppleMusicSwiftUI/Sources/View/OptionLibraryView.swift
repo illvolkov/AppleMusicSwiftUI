@@ -23,7 +23,7 @@ struct OptionLibraryView: View {
                             .frame(width: 30, height: 30, alignment: .center)
                         Text(item.title)
                             .padding(.leading, 7)
-                            .font(.system(size: 22))
+                            .font(.system(size: 21))
                     }
                     .frame(height: 40)
                 }
