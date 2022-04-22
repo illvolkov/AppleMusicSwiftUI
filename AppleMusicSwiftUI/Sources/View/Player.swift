@@ -11,28 +11,28 @@ struct Player: View {
     
     //MARK: - Song model
     
-    let song = SongModel.createSongModel()
+    private let song = SongModel.createSongModel()
     
     //MARK: - Functions
         
-    func createSong() -> Song {
+    private func createSong() -> Song {
         let randomSong = song.randomElement()!
         return randomSong
     }
     
-    func changePlayPauseButtonState() -> String {
+    private func changePlayPauseButtonState() -> String {
         return isPlayInactive ? "play.fill" : "pause.fill"
     }
     
-    func changeSongState() -> Song {
+    private func changeSongState() -> Song {
         return isPlayInactive ?
         Song(icon: "not.performed", name: "Не исполняется") : createSong()
     }
     
     //MARK: - Mutational properties
     
-    @State var randomSong: Song?
-    @State var isPlayInactive = true
+    @State private var randomSong: Song?
+    @State private var isPlayInactive = true
     
     //MARK: - Body
         
@@ -43,21 +43,21 @@ struct Player: View {
                     .resizable()
                     .clipShape(RoundedRectangle(cornerRadius: 5))
                     .shadow(color: .gray, radius: 5, x: 2, y: 3)
-                    .frame(width: 54, height: 54)
+                    .frame(width: UIScreen.main.bounds.width * 0.14,
+                           height: UIScreen.main.bounds.width * 0.14)
                     .padding(.leading, 20)
                     .padding(.trailing, 5)
                     .padding([.top, .bottom], 8)
                 Text(randomSong?.name ?? "Не исполняется")
-                    .font(.system(size: 18))
-                    .frame(width: 190, alignment: .leading)
+                    .font(.system(size: UIScreen.main.bounds.width * 0.045))
+                    .frame(width: UIScreen.main.bounds.width * 0.47, alignment: .leading)
                     .lineLimit(1)
-                Spacer()
                 Button {
                     isPlayInactive.toggle()
                     randomSong = changeSongState()
                 } label: {
                     Image(systemName: changePlayPauseButtonState())
-                        .font(.system(size: 27))
+                        .font(.system(size: UIScreen.main.bounds.width * 0.07))
                         .foregroundColor(.black)
                 }
                 .padding(.trailing, 13)
@@ -65,7 +65,7 @@ struct Player: View {
                     randomSong = createSong()
                 } label: {
                     Image(systemName: "forward.fill")
-                        .font(.system(size: 27))
+                        .font(.system(size: UIScreen.main.bounds.width * 0.07))
                         .foregroundColor(.black)
                 }
                 .padding(.trailing, 20)

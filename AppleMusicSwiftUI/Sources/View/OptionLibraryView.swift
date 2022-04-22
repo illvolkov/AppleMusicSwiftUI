@@ -9,8 +9,18 @@ import SwiftUI
 
 struct OptionLibraryView: View {
     
-    @State var options = OptionLibraryModel.createOptionLibraryModel()
-    @State var multiSelection = Set<UUID>()
+    //MARK: - Mutating properties
+    
+    @State private var options = OptionLibraryModel.createOptionLibraryModel()
+    @State private var multiSelection = Set<UUID>()
+    
+    //MARK: - Functions
+    
+    private func adaptationToiPodSize(withiPodValue: CGFloat,
+                                      withiPhoneValue: CGFloat) -> CGFloat {
+        let device = UIDevice()
+        return device.name == "iPod touch (7th generation)" ? withiPodValue : withiPhoneValue
+    }
     
     var body: some View {
         VStack {
@@ -19,13 +29,16 @@ struct OptionLibraryView: View {
                     HStack {
                         Image(systemName: item.icon)
                             .foregroundColor(.red)
-                            .font(.system(size: 23))
-                            .frame(width: 30, height: 30, alignment: .center)
+                            .font(.system(size: UIScreen.main.bounds.width * 0.063))
+                            .frame(width:  UIScreen.main.bounds.width * 0.07,
+                                   height:  UIScreen.main.bounds.width * 0.07,
+                                   alignment: .center)
                         Text(item.title)
                             .padding(.leading, 7)
-                            .font(.system(size: 21))
+                            .font(.system(size: UIScreen.main.bounds.width * adaptationToiPodSize(
+                            withiPodValue: 0.051, withiPhoneValue: 0.056)))
                     }
-                    .frame(height: 42.5)
+                    .frame(height: UIScreen.main.bounds.width * 0.1101)
                 }
                 .onMove { indexSet, index in
                     self.options.move(fromOffsets: indexSet, toOffset: index)
@@ -33,7 +46,7 @@ struct OptionLibraryView: View {
             }
             .listStyle(PlainListStyle())
             Spacer()
-                .frame(height: 47)
+                .frame(height: UIScreen.main.bounds.width * 0.18)
         }
         .listStyle(PlainListStyle())
     }

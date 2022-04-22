@@ -14,12 +14,12 @@ struct MediaLibraryView: View {
     var body: some View {
         VStack(spacing: 2) {
             Text("Ищете свою музыку?")
-                .font(.system(size: 23))
+                .font(.system(size: UIScreen.main.bounds.width * 0.059))
                 .fontWeight(.semibold)
             Text("Здесь появится купленная Вами в iTunes Store музыка.")
-                .font(.system(size: 17, weight: .light))
+                .font(.system(size: UIScreen.main.bounds.width * 0.043, weight: .light))
                 .multilineTextAlignment(.center)
-                .frame(width: 269)
+                .frame(width: UIScreen.main.bounds.width * 0.69)
                 .opacity(0.6)
         }
     }

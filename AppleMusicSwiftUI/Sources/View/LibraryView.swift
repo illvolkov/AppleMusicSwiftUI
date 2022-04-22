@@ -11,11 +11,11 @@ struct LibraryView: View {
     
     //MARK: - Mutational properties
     
-    @State var isMediaLibraryView = true
+    @State private var isMediaLibraryView = true
     
     //MARK: - Setup dislay
     
-    @ViewBuilder var viewToggle: some View {
+    @ViewBuilder private var viewToggle: some View {
         if isMediaLibraryView {
             MediaLibraryView()
         } else {

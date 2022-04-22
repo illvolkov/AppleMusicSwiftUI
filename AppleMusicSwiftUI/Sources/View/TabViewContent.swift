@@ -32,6 +32,7 @@ struct TabViewContent: View {
                         Text("Поиск")
                     }
             }
+            .frame(width: UIScreen.main.bounds.width * 1)
             .accentColor(.red)
             VStack {
                 Spacer()
