@@ -5,8 +5,6 @@
 //  Created by Ilya Volkov on 20.04.2022.
 //
 
-import Foundation
-
 struct Song {
     let icon: String
     let name: String
@@ -15,29 +13,29 @@ struct Song {
 struct SongModel {
     static func createSongModel() -> [Song] {
         return [
-            Song(icon: "way2sexy", name: "Way 2 Sexy (feat. Future & Young Thug)"),
-            Song(icon: "dont.matter.to.me", name: "Don't Matter To Me"),
-            Song(icon: "toosie.slide", name: "Toosie Slide"),
-            Song(icon: "big.poppa", name: "Big Poppa"),
-            Song(icon: "ole.school.shit",
-                 name: "Ole School Shit (feat. Gangsta Dresta, B.G. Knocc Out & Sylc"),
-            Song(icon: "hits", name: "Hits from the Bong"),
-            Song(icon: "big.city.life", name: "Биг Сити Лайф"),
-            Song(icon: "masquerade", name: "This Masquerade"),
-            Song(icon: "ebenya", name: "ЕБЕНЯ"),
-            Song(icon: "sqwoz.bab", name: "ОЙ"),
-            Song(icon: "sqwoz.bab", name: "КУСЬ"),
-            Song(icon: "sqwoz.bab", name: "KIA RIO"),
-            Song(icon: "wolf", name: "В.О.Л.К"),
-            Song(icon: "lambo", name: "LAMBO URUS"),
-            Song(icon: "micro", name: "МИКРОЗАЙМ"),
-            Song(icon: "bulb", name: "Лампочка"),
-            Song(icon: "ambition", name: "Амбиции"),
-            Song(icon: "young", name: "Вечно молодой"),
-            Song(icon: "do.not.wait", name: "Не Жди Меня"),
-            Song(icon: "september", name: "September"),
-            Song(icon: "boogie", name: "Boogie Wonderland"),
-            Song(icon: "sicko.mode", name: "SICKO MODE")
+            Song(icon: Icons.way2sexySongIcon, name: Strings.way2sexySongTitle),
+            Song(icon: Icons.dontMatterToMeSongIcon, name: Strings.dontMatterToMeSongTitle),
+            Song(icon: Icons.toosieSlideSongIcon, name: Strings.toosieSlideSongTitle),
+            Song(icon: Icons.bigPoppaSongIcon, name: Strings.bigPoppaSongTitle),
+            Song(icon: Icons.oleSchoolShitSongIcon,
+                 name: Strings.oleSchoolShitSongTitle),
+            Song(icon: Icons.hitsSongIcon, name: Strings.hitsSongTitle),
+            Song(icon: Icons.bigCityLifeSongIcon, name: Strings.bigCityLifeSongTitle),
+            Song(icon: Icons.masqueradeSongIcon, name: Strings.masqueradeSongTitle),
+            Song(icon: Icons.ebenyaSongIcon, name: Strings.ebenyaSongTitle),
+            Song(icon: Icons.sqwozBabSongIcon, name: Strings.oopsSongTitle),
+            Song(icon: Icons.sqwozBabSongIcon, name: Strings.kysSongTitle),
+            Song(icon: Icons.sqwozBabSongIcon, name: Strings.kiaRioSongTitle),
+            Song(icon: Icons.wolfSongIcon, name: Strings.wolfSongTitle),
+            Song(icon: Icons.lamboSongIcon, name: Strings.lamboSongTitle),
+            Song(icon: Icons.microSongIcon, name: Strings.microSongTitle),
+            Song(icon: Icons.bulbSongIcon, name: Strings.bulbSongTitle),
+            Song(icon: Icons.ambitionSongIcon, name: Strings.ambitionSongTitle),
+            Song(icon: Icons.youngSongIcon, name: Strings.youngSongTitle),
+            Song(icon: Icons.doNotWaitSongIcon, name: Strings.doNotWaitSongTitle),
+            Song(icon: Icons.septemberSongIcon, name: Strings.septemberSongTitle),
+            Song(icon: Icons.boogieSongIcon, name: Strings.boogieSongTitle),
+            Song(icon: Icons.sickoModeSongIcon, name: Strings.sickoModeSongTitle)
         ]
     }
 }
