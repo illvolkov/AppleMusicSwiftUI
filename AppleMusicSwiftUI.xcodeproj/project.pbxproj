@@ -11,6 +11,8 @@
 		047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D048D280ED2C100891D4E /* TabViewContent.swift */; };
 		047D0490280ED2C400891D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047D048F280ED2C400891D4E /* Assets.xcassets */; };
 		047D0493280ED2C400891D4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047D0492280ED2C400891D4E /* Preview Assets.xcassets */; };
+		047D049F280F1CDD00891D4E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D049E280F1CDD00891D4E /* Player.swift */; };
+		047D04A1280FFF8F00891D4E /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04A0280FFF8E00891D4E /* SongModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		047D048D280ED2C100891D4E /* TabViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewContent.swift; sourceTree = "<group>"; };
 		047D048F280ED2C400891D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047D0492280ED2C400891D4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		047D049E280F1CDD00891D4E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		047D04A0280FFF8E00891D4E /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				047D048D280ED2C100891D4E /* TabViewContent.swift */,
+				047D049E280F1CDD00891D4E /* Player.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 		047D049C280ED55100891D4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				047D04A0280FFF8E00891D4E /* SongModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */,
+				047D049F280F1CDD00891D4E /* Player.swift in Sources */,
+				047D04A1280FFF8F00891D4E /* SongModel.swift in Sources */,
 				047D048C280ED2C100891D4E /* AppleMusicSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
