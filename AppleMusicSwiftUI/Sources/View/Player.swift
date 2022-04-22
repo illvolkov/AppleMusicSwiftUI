@@ -21,12 +21,12 @@ struct Player: View {
     }
     
     private func changePlayPauseButtonState() -> String {
-        return isPlayInactive ? "play.fill" : "pause.fill"
+        return isPlayInactive ? Icons.playButtonIcon : Icons.pauseButtonIcon
     }
     
     private func changeSongState() -> Song {
         return isPlayInactive ?
-        Song(icon: "not.performed", name: "Не исполняется") : createSong()
+        Song(icon: Icons.notPerformedSongIcon, name: Strings.notPerformedSongTitle) : createSong()
     }
     
     //MARK: - Mutational properties
@@ -37,38 +37,41 @@ struct Player: View {
     //MARK: - Body
         
     var body: some View {
-        VStack(spacing: 1) {
+        VStack(spacing: Offsets.playerVStackOffset) {
             HStack {
-                Image(randomSong?.icon ?? "not.performed")
+                Image(randomSong?.icon ?? Icons.notPerformedSongIcon)
                     .resizable()
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
-                    .shadow(color: .gray, radius: 5, x: 2, y: 3)
-                    .frame(width: UIScreen.main.bounds.width * 0.14,
-                           height: UIScreen.main.bounds.width * 0.14)
-                    .padding(.leading, 20)
-                    .padding(.trailing, 5)
-                    .padding([.top, .bottom], 8)
-                Text(randomSong?.name ?? "Не исполняется")
-                    .font(.system(size: UIScreen.main.bounds.width * 0.045))
-                    .frame(width: UIScreen.main.bounds.width * 0.47, alignment: .leading)
+                    .clipShape(RoundedRectangle(cornerRadius: Offsets.songIconShadowCornerRadiusOffset))
+                    .shadow(color: .gray,
+                            radius: Offsets.songIconShadowCornerRadiusOffset,
+                            x: Offsets.songIconShadowXOffset,
+                            y: Offsets.songIconShadowYOffset)
+                    .frame(width: UIScreen.main.bounds.width * Sizes.songIconMultiWidthHeightSize,
+                           height: UIScreen.main.bounds.width * Sizes.songIconMultiWidthHeightSize)
+                    .padding(.leading, Offsets.leadingTrailingOffset20)
+                    .padding(.trailing, Offsets.songIconTrailingOffset)
+                    .padding([.top, .bottom], Offsets.songIconTopBottomOffset)
+                Text(randomSong?.name ?? Strings.notPerformedSongTitle)
+                    .font(.system(size: UIScreen.main.bounds.width * Sizes.songTextMultiFontSize))
+                    .frame(width: UIScreen.main.bounds.width * Sizes.songTextMultiWidthSize, alignment: .leading)
                     .lineLimit(1)
                 Button {
                     isPlayInactive.toggle()
                     randomSong = changeSongState()
                 } label: {
                     Image(systemName: changePlayPauseButtonState())
-                        .font(.system(size: UIScreen.main.bounds.width * 0.07))
+                        .font(.system(size: UIScreen.main.bounds.width * Sizes.playPauseButtonMultiFontSize0_07))
                         .foregroundColor(.black)
                 }
-                .padding(.trailing, 13)
+                .padding(.trailing, Offsets.playPauseButtonTrailingOffset)
                 Button {
                     randomSong = createSong()
                 } label: {
-                    Image(systemName: "forward.fill")
-                        .font(.system(size: UIScreen.main.bounds.width * 0.07))
+                    Image(systemName: Icons.nextButtonIcon)
+                        .font(.system(size: UIScreen.main.bounds.width * Sizes.playPauseButtonMultiFontSize0_07))
                         .foregroundColor(.black)
                 }
-                .padding(.trailing, 20)
+                .padding(.trailing, Offsets.leadingTrailingOffset20)
             }
             .background(Color(uiColor: UIColor.systemGray6))
             Divider()

@@ -18,26 +18,26 @@ struct TabViewContent: View {
             TabView {
                 LibraryView()
                     .tabItem {
-                        Image(systemName: "music.note.house.fill")
-                        Text("Медиатека")
+                        Image(systemName: Icons.libraryViewTabItemIcon)
+                        Text(Strings.libraryViewTabItemText)
                     }
-                Text("RadioView")
+                Text(Strings.radioViewText)
                     .tabItem {
-                        Image(systemName: "dot.radiowaves.left.and.right")
-                        Text("Радио")
+                        Image(systemName: Icons.radioViewTabItemIcon)
+                        Text(Strings.radioViewTabItemText)
                     }
-                Text("SearchView")
+                Text(Strings.searchViewText)
                     .tabItem {
-                        Image(systemName: "magnifyingglass")
-                        Text("Поиск")
+                        Image(systemName: Icons.searchViewTabItemIcon)
+                        Text(Strings.searchViewTabItemText)
                     }
             }
-            .frame(width: UIScreen.main.bounds.width * 1)
+            .frame(width: UIScreen.main.bounds.width * Sizes.tabViewMultiWidthSize)
             .accentColor(.red)
             VStack {
                 Spacer()
                 Player()
-                    .padding(.bottom, 47)
+                    .padding(.bottom, Offsets.playerBottomOffset)
             }
         }
     }

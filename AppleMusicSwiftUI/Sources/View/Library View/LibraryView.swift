@@ -13,7 +13,7 @@ struct LibraryView: View {
     
     @State private var isMediaLibraryView = true
     
-    //MARK: - Setup dislay
+    //MARK: - Setup display
     
     @ViewBuilder private var viewToggle: some View {
         if isMediaLibraryView {
@@ -26,7 +26,7 @@ struct LibraryView: View {
     //MARK: - Functions
     
     private func changeButtonTitle() -> String {
-        isMediaLibraryView ? "Править" : "Готово"
+        isMediaLibraryView ? Strings.editButtonTitle : Strings.doneButtonTitle
     }
     
     //MARK: - Body
@@ -34,7 +34,7 @@ struct LibraryView: View {
     var body: some View {
         NavigationView {
             viewToggle
-                .navigationTitle("Медиатека")
+                .navigationTitle(Strings.libraryViewNavigationTitle)
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
                         Button(changeButtonTitle()) {

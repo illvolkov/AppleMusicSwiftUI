@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OptionLibraryView: View {
     
-    //MARK: - Mutating properties
+    //MARK: - Mutational properties
     
     @State private var options = OptionLibraryModel.createOptionLibraryModel()
     @State private var multiSelection = Set<UUID>()
@@ -19,7 +19,7 @@ struct OptionLibraryView: View {
     private func adaptationToiPodSize(withiPodValue: CGFloat,
                                       withiPhoneValue: CGFloat) -> CGFloat {
         let device = UIDevice()
-        return device.name == "iPod touch (7th generation)" ? withiPodValue : withiPhoneValue
+        return device.name == Strings.iPodTouchName ? withiPodValue : withiPhoneValue
     }
     
     var body: some View {
@@ -29,16 +29,16 @@ struct OptionLibraryView: View {
                     HStack {
                         Image(systemName: item.icon)
                             .foregroundColor(.red)
-                            .font(.system(size: UIScreen.main.bounds.width * 0.063))
-                            .frame(width:  UIScreen.main.bounds.width * 0.07,
-                                   height:  UIScreen.main.bounds.width * 0.07,
+                            .font(.system(size: UIScreen.main.bounds.width * Sizes.optionIconMultiFontSize))
+                            .frame(width:  UIScreen.main.bounds.width * Sizes.optionIconMultiHeightWidth0_07,
+                                   height:  UIScreen.main.bounds.width * Sizes.optionIconMultiHeightWidth0_07,
                                    alignment: .center)
                         Text(item.title)
-                            .padding(.leading, 7)
+                            .padding(.leading, Offsets.optionTextLeftOffset)
                             .font(.system(size: UIScreen.main.bounds.width * adaptationToiPodSize(
-                            withiPodValue: 0.051, withiPhoneValue: 0.056)))
+                                withiPodValue: Sizes.optionTextMultiFontiPodSize, withiPhoneValue: Sizes.optionTextMultiFontiPhoneSize)))
                     }
-                    .frame(height: UIScreen.main.bounds.width * 0.1101)
+                    .frame(height: UIScreen.main.bounds.width * Sizes.horizontalStackMultiHeightSize)
                 }
                 .onMove { indexSet, index in
                     self.options.move(fromOffsets: indexSet, toOffset: index)
@@ -46,7 +46,7 @@ struct OptionLibraryView: View {
             }
             .listStyle(PlainListStyle())
             Spacer()
-                .frame(height: UIScreen.main.bounds.width * 0.18)
+                .frame(height: UIScreen.main.bounds.width * Sizes.spacerMultiHeightSize)
         }
         .listStyle(PlainListStyle())
     }
