@@ -41,15 +41,15 @@ struct Player: View {
             HStack {
                 Image(randomSong?.icon ?? Icons.notPerformedSongIcon)
                     .resizable()
-                    .clipShape(RoundedRectangle(cornerRadius: Offsets.songIconShadowCornerRadiusOffset))
+                    .clipShape(RoundedRectangle(cornerRadius: Offsets.offset5))
                     .shadow(color: .gray,
-                            radius: Offsets.songIconShadowCornerRadiusOffset,
+                            radius: Offsets.offset5,
                             x: Offsets.songIconShadowXOffset,
                             y: Offsets.songIconShadowYOffset)
                     .frame(width: UIScreen.main.bounds.width * Sizes.songIconMultiWidthHeightSize,
                            height: UIScreen.main.bounds.width * Sizes.songIconMultiWidthHeightSize)
                     .padding(.leading, Offsets.leadingTrailingOffset20)
-                    .padding(.trailing, Offsets.songIconTrailingOffset)
+                    .padding(.trailing, Offsets.offset5)
                     .padding([.top, .bottom], Offsets.songIconTopBottomOffset)
                 Text(randomSong?.name ?? Strings.notPerformedSongTitle)
                     .font(.system(size: UIScreen.main.bounds.width * Sizes.songTextMultiFontSize))

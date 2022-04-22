@@ -21,11 +21,10 @@ enum Offsets {
     
     //MARK: - Player
     static let playerVStackOffset: CGFloat = 1
-    static let songIconShadowCornerRadiusOffset: CGFloat = 5
+    static let offset5: CGFloat = 5
     static let songIconShadowXOffset: CGFloat = 2
     static let songIconShadowYOffset: CGFloat = 3
     static let leadingTrailingOffset20: CGFloat = 20
-    static let songIconTrailingOffset: CGFloat = 5
     static let songIconTopBottomOffset: CGFloat = 8
     static let playPauseButtonTrailingOffset: CGFloat = 13
 }
