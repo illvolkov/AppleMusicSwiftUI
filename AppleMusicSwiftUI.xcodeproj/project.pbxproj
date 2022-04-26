@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046D55452817F19400D05C91 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D55442817F19400D05C91 /* RadioView.swift */; };
+		046D55472817F25000D05C91 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D55462817F25000D05C91 /* SearchView.swift */; };
 		047BF65928122C6800F722A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BF65828122C6800F722A9 /* Constants.swift */; };
 		047D048C280ED2C100891D4E /* AppleMusicSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D048B280ED2C100891D4E /* AppleMusicSwiftUIApp.swift */; };
 		047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D048D280ED2C100891D4E /* TabViewContent.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046D55442817F19400D05C91 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
+		046D55462817F25000D05C91 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		047BF65828122C6800F722A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		047D0488280ED2C100891D4E /* AppleMusicSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusicSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047D048B280ED2C100891D4E /* AppleMusicSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -95,7 +99,6 @@
 				047D049A280ED53300891D4E /* App */,
 				047D049B280ED53E00891D4E /* View */,
 				047D049C280ED55100891D4E /* Model */,
-				047BF65828122C6800F722A9 /* Constants.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -114,6 +117,8 @@
 				047BF65728122B9F00F722A9 /* Library View */,
 				047D048D280ED2C100891D4E /* TabViewContent.swift */,
 				047D049E280F1CDD00891D4E /* Player.swift */,
+				046D55442817F19400D05C91 /* RadioView.swift */,
+				046D55462817F25000D05C91 /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 		047D049C280ED55100891D4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				047BF65828122C6800F722A9 /* Constants.swift */,
 				047D04A0280FFF8E00891D4E /* SongModel.swift */,
 				047D04A62810244100891D4E /* OptionLibraryModel.swift */,
 			);
@@ -210,11 +216,13 @@
 				047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */,
 				047D04A72810244100891D4E /* OptionLibraryModel.swift in Sources */,
 				047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */,
+				046D55452817F19400D05C91 /* RadioView.swift in Sources */,
 				047D04AB28103DE900891D4E /* LibraryView.swift in Sources */,
 				047D049F280F1CDD00891D4E /* Player.swift in Sources */,
 				047D04A1280FFF8F00891D4E /* SongModel.swift in Sources */,
 				047D048C280ED2C100891D4E /* AppleMusicSwiftUIApp.swift in Sources */,
 				047BF65928122C6800F722A9 /* Constants.swift in Sources */,
+				046D55472817F25000D05C91 /* SearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

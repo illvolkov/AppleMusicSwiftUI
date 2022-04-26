@@ -21,12 +21,12 @@ struct TabViewContent: View {
                         Image(systemName: Icons.libraryViewTabItemIcon)
                         Text(Strings.libraryViewTabItemText)
                     }
-                Text(Strings.radioViewText)
+                RadioView()
                     .tabItem {
                         Image(systemName: Icons.radioViewTabItemIcon)
                         Text(Strings.radioViewTabItemText)
                     }
-                Text(Strings.searchViewText)
+                SearchView()
                     .tabItem {
                         Image(systemName: Icons.searchViewTabItemIcon)
                         Text(Strings.searchViewTabItemText)

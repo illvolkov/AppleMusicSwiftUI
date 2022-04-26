@@ -104,7 +104,7 @@ enum Strings {
     static let boogieSongTitle = "Boogie Wonderland"
     static let sickoModeSongTitle = "SICKO MODE"
     
-    //OptionLibraryModel
+    //MARK: - OptionLibraryModel
     static let playlistsOptionTitle = "Плейлисты"
     static let artistssOptionTitle = "Артисты"
     static let albumsOptionTitle = "Альбомы"
@@ -116,6 +116,12 @@ enum Strings {
     static let authorsOptionTitle = "Авторы"
     static let uploadedOptionTitle = "Загружено"
     static let homeCollectionOptionTitle = "Домашняя коллекция"
+    
+    //MARK: - RadioView
+    static let radioText = "Радио"
+    
+    //MARK: - SearchView
+    static let searchText = "Поиск"
 }
 
 //MARK: - Icons
