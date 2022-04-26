@@ -72,9 +72,7 @@ enum Strings {
     
     //MARK: - TabViewContent
     static let libraryViewTabItemText = "Медиатека"
-    static let radioViewText = "RadioView"
     static let radioViewTabItemText = "Радио"
-    static let searchViewText = "SearchView"
     static let searchViewTabItemText = "Поиск"
     
     //MARK: - Player
@@ -118,10 +116,10 @@ enum Strings {
     static let homeCollectionOptionTitle = "Домашняя коллекция"
     
     //MARK: - RadioView
-    static let radioText = "Радио"
-    
+    static let radioViewText = "RadioView"
+
     //MARK: - SearchView
-    static let searchText = "Поиск"
+    static let searchViewText = "SearchView"
 }
 
 //MARK: - Icons

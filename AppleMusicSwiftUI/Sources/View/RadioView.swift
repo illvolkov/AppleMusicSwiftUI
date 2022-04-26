@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RadioView: View {
     var body: some View {
-        Text(Strings.radioText)
+        Text(Strings.radioViewText)
     }
 }
 
