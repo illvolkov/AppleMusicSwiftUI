@@ -27,6 +27,23 @@ enum Offsets {
     static let leadingTrailingOffset20: CGFloat = 20
     static let songIconTopBottomOffset: CGFloat = 8
     static let playPauseButtonTrailingOffset: CGFloat = 13
+    
+    //MARK: - RadioView
+    static let lazyHGridSpacing: CGFloat = 10
+    static let lazyHGridTopOffset: CGFloat = -35
+    static let favoriteStationDividerBottomOffset: CGFloat = 5
+    static let sectionDividerTopOffset: CGFloat = -34
+    static let sectionDividerLeadingOffset: CGFloat = 19
+    static let sectionDividerTrailingOffset: CGFloat = 22
+    static let favoriteTitleBottomOffset: CGFloat = -7
+    static let favoriteStationImageCornerRadius: CGFloat = 4
+    static let stationImageTopOffset: CGFloat = -5
+    static let sectionHeaderTopOffset: CGFloat = -18
+    static let sectionHeaderBottomOffset: CGFloat = -2
+    static let hStackSpacing: CGFloat = 20
+    static let subStationImageCornerRadius: CGFloat = 5
+    static let subStationDividerTrailingOffset: CGFloat = 6
+    static let subStationDividerBottomOffset: CGFloat = 1
 }
 
 //MARK: - Sizes
@@ -53,6 +70,17 @@ enum Sizes {
     static let songTextMultiWidthSize: CGFloat = 0.47
     static let songTextMultiFontSize: CGFloat = 0.045
     static let playPauseButtonMultiFontSize0_07 = 0.07
+    
+    //MARK: - RadioView
+    static let favoriteTitleMultiplierFontSize: CGFloat = 0.03
+    static let titleMultiplierFontSize0_059: CGFloat = 0.059
+    static let favoriteStationImageMultiplierWidthSize: CGFloat = 0.908
+    static let favoriteStationImageMultiplierHeightSize: CGFloat = 0.6
+    static let sectionHeaderMultiplierFontSize: CGFloat = 0.063
+    static let subStationImageMultiplierSize: CGFloat = 0.254
+    static let subStationTitleMultiplierFontSize: CGFloat = 0.042
+    static let subStationSubTitleMultiplierFontSize: CGFloat = 0.031
+    static let spacerMultiplierHeightSize: CGFloat = 0.133
 }
 
 //MARK: - Strings
@@ -116,7 +144,35 @@ enum Strings {
     static let homeCollectionOptionTitle = "Домашняя коллекция"
     
     //MARK: - RadioView
-    static let radioViewText = "RadioView"
+    static let radioViewNavigationTitle = "Радио"
+    static let sectionHeaderTitle = "Станции"
+    
+    //MARK: - FavoriteRadioStationModel
+    static let favoriteStationTitle = "Избранная радиостанция"
+    static let appleMusicStationTitle = "Станция Apple Music"
+    static let lightPopTitle = "Легкий поп"
+    static let hitsTitle = "Хиты"
+    static let hipHopTitle = "Хип-хоп"
+    static let popMusicTitle = "Поп-музыка"
+    static let rockClassicTitle = "Классика рока"
+    static let smoothJazzTitle = "Смус-джаз"
+    static let chillOutTitle = "Чилаут"
+    
+    //MARK: - RadioStationModel
+    static let zaneStationTitle = "The Zane Lowe Show"
+    static let rapLifeStationTitle = "Rap Life Radio"
+    static let superbloomStationTitle = "Superbloom Radio"
+    static let africaNowStationTitle = "Africa Now Radio"
+    static let danceXLStationTitle = "danceXL Radio"
+    static let ebroShowStationTitle = "The Ebro Show"
+    static let charlieSloothStationTitle = "Charlie Sloth"
+    static let musicDailyStationTitle = "New Music Daily Radio"
+    static let agendaStationTitle = "The Agenda Radio"
+    static let appleMusicSubTitle = "Apple Music"
+    static let superbloomStationSubTitle = "Superbloom Radio with Travis Mills"
+    static let danceXLStationSubTitle = "danceXL Radio"
+    static let ebroStationSubTitle = "Эбро Дарден"
+    static let charlieSlothStationSubTitle = "Charlie Sloth"
 
     //MARK: - SearchView
     static let searchViewText = "SearchView"
@@ -170,6 +226,26 @@ enum Icons {
     static let authorsOptionIcon = "music.quarternote.3"
     static let uploadedOptionIcon = "arrow.down.circle"
     static let homeCollectionOptionIcon = "music.note.house"
+    
+    //MARK: - FavoriteRadioStationModel
+    static let lightPopIcon = "light.pop"
+    static let hitsIcon = "hit"
+    static let hipHopIcon = "hip-hop"
+    static let popMusicIcon = "pop.music"
+    static let rockClassicIcon = "rock.classic"
+    static let smoothJazzIcon = "smooth-jazz"
+    static let chillOutIcon = "chill.out"
+    
+    //MARK: - RadioStationModel
+    static let zaneStationIcon = "zane"
+    static let rapLifeStationIcon = "rap.life"
+    static let superbloomStationIcon = "superbloom"
+    static let africaNowStationIcon = "africa.now"
+    static let danceXLStationIcon = "danceXL"
+    static let ebroStationIcon = "ebro"
+    static let charlieSlothStationIcon = "charlie.sloth"
+    static let nmdStationIcon = "nmd"
+    static let agendaStationIcon = "agenda"
 }
 
 //MARK: - Display
@@ -177,5 +253,8 @@ enum Icons {
 enum Display {
     //MARK: - MediaLibraryView
     static let musicWillAppearHereTextOpacity: CGFloat = 0.6
+    
+    //MARK: - RadioView
+    static let titleOpacity0_6: CGFloat = 0.6
 }
  

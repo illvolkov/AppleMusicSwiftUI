@@ -54,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0410B5DF281D5A8500CAB7D6 /* RadioViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0410B5DD281D347400CAB7D6 /* RadioStationModel.swift */,
+				0410B5DB281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift */,
+			);
+			path = RadioViewModels;
+			sourceTree = "<group>";
+		};
 		047BF65728122B9F00F722A9 /* Library View */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,11 +139,10 @@
 		047D049C280ED55100891D4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0410B5DF281D5A8500CAB7D6 /* RadioViewModels */,
 				047BF65828122C6800F722A9 /* Constants.swift */,
 				047D04A0280FFF8E00891D4E /* SongModel.swift */,
 				047D04A62810244100891D4E /* OptionLibraryModel.swift */,
-				0410B5DB281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift */,
-				0410B5DD281D347400CAB7D6 /* RadioStationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
