@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0410B5DC281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410B5DB281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift */; };
+		0410B5DE281D347400CAB7D6 /* RadioStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410B5DD281D347400CAB7D6 /* RadioStationModel.swift */; };
 		046D55452817F19400D05C91 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D55442817F19400D05C91 /* RadioView.swift */; };
 		046D55472817F25000D05C91 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D55462817F25000D05C91 /* SearchView.swift */; };
 		047BF65928122C6800F722A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BF65828122C6800F722A9 /* Constants.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		0410B5DB281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRadioStationModel.swift; sourceTree = "<group>"; };
+		0410B5DD281D347400CAB7D6 /* RadioStationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioStationModel.swift; sourceTree = "<group>"; };
 		046D55442817F19400D05C91 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		046D55462817F25000D05C91 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		047BF65828122C6800F722A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				047D04A0280FFF8E00891D4E /* SongModel.swift */,
 				047D04A62810244100891D4E /* OptionLibraryModel.swift */,
 				0410B5DB281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift */,
+				0410B5DD281D347400CAB7D6 /* RadioStationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0410B5DE281D347400CAB7D6 /* RadioStationModel.swift in Sources */,
 				047D04A32810167D00891D4E /* MediaLibraryView.swift in Sources */,
 				047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */,
 				047D04A72810244100891D4E /* OptionLibraryModel.swift in Sources */,
