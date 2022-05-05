@@ -36,7 +36,7 @@ struct TabViewContent: View {
             .accentColor(.red)
             VStack {
                 Spacer()
-                Player()
+                PlayerView()
                     .padding(.bottom, Offsets.playerBottomOffset)
             }
         }

@@ -19,31 +19,29 @@ enum Offsets {
     //MARK: - TabViewContent
     static let playerBottomOffset: CGFloat = 47
     
-    //MARK: - Player
+    //MARK: - PlayerView
     static let playerVStackOffset: CGFloat = 1
     static let offset5: CGFloat = 5
     static let songIconShadowXOffset: CGFloat = 2
     static let songIconShadowYOffset: CGFloat = 3
-    static let leadingTrailingOffset20: CGFloat = 20
     static let songIconTopBottomOffset: CGFloat = 8
     static let playPauseButtonTrailingOffset: CGFloat = 13
     
     //MARK: - RadioView
-    static let lazyHGridSpacing: CGFloat = 10
-    static let lazyHGridTopOffset: CGFloat = -35
-    static let favoriteStationDividerBottomOffset: CGFloat = 5
-    static let sectionDividerTopOffset: CGFloat = -34
-    static let sectionDividerLeadingOffset: CGFloat = 19
-    static let sectionDividerTrailingOffset: CGFloat = 22
+    static let leadingTrailingOffset18: CGFloat = 18
+    static let favoriteRadioStationBottomOffset: CGFloat = -19
+    
+    //MARK: - FavoriteRadioStationView
+    static let lazyHGridTopOffset: CGFloat = -29
+    static let favoriteStationDividerBottomOffset: CGFloat = 4
     static let favoriteTitleBottomOffset: CGFloat = -7
     static let favoriteStationImageCornerRadius: CGFloat = 4
-    static let stationImageTopOffset: CGFloat = -5
-    static let sectionHeaderTopOffset: CGFloat = -18
-    static let sectionHeaderBottomOffset: CGFloat = -2
+    static let stationTitleBottomOffset: CGFloat = 1
+    
+    //MARK: - RadioStationView
     static let hStackSpacing: CGFloat = 20
     static let subStationImageCornerRadius: CGFloat = 5
-    static let subStationDividerTrailingOffset: CGFloat = 6
-    static let subStationDividerBottomOffset: CGFloat = 1
+    static let subStationDividerBottomOffset: CGFloat = 1.5
 }
 
 //MARK: - Sizes
@@ -65,22 +63,26 @@ enum Sizes {
     //MARK: - TabViewContent
     static let tabViewMultiWidthSize: CGFloat = 1
     
-    //MARK: - Player
+    //MARK: - PlayerView
     static let songIconMultiWidthHeightSize: CGFloat = 0.14
-    static let songTextMultiWidthSize: CGFloat = 0.47
+    static let songTextMultiWidthSize: CGFloat = 0.48
     static let songTextMultiFontSize: CGFloat = 0.045
     static let playPauseButtonMultiFontSize0_07 = 0.07
     
     //MARK: - RadioView
+    static let sectionHeaderMultiplierFontSize: CGFloat = 0.063
+    static let spacerMultiplierHeightSize: CGFloat = 0.174
+    
+    //MARK: - FavoriteRadioStationView
     static let favoriteTitleMultiplierFontSize: CGFloat = 0.03
     static let titleMultiplierFontSize0_059: CGFloat = 0.059
     static let favoriteStationImageMultiplierWidthSize: CGFloat = 0.908
     static let favoriteStationImageMultiplierHeightSize: CGFloat = 0.6
-    static let sectionHeaderMultiplierFontSize: CGFloat = 0.063
-    static let subStationImageMultiplierSize: CGFloat = 0.254
+    
+    //MARK: - RadioStationView
+    static let subStationImageMultiplierSize0_254: CGFloat = 0.254
     static let subStationTitleMultiplierFontSize: CGFloat = 0.042
     static let subStationSubTitleMultiplierFontSize: CGFloat = 0.031
-    static let spacerMultiplierHeightSize: CGFloat = 0.133
 }
 
 //MARK: - Strings
@@ -103,7 +105,7 @@ enum Strings {
     static let radioViewTabItemText = "Радио"
     static let searchViewTabItemText = "Поиск"
     
-    //MARK: - Player
+    //MARK: - PlayerView
     static let notPerformedSongTitle = "Не исполняется"
     
     //MARK: - SongModel
@@ -186,7 +188,7 @@ enum Icons {
     static let radioViewTabItemIcon = "dot.radiowaves.left.and.right"
     static let searchViewTabItemIcon = "magnifyingglass"
     
-    //MARK: - Player
+    //MARK: - PlayerView
     static let playButtonIcon = "play.fill"
     static let pauseButtonIcon = "pause.fill"
     static let notPerformedSongIcon = "not.performed"

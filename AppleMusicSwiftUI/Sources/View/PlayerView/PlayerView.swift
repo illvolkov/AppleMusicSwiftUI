@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Player: View {
+struct PlayerView: View {
     
     //MARK: - Song model
     
@@ -48,13 +48,14 @@ struct Player: View {
                             y: Offsets.songIconShadowYOffset)
                     .frame(width: UIScreen.main.bounds.width * Sizes.songIconMultiWidthHeightSize,
                            height: UIScreen.main.bounds.width * Sizes.songIconMultiWidthHeightSize)
-                    .padding(.leading, Offsets.leadingTrailingOffset20)
                     .padding(.trailing, Offsets.offset5)
                     .padding([.top, .bottom], Offsets.songIconTopBottomOffset)
+                
                 Text(randomSong?.name ?? Strings.notPerformedSongTitle)
                     .font(.system(size: UIScreen.main.bounds.width * Sizes.songTextMultiFontSize))
                     .frame(width: UIScreen.main.bounds.width * Sizes.songTextMultiWidthSize, alignment: .leading)
                     .lineLimit(1)
+                
                 Button {
                     isPlayInactive.toggle()
                     randomSong = changeSongState()
@@ -64,6 +65,7 @@ struct Player: View {
                         .foregroundColor(.black)
                 }
                 .padding(.trailing, Offsets.playPauseButtonTrailingOffset)
+                
                 Button {
                     randomSong = createSong()
                 } label: {
@@ -71,9 +73,10 @@ struct Player: View {
                         .font(.system(size: UIScreen.main.bounds.width * Sizes.playPauseButtonMultiFontSize0_07))
                         .foregroundColor(.black)
                 }
-                .padding(.trailing, Offsets.leadingTrailingOffset20)
             }
+            .frame(width: UIScreen.main.bounds.width)
             .background(Color(uiColor: UIColor.systemGray6))
+            
             Divider()
         }
     }
@@ -81,6 +84,6 @@ struct Player: View {
 
 struct Player_Previews: PreviewProvider {
     static var previews: some View {
-        Player()
+        TabViewContent()
     }
 }

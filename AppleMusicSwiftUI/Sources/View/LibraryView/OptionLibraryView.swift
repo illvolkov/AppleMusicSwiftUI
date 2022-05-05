@@ -33,6 +33,7 @@ struct OptionLibraryView: View {
                             .frame(width:  UIScreen.main.bounds.width * Sizes.optionIconMultiHeightWidth0_07,
                                    height:  UIScreen.main.bounds.width * Sizes.optionIconMultiHeightWidth0_07,
                                    alignment: .center)
+                        
                         Text(item.title)
                             .padding(.leading, Offsets.optionTextLeftOffset)
                             .font(.system(size: UIScreen.main.bounds.width * adaptationToiPodSize(

@@ -16,6 +16,7 @@ struct MediaLibraryView: View {
             Text(Strings.lookingYourMusicText)
                 .font(.system(size: UIScreen.main.bounds.width * Sizes.loogingYourMusicTextMultiFontSize))
                 .fontWeight(.semibold)
+            
             Text(Strings.musicWillAppearHereText)
                 .font(.system(size: UIScreen.main.bounds.width * Sizes.musicWillAppearHereTextMultiFontSize, weight: .light))
                 .multilineTextAlignment(.center)
