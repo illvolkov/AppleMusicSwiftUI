@@ -84,6 +84,6 @@ struct PlayerView: View {
 
 struct Player_Previews: PreviewProvider {
     static var previews: some View {
-        TabViewContent()
+        PlayerView()
     }
 }

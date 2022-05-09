@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct SearchView: View {
+    
+    @State var isSearching = false
+    @State var searchText = ""
+    
+    @ViewBuilder var viewToggle: some View {
+        if isSearching {
+            Text("Поиск треков")
+        } else {
+            Text("Категории")
+        }
+    }
+    
     var body: some View {
-        Text(Strings.searchViewText)
+        NavigationView {
+            VStack {
+                TextField("searchable", text: $searchText)
+                viewToggle
+            }
+            .navigationTitle("Поиск")
+        }
     }
 }
 
