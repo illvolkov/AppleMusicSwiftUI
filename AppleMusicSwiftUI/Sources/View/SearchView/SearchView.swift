@@ -16,7 +16,7 @@ struct SearchView: View {
         if isSearching {
             Text("Поиск треков")
         } else {
-            Text("Категории")
+            CategoryView()
         }
     }
     
@@ -26,6 +26,7 @@ struct SearchView: View {
                 TextField("searchable", text: $searchText)
                 viewToggle
             }
+            .padding(.horizontal)
             .navigationTitle("Поиск")
         }
     }

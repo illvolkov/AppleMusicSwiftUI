@@ -9,12 +9,12 @@ import SwiftUI
 
 struct FavoriteRadioStationView: View {
     
-    private let favoriteRadioStation = FavoriteRadioStationModel.createModel()
+    @StateObject var favoriteRadioStation = FavoriteModel()
     private let rowsStation = [GridItem(.fixed(UIScreen.main.bounds.width))]
     
     var body: some View {
         LazyHGrid(rows: rowsStation) {
-            ForEach(favoriteRadioStation) { item in
+            ForEach(favoriteRadioStation.model.favoriteStations) { item in
                 VStack(alignment: .leading) {
                     Divider()
                         .padding(.bottom, Offsets.favoriteStationDividerBottomOffset)

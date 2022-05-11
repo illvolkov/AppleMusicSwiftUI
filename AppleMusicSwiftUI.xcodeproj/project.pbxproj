@@ -24,6 +24,7 @@
 		047D04A72810244100891D4E /* OptionLibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04A62810244100891D4E /* OptionLibraryModel.swift */; };
 		047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04A8281027F500891D4E /* OptionLibraryView.swift */; };
 		047D04AB28103DE900891D4E /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04AA28103DE900891D4E /* LibraryView.swift */; };
+		04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5AF328297D1700828C43 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		047D04A62810244100891D4E /* OptionLibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionLibraryModel.swift; sourceTree = "<group>"; };
 		047D04A8281027F500891D4E /* OptionLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionLibraryView.swift; sourceTree = "<group>"; };
 		047D04AA28103DE900891D4E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		04DD5AF328297D1700828C43 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				046D55462817F25000D05C91 /* SearchView.swift */,
+				04DD5AF328297D1700828C43 /* CategoryView.swift */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */,
 				047D04A72810244100891D4E /* OptionLibraryModel.swift in Sources */,
 				047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */,
+				04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */,
 				046D55452817F19400D05C91 /* RadioView.swift in Sources */,
 				047D04AB28103DE900891D4E /* LibraryView.swift in Sources */,
 				047D049F280F1CDD00891D4E /* PlayerView.swift in Sources */,
