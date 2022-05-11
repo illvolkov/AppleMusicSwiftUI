@@ -25,6 +25,7 @@
 		047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04A8281027F500891D4E /* OptionLibraryView.swift */; };
 		047D04AB28103DE900891D4E /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04AA28103DE900891D4E /* LibraryView.swift */; };
 		04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5AF328297D1700828C43 /* CategoryView.swift */; };
+		04DD5B19282C0C3400828C43 /* LightPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B18282C0C3400828C43 /* LightPopModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		047D04A8281027F500891D4E /* OptionLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionLibraryView.swift; sourceTree = "<group>"; };
 		047D04AA28103DE900891D4E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		04DD5AF328297D1700828C43 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		04DD5B18282C0C3400828C43 /* LightPopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		047D049C280ED55100891D4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04DD5B17282C0C1500828C43 /* SearchViewModels */,
 				041C92402823DBC1001DE63A /* LibraryViewModels */,
 				0410B5DF281D5A8500CAB7D6 /* RadioViewModels */,
 				041C924728240F11001DE63A /* PlayerViewModels */,
@@ -203,6 +206,14 @@
 				047D048F280ED2C400891D4E /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		04DD5B17282C0C1500828C43 /* SearchViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				04DD5B18282C0C3400828C43 /* LightPopModel.swift */,
+			);
+			path = SearchViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 				047D04A1280FFF8F00891D4E /* SongModel.swift in Sources */,
 				0410B5DC281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift in Sources */,
 				047D048C280ED2C100891D4E /* AppleMusicSwiftUIApp.swift in Sources */,
+				04DD5B19282C0C3400828C43 /* LightPopModel.swift in Sources */,
 				041C92442823DE95001DE63A /* RadioStationView.swift in Sources */,
 				047BF65928122C6800F722A9 /* Constants.swift in Sources */,
 				046D55472817F25000D05C91 /* SearchView.swift in Sources */,
