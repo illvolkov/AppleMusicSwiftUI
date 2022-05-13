@@ -30,7 +30,7 @@ struct FavoriteRadioStationModel {
         return [
             FavoriteRadioStation(genreTitle: Strings.lightPopTitle,
                                  stationImage: Icons.lightPopIcon,
-                                 destionationView: AnyView(Text("LightPopView"))),
+                                 destionationView: AnyView(LightPopView())),
             
             FavoriteRadioStation(genreTitle: Strings.hitsTitle,
                                  stationImage: Icons.hitsIcon,
