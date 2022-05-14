@@ -34,7 +34,7 @@ struct FavoriteRadioStationModel {
             
             FavoriteRadioStation(genreTitle: Strings.hitsTitle,
                                  stationImage: Icons.hitsIcon,
-                                 destionationView: AnyView(Text("HitsView"))),
+                                 destionationView: AnyView(HitsView())),
             
             FavoriteRadioStation(genreTitle: Strings.hipHopTitle,
                                  stationImage: Icons.hipHopIcon,

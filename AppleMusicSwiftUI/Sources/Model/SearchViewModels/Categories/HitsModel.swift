@@ -32,7 +32,7 @@ struct HitsModel {
                 CategoryCell(title: "R&B-хиты", producerTitle: "Apple Music R&B", cover: "rb.hits")]),
             
             CategorySection(sectionTitle: "Горячие треки", cells: [
-                CategoryCell(title: "Гармония", producerTitle: "Artik & Asti", cover: "garmony"),
+                CategoryCell(title: "Гармония", producerTitle: "Artik & Asti", cover: "harmony"),
                 CategoryCell(title: "Отпускаю", producerTitle: "Егор Крид & МакSим", cover: "letting.go"),
                 CategoryCell(title: "Феникс", producerTitle: "ANNA ASTI", cover: "phoenix"),
                 CategoryCell(title: "СОЛНЦЕ МОНАКО", producerTitle: "Люся Чеботина", cover: "sun.in.monaco"),
@@ -46,7 +46,7 @@ struct HitsModel {
                 CategoryCell(title: "Патрон", producerTitle: "Miyagi & Andy Panda", cover: "bullet")]),
             
             CategorySection(sectionTitle: "Новые релизы", cells: [
-                CategoryCell(title: "Voyage", producerTitle: "ABBA", cover: "voyage"),
+                CategoryCell(title: "Voyage", producerTitle: "ABBA", cover: "abba"),
                 CategoryCell(title: "It'll All Make Sense In The End", producerTitle: "James Arthur", cover: "it.all.make.sense"),
                 CategoryCell(title: "Still Over It", producerTitle: "Summer Walker", cover: "still.over.it"),
                 CategoryCell(title: "=", producerTitle: "Ed Sheeran", cover: "ed.sheeran"),
@@ -69,7 +69,7 @@ struct HitsModel {
                 CategoryCell(title: "Doo-Wops & Hooligans (Deluxe Version)", producerTitle: "Bruno Mars", cover: "doo.wops"),
                 CategoryCell(title: "No Ceilings", producerTitle: "Lil Wayne", cover: "no.ceilings"),
                 CategoryCell(title: "Я вышла на Пикадилли", producerTitle: "Лайма Вайкуле", cover: "im.out"),
-                CategoryCell(title: "Lemodane", producerTitle: "Beyonce", cover: "lemonade")]),
+                CategoryCell(title: "Lemonade", producerTitle: "Beyonce", cover: "lemodane")]),
             
             CategorySection(sectionTitle: "Наши любимые артисты", cells: [
                 CategoryCell(title: "Justin Bieber", producerTitle: nil, cover: "jastin.bieber"),

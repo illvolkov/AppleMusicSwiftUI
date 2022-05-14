@@ -29,6 +29,9 @@
 		047D04A72810244100891D4E /* OptionLibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04A62810244100891D4E /* OptionLibraryModel.swift */; };
 		047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04A8281027F500891D4E /* OptionLibraryView.swift */; };
 		047D04AB28103DE900891D4E /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D04AA28103DE900891D4E /* LibraryView.swift */; };
+		0481D378282FA3EA009682E9 /* HitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D377282FA3EA009682E9 /* HitsView.swift */; };
+		0481D37A282FA3F7009682E9 /* HitsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D379282FA3F7009682E9 /* HitsHeader.swift */; };
+		0481D37C282FA40B009682E9 /* HitsCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D37B282FA40B009682E9 /* HitsCellTypes.swift */; };
 		04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5AF328297D1700828C43 /* CategoryView.swift */; };
 		04DD5B19282C0C3400828C43 /* LightPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B18282C0C3400828C43 /* LightPopModel.swift */; };
 		04DD5B1B282C63D000828C43 /* LightPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B1A282C63D000828C43 /* LightPopView.swift */; };
@@ -60,6 +63,9 @@
 		047D04A62810244100891D4E /* OptionLibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionLibraryModel.swift; sourceTree = "<group>"; };
 		047D04A8281027F500891D4E /* OptionLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionLibraryView.swift; sourceTree = "<group>"; };
 		047D04AA28103DE900891D4E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		0481D377282FA3EA009682E9 /* HitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsView.swift; sourceTree = "<group>"; };
+		0481D379282FA3F7009682E9 /* HitsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsHeader.swift; sourceTree = "<group>"; };
+		0481D37B282FA40B009682E9 /* HitsCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsCellTypes.swift; sourceTree = "<group>"; };
 		04DD5AF328297D1700828C43 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		04DD5B18282C0C3400828C43 /* LightPopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopModel.swift; sourceTree = "<group>"; };
 		04DD5B1A282C63D000828C43 /* LightPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopView.swift; sourceTree = "<group>"; };
@@ -135,9 +141,10 @@
 			children = (
 				04DD5AF328297D1700828C43 /* CategoryView.swift */,
 				04DD5B1F282CA9E100828C43 /* CategoryCellTypes.swift */,
-				044077CF282DC1BA00634139 /* ToolBarMenuButton.swift */,
 				044077D1282DCB2800634139 /* SongMenuButton.swift */,
+				044077CF282DC1BA00634139 /* ToolBarMenuButton.swift */,
 				04DD5B1C282CA7EE00828C43 /* LightPopView */,
+				0481D376282FA3A7009682E9 /* HitsView */,
 			);
 			path = CategoryView;
 			sourceTree = "<group>";
@@ -246,6 +253,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		0481D376282FA3A7009682E9 /* HitsView */ = {
+			isa = PBXGroup;
+			children = (
+				0481D377282FA3EA009682E9 /* HitsView.swift */,
+				0481D379282FA3F7009682E9 /* HitsHeader.swift */,
+				0481D37B282FA40B009682E9 /* HitsCellTypes.swift */,
+			);
+			path = HitsView;
+			sourceTree = "<group>";
+		};
 		04DD5B17282C0C1500828C43 /* SearchViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +353,7 @@
 			files = (
 				044077D4282DF68E00634139 /* HitsModel.swift in Sources */,
 				04DD5B1E282CA8D900828C43 /* LightPopHeader.swift in Sources */,
+				0481D378282FA3EA009682E9 /* HitsView.swift in Sources */,
 				0410B5DE281D347400CAB7D6 /* RadioStationModel.swift in Sources */,
 				041C92422823DC98001DE63A /* FavoriteRadioStationView.swift in Sources */,
 				047D04A32810167D00891D4E /* MediaLibraryView.swift in Sources */,
@@ -345,8 +363,10 @@
 				044077D2282DCB2800634139 /* SongMenuButton.swift in Sources */,
 				047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */,
 				04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */,
+				0481D37A282FA3F7009682E9 /* HitsHeader.swift in Sources */,
 				046D55452817F19400D05C91 /* RadioView.swift in Sources */,
 				047D04AB28103DE900891D4E /* LibraryView.swift in Sources */,
+				0481D37C282FA40B009682E9 /* HitsCellTypes.swift in Sources */,
 				047D049F280F1CDD00891D4E /* PlayerView.swift in Sources */,
 				047D04A1280FFF8F00891D4E /* SongModel.swift in Sources */,
 				04DD5B1B282C63D000828C43 /* LightPopView.swift in Sources */,
