@@ -66,14 +66,13 @@ struct CircleItemCellType: View {
                 .cornerRadius(70)
             VStack {
                 Text(cell.title)
-                    .font(.system(size: UIScreen.main.bounds.width * 0.0397))
                 if cell.producerTitle != nil {
                     Text(cell.producerTitle ?? "")
-                    .font(.system(size: UIScreen.main.bounds.width * 0.0397))
                 } else {
                     Spacer()
                 }
             }
+            .font(.system(size: UIScreen.main.bounds.width * 0.0397))
         }
         .frame(width: UIScreen.main.bounds.width * 0.29,
                height: UIScreen.main.bounds.width * 0.4)
@@ -181,7 +180,7 @@ struct RectangleItemCellType_Previews: PreviewProvider {
 
 struct CircleItemCellType_Previews: PreviewProvider {
     static var previews: some View {
-        CircleItemCellType(cell: CategoryCell(title: "Тест", producerTitle: "Тест", cover: "lizzo"))
+        CircleItemCellType(cell: CategoryCell(title: "Тест", producerTitle: nil, cover: "lizzo"))
     }
 }
 

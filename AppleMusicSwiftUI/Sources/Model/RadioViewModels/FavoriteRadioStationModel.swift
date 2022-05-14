@@ -42,7 +42,7 @@ struct FavoriteRadioStationModel {
             
             FavoriteRadioStation(genreTitle: Strings.popMusicTitle,
                                  stationImage: Icons.popMusicIcon,
-                                 destionationView: AnyView(Text("PopMusicView"))),
+                                 destionationView: AnyView(PopInRussianView())),
             
             FavoriteRadioStation(genreTitle: Strings.rockClassicTitle,
                                  stationImage: Icons.rockClassicIcon,

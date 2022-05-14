@@ -18,6 +18,9 @@
 		044077D4282DF68E00634139 /* HitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044077D3282DF68E00634139 /* HitsModel.swift */; };
 		046D55452817F19400D05C91 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D55442817F19400D05C91 /* RadioView.swift */; };
 		046D55472817F25000D05C91 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D55462817F25000D05C91 /* SearchView.swift */; };
+		0471E3BD283065EE00029915 /* PopInRussianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3BC283065EE00029915 /* PopInRussianView.swift */; };
+		0471E3BF283065FB00029915 /* PopInRussianHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3BE283065FB00029915 /* PopInRussianHeader.swift */; };
+		0471E3C12830660600029915 /* PopInRussianCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C02830660600029915 /* PopInRussianCellTypes.swift */; };
 		047BF65928122C6800F722A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BF65828122C6800F722A9 /* Constants.swift */; };
 		047D048C280ED2C100891D4E /* AppleMusicSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D048B280ED2C100891D4E /* AppleMusicSwiftUIApp.swift */; };
 		047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D048D280ED2C100891D4E /* TabViewContent.swift */; };
@@ -36,6 +39,7 @@
 		0481D388282FFE75009682E9 /* HipHopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D387282FFE75009682E9 /* HipHopView.swift */; };
 		0481D38A282FFE7F009682E9 /* HipHopHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D389282FFE7F009682E9 /* HipHopHeader.swift */; };
 		0481D38C282FFE8D009682E9 /* HipHopCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D38B282FFE8D009682E9 /* HipHopCellTypes.swift */; };
+		0481D39028305AD7009682E9 /* PopInRussianModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D38F28305AD7009682E9 /* PopInRussianModel.swift */; };
 		04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5AF328297D1700828C43 /* CategoryView.swift */; };
 		04DD5B19282C0C3400828C43 /* LightPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B18282C0C3400828C43 /* LightPopModel.swift */; };
 		04DD5B1B282C63D000828C43 /* LightPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B1A282C63D000828C43 /* LightPopView.swift */; };
@@ -55,6 +59,9 @@
 		044077D3282DF68E00634139 /* HitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsModel.swift; sourceTree = "<group>"; };
 		046D55442817F19400D05C91 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		046D55462817F25000D05C91 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		0471E3BC283065EE00029915 /* PopInRussianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianView.swift; sourceTree = "<group>"; };
+		0471E3BE283065FB00029915 /* PopInRussianHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianHeader.swift; sourceTree = "<group>"; };
+		0471E3C02830660600029915 /* PopInRussianCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianCellTypes.swift; sourceTree = "<group>"; };
 		047BF65828122C6800F722A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		047D0488280ED2C100891D4E /* AppleMusicSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusicSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047D048B280ED2C100891D4E /* AppleMusicSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -74,6 +81,7 @@
 		0481D387282FFE75009682E9 /* HipHopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopView.swift; sourceTree = "<group>"; };
 		0481D389282FFE7F009682E9 /* HipHopHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopHeader.swift; sourceTree = "<group>"; };
 		0481D38B282FFE8D009682E9 /* HipHopCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopCellTypes.swift; sourceTree = "<group>"; };
+		0481D38F28305AD7009682E9 /* PopInRussianModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianModel.swift; sourceTree = "<group>"; };
 		04DD5AF328297D1700828C43 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		04DD5B18282C0C3400828C43 /* LightPopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopModel.swift; sourceTree = "<group>"; };
 		04DD5B1A282C63D000828C43 /* LightPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopView.swift; sourceTree = "<group>"; };
@@ -154,6 +162,7 @@
 				04DD5B1C282CA7EE00828C43 /* LightPopView */,
 				0481D376282FA3A7009682E9 /* HitsView */,
 				0481D386282FFE45009682E9 /* HipHopView */,
+				0471E3BB283065BE00029915 /* PopInRussianView */,
 			);
 			path = CategoryView;
 			sourceTree = "<group>";
@@ -165,8 +174,19 @@
 				04DD5B18282C0C3400828C43 /* LightPopModel.swift */,
 				044077D3282DF68E00634139 /* HitsModel.swift */,
 				0481D384282FEEDE009682E9 /* HipHopModel.swift */,
+				0481D38F28305AD7009682E9 /* PopInRussianModel.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		0471E3BB283065BE00029915 /* PopInRussianView */ = {
+			isa = PBXGroup;
+			children = (
+				0471E3BC283065EE00029915 /* PopInRussianView.swift */,
+				0471E3BE283065FB00029915 /* PopInRussianHeader.swift */,
+				0471E3C02830660600029915 /* PopInRussianCellTypes.swift */,
+			);
+			path = PopInRussianView;
 			sourceTree = "<group>";
 		};
 		047BF65728122B9F00F722A9 /* LibraryView */ = {
@@ -373,7 +393,9 @@
 			files = (
 				044077D4282DF68E00634139 /* HitsModel.swift in Sources */,
 				04DD5B1E282CA8D900828C43 /* LightPopHeader.swift in Sources */,
+				0471E3BF283065FB00029915 /* PopInRussianHeader.swift in Sources */,
 				0481D38A282FFE7F009682E9 /* HipHopHeader.swift in Sources */,
+				0471E3BD283065EE00029915 /* PopInRussianView.swift in Sources */,
 				0481D378282FA3EA009682E9 /* HitsView.swift in Sources */,
 				0410B5DE281D347400CAB7D6 /* RadioStationModel.swift in Sources */,
 				041C92422823DC98001DE63A /* FavoriteRadioStationView.swift in Sources */,
@@ -381,7 +403,9 @@
 				047D04A32810167D00891D4E /* MediaLibraryView.swift in Sources */,
 				047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */,
 				047D04A72810244100891D4E /* OptionLibraryModel.swift in Sources */,
+				0481D39028305AD7009682E9 /* PopInRussianModel.swift in Sources */,
 				04DD5B20282CA9E100828C43 /* CategoryCellTypes.swift in Sources */,
+				0471E3C12830660600029915 /* PopInRussianCellTypes.swift in Sources */,
 				044077D2282DCB2800634139 /* SongMenuButton.swift in Sources */,
 				047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */,
 				0481D38C282FFE8D009682E9 /* HipHopCellTypes.swift in Sources */,
