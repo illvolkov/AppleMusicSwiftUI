@@ -28,15 +28,16 @@ struct HitsView: View {
                 ForEach(hitsModel) { section in
                     VStack {
                         HitsHeader(section: section)
+                            .padding(.horizontal, 18)
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: createDifferentGrids(with: section)) {
                                 ForEach(section.cells) { cell in
                                     HitsCellTypes(section: section, cell: cell)
                                 }
                             }
+                            .padding(.horizontal, 18)
                         }
                     }
-                    .padding(.horizontal, 18)
                 }
             }
             Spacer()

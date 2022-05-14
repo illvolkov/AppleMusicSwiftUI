@@ -17,15 +17,16 @@ struct HipHopView: View {
                 ForEach(hipHopModel) { section in
                     VStack {
                         HipHopHeader(section: section)
+                            .padding(.horizontal, 18)
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: GridType.createDifferentGrids(with: section)) {
                                 ForEach(section.cells) { cell in
                                     HipHopCellTypes(section: section, cell: cell)
                                 }
                             }
+                            .padding(.horizontal, 18)
                         }
                     }
-                    .padding(.horizontal, 18)
                 }
             }
             Spacer()

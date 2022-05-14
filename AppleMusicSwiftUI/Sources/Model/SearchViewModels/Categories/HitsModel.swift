@@ -77,7 +77,7 @@ struct HitsModel {
                 CategoryCell(title: "Dua Lipa", producerTitle: nil, cover: "dua.lipa.circle"),
                 CategoryCell(title: "Звери", producerTitle: nil, cover: "animals.circle"),
                 CategoryCell(title: "Andro", producerTitle: nil, cover: "andro.circle"),
-                CategoryCell(title: "HammAli & Navai", producerTitle: nil, cover: "navai.circle"),
+                CategoryCell(title: "HammAli &", producerTitle: "Navai", cover: "navai.circle"),
                 CategoryCell(title: "Diplo", producerTitle: nil, cover: "diplo.circle"),
                 CategoryCell(title: "ST", producerTitle: nil, cover: "st.circle"),
                 CategoryCell(title: "Кино", producerTitle: nil, cover: "cinema.circle")])

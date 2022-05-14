@@ -61,11 +61,22 @@ struct CircleItemCellType: View {
         VStack {
             Image(cell.cover)
                 .resizable()
+                .frame(width: UIScreen.main.bounds.width * 0.28,
+                       height: UIScreen.main.bounds.width * 0.28)
                 .cornerRadius(70)
-            Text(cell.title)
-                .font(.system(size: UIScreen.main.bounds.width * 0.0397))
+            VStack {
+                Text(cell.title)
+                    .font(.system(size: UIScreen.main.bounds.width * 0.0397))
+                if cell.producerTitle != nil {
+                    Text(cell.producerTitle ?? "")
+                    .font(.system(size: UIScreen.main.bounds.width * 0.0397))
+                } else {
+                    Spacer()
+                }
+            }
         }
-        .frame(width: UIScreen.main.bounds.width * 0.29, height: UIScreen.main.bounds.width * 0.37)
+        .frame(width: UIScreen.main.bounds.width * 0.29,
+               height: UIScreen.main.bounds.width * 0.4)
     }
 }
 
@@ -93,7 +104,8 @@ struct SquareItemCellType: View {
             }
             .font(.system(size: UIScreen.main.bounds.width * 0.038))
         }
-        .frame(width: UIScreen.main.bounds.width * 0.445)
+        .frame(width: UIScreen.main.bounds.width * 0.445,
+               height: UIScreen.main.bounds.width * 0.55)
     }
 }
 
