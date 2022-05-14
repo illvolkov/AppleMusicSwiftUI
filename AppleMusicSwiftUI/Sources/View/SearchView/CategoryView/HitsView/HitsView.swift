@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HitsView: View {
     
-    private func createDifferentRows(with model: CategorySection) -> [GridItem] {
+    private func createDifferentGrids(with model: CategorySection) -> [GridItem] {
         switch model.sectionTitle {
         case "Горячие треки":
             return [GridItem(.adaptive(minimum: UIScreen.main.bounds.width * 0.11))]
@@ -28,16 +28,15 @@ struct HitsView: View {
                 ForEach(hitsModel) { section in
                     VStack {
                         HitsHeader(section: section)
-                            .padding(.horizontal, 18)
                         ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHGrid(rows: createDifferentRows(with: section)) {
+                            LazyHGrid(rows: createDifferentGrids(with: section)) {
                                 ForEach(section.cells) { cell in
                                     HitsCellTypes(section: section, cell: cell)
                                 }
                             }
-                            .padding(.horizontal, 18)
                         }
                     }
+                    .padding(.horizontal, 18)
                 }
             }
             Spacer()

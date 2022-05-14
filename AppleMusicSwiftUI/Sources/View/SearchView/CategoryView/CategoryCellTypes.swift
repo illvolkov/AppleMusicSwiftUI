@@ -7,6 +7,21 @@
 
 import SwiftUI
 
+struct GridType {
+    static func createDifferentGrids(with model: CategorySection) -> [GridItem] {
+        switch model.sectionTitle {
+        case "Плейлисты":
+            return Array(repeating: GridItem(.fixed(UIScreen.main.bounds.width * 0.55)), count: 2)
+        case "Горячие треки":
+            return [GridItem(.adaptive(minimum: UIScreen.main.bounds.width * 0.11))]
+        case "Наши любимые артисты", "Видео":
+            return [GridItem(.fixed(UIScreen.main.bounds.width * 0.3))]
+        default:
+            return [GridItem(.fixed(UIScreen.main.bounds.width * 0.5))]
+        }
+    }
+}
+
 struct RectangleItemCellType: View {
     
     let cell: CategoryCell
@@ -48,7 +63,7 @@ struct CircleItemCellType: View {
                 .resizable()
                 .cornerRadius(70)
             Text(cell.title)
-                .font(.system(size: UIScreen.main.bounds.width * 0.04))
+                .font(.system(size: UIScreen.main.bounds.width * 0.0397))
         }
         .frame(width: UIScreen.main.bounds.width * 0.29, height: UIScreen.main.bounds.width * 0.37)
     }
@@ -68,6 +83,7 @@ struct SquareItemCellType: View {
                 .padding(.bottom, -3)
             VStack(alignment: .leading) {
                 Text(cell.title)
+                    .lineLimit(1)
                 if cell.producerTitle != nil {
                     Text(cell.producerTitle ?? "")
                         .opacity(0.7)
@@ -106,8 +122,6 @@ struct ListItemCellType: View {
                                 .frame(width: UIScreen.main.bounds.width * 0.64, alignment: .leading)
                                 .opacity(0.7)
                                 .lineLimit(1)
-                        } else {
-                            Spacer()
                         }
                     }
                     SongMenuButton()

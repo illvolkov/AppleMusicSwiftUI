@@ -22,16 +22,16 @@ struct HipHopModel {
                 CategoryCell(title: "Ransom (Remix) - Single", producerTitle: "Lil Tecca & Juice WRLD", cover: "ransom")]),
             
             CategorySection(sectionTitle: "Плейлисты", cells: [
-                CategoryCell(title: "Rap Life", producerTitle: "Apple Music Хип-хоп", cover: "rap.life"),
+                CategoryCell(title: "Rap Life", producerTitle: "Apple Music Хип-хоп", cover: "rap.lifee"),
                 CategoryCell(title: "#наповторе", producerTitle: "Apple Music Хип-хоп", cover: "on.repeat"),
                 CategoryCell(title: "Зажигаем!", producerTitle: "Apple Music Хип-хоп", cover: "ignite"),
-                CategoryCell(title: "Хип-хоп-частота", producerTitle: "Apple Music Хип-хоп", cover: "freak"),
+                CategoryCell(title: "Хип-хоп-частота", producerTitle: "Apple Music Хип-хоп", cover: "hip.hop.freak"),
                 CategoryCell(title: "Мастера слова", producerTitle: "Apple Music Хип-хоп", cover: "word.masters"),
                 CategoryCell(title: "Тренажерка", producerTitle: "Apple Music Хип-хоп", cover: "gym"),
                 CategoryCell(title: "Законы улиц", producerTitle: "Apple Music Хип-хоп", cover: "street.rules"),
                 CategoryCell(title: "Beats of the Weak", producerTitle: "Beats by Dr. Dre", cover: "beats.of.the.weak"),
                 CategoryCell(title: "Хип-хоп для тренировки", producerTitle: "Apple Music Хип-хоп", cover: "hip.hop.for.training"),
-                CategoryCell(title: "Хип-хоп на повторе", producerTitle: "Apple Music Хип-хоп", cover: "hop.hop.on.repeat"),
+                CategoryCell(title: "Хип-хоп на повторе", producerTitle: "Apple Music Хип-хоп", cover: "hip.hop.on.repeat"),
                 CategoryCell(title: "Хип-хоп и R&B вне времени", producerTitle: "Apple Music Хип-хоп", cover: "hip.hop.and.rb"),
                 CategoryCell(title: "Rap Heavy Hitters", producerTitle: "Apple Music", cover: "rap.heavy.hitters")]),
             
@@ -54,23 +54,23 @@ struct HipHopModel {
             
             CategorySection(sectionTitle: "Видео", cells: [
                 CategoryCell(title: "Plenty", producerTitle: "Money Man", cover: "plenty"),
-                CategoryCell(title: "CHild of God", producerTitle: "Chance the Rapper", cover: "child.of.god"),
+                CategoryCell(title: "Child of God", producerTitle: "Chance the Rapper", cover: "child.of.god"),
                 CategoryCell(title: "Cigarettes", producerTitle: "Juice WRLD", cover: "cigarettes")]),
             
             CategorySection(sectionTitle: "Наши любимые артисты", cells: [
                 CategoryCell(title: "Lil Uzi Vert", producerTitle: nil, cover: "lil.uzi.vert.circle"),
-                CategoryCell(title: "104", producerTitle: nil, cover: "104"),
-                CategoryCell(title: "Скриптонит", producerTitle: nil, cover: "scriptonit"),
+                CategoryCell(title: "104", producerTitle: nil, cover: "104.circle"),
+                CategoryCell(title: "Скриптонит", producerTitle: nil, cover: "skriptonit.circle"),
                 CategoryCell(title: "Drake", producerTitle: nil, cover: "drake.circle"),
-                CategoryCell(title: "163ONMYNECK", producerTitle: nil, cover: "1630onmyneck"),
-                CategoryCell(title: "blago white", producerTitle: nil, cover: "blago.white"),
-                CategoryCell(title: "Future", producerTitle: nil, cover: "future"),
-                CategoryCell(title: "SEEMEE", producerTitle: nil, cover: "seemee"),
-                CategoryCell(title: "Платина", producerTitle: nil, cover: "platina")]),
+                CategoryCell(title: "163ONMYNECK", producerTitle: nil, cover: "163onmynect.circle"),
+                CategoryCell(title: "blago white", producerTitle: nil, cover: "blago.white.circle"),
+                CategoryCell(title: "Future", producerTitle: nil, cover: "future.circle"),
+                CategoryCell(title: "SEEMEE", producerTitle: nil, cover: "seemee.circle"),
+                CategoryCell(title: "Платина", producerTitle: nil, cover: "platina.circle")]),
             
             CategorySection(sectionTitle: "Verzuz", cells: [
                 CategoryCell(title: "Verzuz Cheat Sheet: Bone Thugs-n-harmny x Three 6 Mafia", producerTitle: "Apple Music", cover: "verzuz.bone.thugs"),
-                CategoryCell(title: "Verzuz: Big Daddy Kane x KRS-One", producerTitle: "Apple Music", cover: "verzuz.big.daddy"),
+                CategoryCell(title: "Verzuz: Big Daddy Kane x KRS-One", producerTitle: "Apple Music", cover: "verzuz.big.daddy.kane"),
                 CategoryCell(title: "Verzuz Cheat Sheet: The Lox x Dipset", producerTitle: "Apple Music", cover: "verzuz.the.lox"),
                 CategoryCell(title: "Verzuz: Fat Joe x Ja Rule", producerTitle: "Apple Music", cover: "verzuz.fat.joe"),
                 CategoryCell(title: "Verzuz Cheat Sheet: Bow Wow x Soulja Boy", producerTitle: "Apple Music", cover: "verzuz.bow.wow"),

@@ -39,6 +39,7 @@ struct LightPopCellTypes: View {
 
 struct LightPopCellTypes_Previews: PreviewProvider {
     static var previews: some View {
-        LightPopCellTypes(section: CategorySection(sectionTitle: "Горячие треки", cells: [CategoryCell(title: "", producerTitle: "", cover: "")]), cell: CategoryCell(title: "Тест", producerTitle: "Тест", cover: "katana"))
+        LightPopCellTypes(section: CategorySection(sectionTitle: "Горячие треки", cells: [CategoryCell(title: "", producerTitle: "", cover: "")]),
+                          cell: CategoryCell(title: "Тест", producerTitle: "Тест", cover: "katana"))
     }
 }

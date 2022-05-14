@@ -1,26 +1,26 @@
 //
-//  LightPopView.swift
+//  HipHopView.swift
 //  AppleMusicSwiftUI
 //
-//  Created by Ilya Volkov on 12.05.2022.
+//  Created by Ilya Volkov on 14.05.2022.
 //
 
 import SwiftUI
+
+struct HipHopView: View {
     
-struct LightPopView: View {
-    
-    let lightPopModel = LightPopModel.createModel()
+    let hipHopModel = HipHopModel.createModel()
     
     var body: some View {
         ScrollView(.vertical) {
             VStack(alignment: .leading, spacing: 25) {
-                ForEach(lightPopModel) { section in
+                ForEach(hipHopModel) { section in
                     VStack {
-                        LightPopHeader(section: section)
+                        HipHopHeader(section: section)
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: GridType.createDifferentGrids(with: section)) {
                                 ForEach(section.cells) { cell in
-                                    LightPopCellTypes(section: section, cell: cell)
+                                    HipHopCellTypes(section: section, cell: cell)
                                 }
                             }
                         }
@@ -31,15 +31,15 @@ struct LightPopView: View {
             Spacer()
                 .frame(height: UIScreen.main.bounds.width * 0.25)
         }
-        .navigationTitle("Легкий поп")
+        .navigationTitle("Хип-хоп")
         .toolbar {
             ToolBarMenuButton()
         }
     }
 }
 
-struct LightPopView_Previews: PreviewProvider {
+struct HipHopView_Previews: PreviewProvider {
     static var previews: some View {
-        LightPopView()
+        HipHopView()
     }
 }

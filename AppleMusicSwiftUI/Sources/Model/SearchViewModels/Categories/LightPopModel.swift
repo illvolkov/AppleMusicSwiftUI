@@ -38,7 +38,7 @@ struct LightPopModel {
                 CategoryCell(title: "Семейные хиты", producerTitle: "Apple Music для семьи", cover: "family.hits"),
                 CategoryCell(title: "Только хиты", producerTitle: "Apple Music Хиты", cover: "only.hits"),
                 CategoryCell(title: "На гребне", producerTitle: "Apple Music Хиты на русском", cover: "on.the.crest"),
-                CategoryCell(title: "Тин-поп-хиты", producerTitle: nil, cover: "tin.pop.hits"),
+                CategoryCell(title: "Тин-поп-хиты", producerTitle: " ", cover: "tin.pop.hits"),
                 CategoryCell(title: "Поп-музыка вне времени", producerTitle: "Apple Music Поп", cover: "out.of.time"),
                 CategoryCell(title: "Ритмы и рифмы", producerTitle: "Apple Music", cover: "rhythm"),
                 CategoryCell(title: "Восточная волна", producerTitle: "Apple Music", cover: "east.wave"),
@@ -55,7 +55,7 @@ struct LightPopModel {
                 CategoryCell(title: "Планета поп-музыки", producerTitle: "Apple Music Поп", cover: "hits.planet"),
                 CategoryCell(title: "Прощай, любовь", producerTitle: "Apple Music Поп", cover: "goodbye.love"),
                 CategoryCell(title: "Жизнь прекрасна", producerTitle: "Apple Music Поп", cover: "life.is.beautiful"),
-                CategoryCell(title: "Ностальгия по поп-латино 2000-х", producerTitle: nil, cover: "nostalgy"),
+                CategoryCell(title: "Ностальгия по поп-латино 2000-х", producerTitle: " ", cover: "nostalgy"),
                 CategoryCell(title: "Поп-делюкс", producerTitle: "Apple Music Поп", cover: "pop.delux")]),
             
             CategorySection(sectionTitle: "Горячие треки", cells: [

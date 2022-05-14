@@ -26,7 +26,7 @@ struct SearchView: View {
                 TextField("searchable", text: $searchText)
                 viewToggle
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 18)
             .navigationTitle("Поиск")
         }
     }

@@ -23,7 +23,7 @@ struct HitsModel {
                 CategoryCell(title: "Жизнь прекрасна", producerTitle: "Apple Music Поп", cover: "life.is.beautiful"),
                 CategoryCell(title: "Ностальгия по старой эстраде", producerTitle: "Apple Music", cover: "nostalgia.old"),
                 CategoryCell(title: "Легкий хиты", producerTitle: "Apple Music Поп", cover: "light.hits"),
-                CategoryCell(title: "Тин-поп-хиты", producerTitle: nil, cover: "tin.pop.hits"),
+                CategoryCell(title: "Тин-поп-хиты", producerTitle: " ", cover: "tin.pop.hits"),
                 CategoryCell(title: "Будущие хиты", producerTitle: "Apple Music", cover: "future.hits"),
                 CategoryCell(title: "Эффект Дрейка", producerTitle: "Apple Music Хип-хоп", cover: "drake.effect"),
                 CategoryCell(title: "Новинки поп-музыки", producerTitle: "Apple Music Поп", cover: "rectangle.pop.novelties"),

@@ -33,6 +33,9 @@
 		0481D37A282FA3F7009682E9 /* HitsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D379282FA3F7009682E9 /* HitsHeader.swift */; };
 		0481D37C282FA40B009682E9 /* HitsCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D37B282FA40B009682E9 /* HitsCellTypes.swift */; };
 		0481D385282FEEDE009682E9 /* HipHopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D384282FEEDE009682E9 /* HipHopModel.swift */; };
+		0481D388282FFE75009682E9 /* HipHopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D387282FFE75009682E9 /* HipHopView.swift */; };
+		0481D38A282FFE7F009682E9 /* HipHopHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D389282FFE7F009682E9 /* HipHopHeader.swift */; };
+		0481D38C282FFE8D009682E9 /* HipHopCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D38B282FFE8D009682E9 /* HipHopCellTypes.swift */; };
 		04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5AF328297D1700828C43 /* CategoryView.swift */; };
 		04DD5B19282C0C3400828C43 /* LightPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B18282C0C3400828C43 /* LightPopModel.swift */; };
 		04DD5B1B282C63D000828C43 /* LightPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B1A282C63D000828C43 /* LightPopView.swift */; };
@@ -68,6 +71,9 @@
 		0481D379282FA3F7009682E9 /* HitsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsHeader.swift; sourceTree = "<group>"; };
 		0481D37B282FA40B009682E9 /* HitsCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsCellTypes.swift; sourceTree = "<group>"; };
 		0481D384282FEEDE009682E9 /* HipHopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopModel.swift; sourceTree = "<group>"; };
+		0481D387282FFE75009682E9 /* HipHopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopView.swift; sourceTree = "<group>"; };
+		0481D389282FFE7F009682E9 /* HipHopHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopHeader.swift; sourceTree = "<group>"; };
+		0481D38B282FFE8D009682E9 /* HipHopCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopCellTypes.swift; sourceTree = "<group>"; };
 		04DD5AF328297D1700828C43 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		04DD5B18282C0C3400828C43 /* LightPopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopModel.swift; sourceTree = "<group>"; };
 		04DD5B1A282C63D000828C43 /* LightPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopView.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				044077CF282DC1BA00634139 /* ToolBarMenuButton.swift */,
 				04DD5B1C282CA7EE00828C43 /* LightPopView */,
 				0481D376282FA3A7009682E9 /* HitsView */,
+				0481D386282FFE45009682E9 /* HipHopView */,
 			);
 			path = CategoryView;
 			sourceTree = "<group>";
@@ -266,6 +273,16 @@
 			path = HitsView;
 			sourceTree = "<group>";
 		};
+		0481D386282FFE45009682E9 /* HipHopView */ = {
+			isa = PBXGroup;
+			children = (
+				0481D387282FFE75009682E9 /* HipHopView.swift */,
+				0481D389282FFE7F009682E9 /* HipHopHeader.swift */,
+				0481D38B282FFE8D009682E9 /* HipHopCellTypes.swift */,
+			);
+			path = HipHopView;
+			sourceTree = "<group>";
+		};
 		04DD5B17282C0C1500828C43 /* SearchViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +373,7 @@
 			files = (
 				044077D4282DF68E00634139 /* HitsModel.swift in Sources */,
 				04DD5B1E282CA8D900828C43 /* LightPopHeader.swift in Sources */,
+				0481D38A282FFE7F009682E9 /* HipHopHeader.swift in Sources */,
 				0481D378282FA3EA009682E9 /* HitsView.swift in Sources */,
 				0410B5DE281D347400CAB7D6 /* RadioStationModel.swift in Sources */,
 				041C92422823DC98001DE63A /* FavoriteRadioStationView.swift in Sources */,
@@ -366,10 +384,12 @@
 				04DD5B20282CA9E100828C43 /* CategoryCellTypes.swift in Sources */,
 				044077D2282DCB2800634139 /* SongMenuButton.swift in Sources */,
 				047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */,
+				0481D38C282FFE8D009682E9 /* HipHopCellTypes.swift in Sources */,
 				04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */,
 				0481D37A282FA3F7009682E9 /* HitsHeader.swift in Sources */,
 				046D55452817F19400D05C91 /* RadioView.swift in Sources */,
 				047D04AB28103DE900891D4E /* LibraryView.swift in Sources */,
+				0481D388282FFE75009682E9 /* HipHopView.swift in Sources */,
 				0481D37C282FA40B009682E9 /* HitsCellTypes.swift in Sources */,
 				047D049F280F1CDD00891D4E /* PlayerView.swift in Sources */,
 				047D04A1280FFF8F00891D4E /* SongModel.swift in Sources */,

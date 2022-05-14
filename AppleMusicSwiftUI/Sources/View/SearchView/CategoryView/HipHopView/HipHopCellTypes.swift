@@ -1,5 +1,5 @@
 //
-//  HitsCellTypes.swift
+//  HipHopCellTypes.swift
 //  AppleMusicSwiftUI
 //
 //  Created by Ilya Volkov on 14.05.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HitsCellTypes: View {
+struct HipHopCellTypes: View {
     
     let section: CategorySection
     let cell: CategoryCell
@@ -23,19 +23,21 @@ struct HitsCellTypes: View {
         case "Наши любимые артисты":
             CircleItemCellType(cell: cell)
         case "Плейлисты",
-             "Новые релизы",
-             "Плейлисты по артистам",
-             "Главные альбомы":
+             "Пространственное звучание",
+             "Расслабленный рэп",
+             "Verzuz":
             SquareItemCellType(cell: cell)
+        case "Видео":
+            VideoItemCellType(cell: cell)
         default:
             RectangleItemCellType(cell: cell)
         }
     }
 }
 
-struct HitsCellTypes_Previews: PreviewProvider {
+struct HipHopCellTypes_Previews: PreviewProvider {
     static var previews: some View {
-        HitsCellTypes(section: CategorySection(sectionTitle: "Горячие треки", cells: [CategoryCell(title: "", producerTitle: "", cover: "")]),
-                      cell: CategoryCell(title: "Тест", producerTitle: "Тест", cover: "harmony"))
+        HipHopCellTypes(section: CategorySection(sectionTitle: "Verzuz", cells: [CategoryCell(title: "", producerTitle: "", cover: "")]),
+                        cell: CategoryCell(title: "Тест", producerTitle: "Тест", cover: "verzuz.big.daddy.kane"))
     }
 }
