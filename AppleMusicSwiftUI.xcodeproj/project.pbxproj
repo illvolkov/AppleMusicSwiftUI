@@ -21,6 +21,10 @@
 		0471E3BD283065EE00029915 /* PopInRussianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3BC283065EE00029915 /* PopInRussianView.swift */; };
 		0471E3BF283065FB00029915 /* PopInRussianHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3BE283065FB00029915 /* PopInRussianHeader.swift */; };
 		0471E3C12830660600029915 /* PopInRussianCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C02830660600029915 /* PopInRussianCellTypes.swift */; };
+		0471E3C328311F1900029915 /* RockClassicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C228311F1900029915 /* RockClassicModel.swift */; };
+		0471E3C628314B1900029915 /* RockClassicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C528314B1800029915 /* RockClassicView.swift */; };
+		0471E3C828314B2300029915 /* RockClassicHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C728314B2300029915 /* RockClassicHeader.swift */; };
+		0471E3CA28314B2D00029915 /* RockClassicCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C928314B2D00029915 /* RockClassicCellTypes.swift */; };
 		047BF65928122C6800F722A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BF65828122C6800F722A9 /* Constants.swift */; };
 		047D048C280ED2C100891D4E /* AppleMusicSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D048B280ED2C100891D4E /* AppleMusicSwiftUIApp.swift */; };
 		047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D048D280ED2C100891D4E /* TabViewContent.swift */; };
@@ -62,6 +66,10 @@
 		0471E3BC283065EE00029915 /* PopInRussianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianView.swift; sourceTree = "<group>"; };
 		0471E3BE283065FB00029915 /* PopInRussianHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianHeader.swift; sourceTree = "<group>"; };
 		0471E3C02830660600029915 /* PopInRussianCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianCellTypes.swift; sourceTree = "<group>"; };
+		0471E3C228311F1900029915 /* RockClassicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockClassicModel.swift; sourceTree = "<group>"; };
+		0471E3C528314B1800029915 /* RockClassicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockClassicView.swift; sourceTree = "<group>"; };
+		0471E3C728314B2300029915 /* RockClassicHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockClassicHeader.swift; sourceTree = "<group>"; };
+		0471E3C928314B2D00029915 /* RockClassicCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockClassicCellTypes.swift; sourceTree = "<group>"; };
 		047BF65828122C6800F722A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		047D0488280ED2C100891D4E /* AppleMusicSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusicSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047D048B280ED2C100891D4E /* AppleMusicSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -155,14 +163,15 @@
 		044077CD282DB7C700634139 /* CategoryView */ = {
 			isa = PBXGroup;
 			children = (
-				04DD5AF328297D1700828C43 /* CategoryView.swift */,
-				04DD5B1F282CA9E100828C43 /* CategoryCellTypes.swift */,
-				044077D1282DCB2800634139 /* SongMenuButton.swift */,
 				044077CF282DC1BA00634139 /* ToolBarMenuButton.swift */,
+				044077D1282DCB2800634139 /* SongMenuButton.swift */,
+				04DD5B1F282CA9E100828C43 /* CategoryCellTypes.swift */,
+				04DD5AF328297D1700828C43 /* CategoryView.swift */,
 				04DD5B1C282CA7EE00828C43 /* LightPopView */,
 				0481D376282FA3A7009682E9 /* HitsView */,
 				0481D386282FFE45009682E9 /* HipHopView */,
 				0471E3BB283065BE00029915 /* PopInRussianView */,
+				0471E3C428314AFB00029915 /* RockClassicView */,
 			);
 			path = CategoryView;
 			sourceTree = "<group>";
@@ -175,6 +184,7 @@
 				044077D3282DF68E00634139 /* HitsModel.swift */,
 				0481D384282FEEDE009682E9 /* HipHopModel.swift */,
 				0481D38F28305AD7009682E9 /* PopInRussianModel.swift */,
+				0471E3C228311F1900029915 /* RockClassicModel.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -187,6 +197,16 @@
 				0471E3C02830660600029915 /* PopInRussianCellTypes.swift */,
 			);
 			path = PopInRussianView;
+			sourceTree = "<group>";
+		};
+		0471E3C428314AFB00029915 /* RockClassicView */ = {
+			isa = PBXGroup;
+			children = (
+				0471E3C528314B1800029915 /* RockClassicView.swift */,
+				0471E3C728314B2300029915 /* RockClassicHeader.swift */,
+				0471E3C928314B2D00029915 /* RockClassicCellTypes.swift */,
+			);
+			path = RockClassicView;
 			sourceTree = "<group>";
 		};
 		047BF65728122B9F00F722A9 /* LibraryView */ = {
@@ -394,9 +414,11 @@
 				044077D4282DF68E00634139 /* HitsModel.swift in Sources */,
 				04DD5B1E282CA8D900828C43 /* LightPopHeader.swift in Sources */,
 				0471E3BF283065FB00029915 /* PopInRussianHeader.swift in Sources */,
+				0471E3CA28314B2D00029915 /* RockClassicCellTypes.swift in Sources */,
 				0481D38A282FFE7F009682E9 /* HipHopHeader.swift in Sources */,
 				0471E3BD283065EE00029915 /* PopInRussianView.swift in Sources */,
 				0481D378282FA3EA009682E9 /* HitsView.swift in Sources */,
+				0471E3C628314B1900029915 /* RockClassicView.swift in Sources */,
 				0410B5DE281D347400CAB7D6 /* RadioStationModel.swift in Sources */,
 				041C92422823DC98001DE63A /* FavoriteRadioStationView.swift in Sources */,
 				0481D385282FEEDE009682E9 /* HipHopModel.swift in Sources */,
@@ -416,6 +438,7 @@
 				0481D388282FFE75009682E9 /* HipHopView.swift in Sources */,
 				0481D37C282FA40B009682E9 /* HitsCellTypes.swift in Sources */,
 				047D049F280F1CDD00891D4E /* PlayerView.swift in Sources */,
+				0471E3C328311F1900029915 /* RockClassicModel.swift in Sources */,
 				047D04A1280FFF8F00891D4E /* SongModel.swift in Sources */,
 				04DD5B1B282C63D000828C43 /* LightPopView.swift in Sources */,
 				0410B5DC281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift in Sources */,
@@ -423,6 +446,7 @@
 				047D048C280ED2C100891D4E /* AppleMusicSwiftUIApp.swift in Sources */,
 				04DD5B19282C0C3400828C43 /* LightPopModel.swift in Sources */,
 				041C92442823DE95001DE63A /* RadioStationView.swift in Sources */,
+				0471E3C828314B2300029915 /* RockClassicHeader.swift in Sources */,
 				047BF65928122C6800F722A9 /* Constants.swift in Sources */,
 				046D55472817F25000D05C91 /* SearchView.swift in Sources */,
 				044077CC282DB77C00634139 /* LightPopCellTypes.swift in Sources */,

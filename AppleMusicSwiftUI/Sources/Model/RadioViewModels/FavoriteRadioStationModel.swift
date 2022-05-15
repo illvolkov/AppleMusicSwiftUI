@@ -46,7 +46,7 @@ struct FavoriteRadioStationModel {
             
             FavoriteRadioStation(genreTitle: Strings.rockClassicTitle,
                                  stationImage: Icons.rockClassicIcon,
-                                 destionationView: AnyView(Text("RockClassicView"))),
+                                 destionationView: AnyView(RockClassicView())),
             
             FavoriteRadioStation(genreTitle: Strings.smoothJazzTitle,
                                  stationImage: Icons.smoothJazzIcon,

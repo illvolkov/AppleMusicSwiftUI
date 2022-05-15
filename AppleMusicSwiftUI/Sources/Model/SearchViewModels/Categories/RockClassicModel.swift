@@ -31,7 +31,7 @@ struct RockClassicModel {
             
             CategorySection(sectionTitle: "Избранные релизы", cells: [
                 CategoryCell(title: "Jessie's Girl (40th Anniversary Special Edition Live Version) - Single", producerTitle: "Rick Springfield", cover: "jessie.girl"),
-                CategoryCell(title: "Portals - EP", producerTitle: "Kirk Hammett", cover: "portals"),
+                CategoryCell(title: "Portals - EP", producerTitle: "Kirk Hammett", cover: "portals.ep"),
                 CategoryCell(title: "Classic", producerTitle: "Bryan Adams", cover: "classic")]),
             
             CategorySection(sectionTitle: "Главные альбомы", cells: [
