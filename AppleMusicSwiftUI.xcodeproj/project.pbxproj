@@ -25,6 +25,7 @@
 		0471E3C628314B1900029915 /* RockClassicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C528314B1800029915 /* RockClassicView.swift */; };
 		0471E3C828314B2300029915 /* RockClassicHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C728314B2300029915 /* RockClassicHeader.swift */; };
 		0471E3CA28314B2D00029915 /* RockClassicCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C928314B2D00029915 /* RockClassicCellTypes.swift */; };
+		0471E3CC28314FAC00029915 /* SmoothJazzModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3CB28314FAC00029915 /* SmoothJazzModel.swift */; };
 		047BF65928122C6800F722A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BF65828122C6800F722A9 /* Constants.swift */; };
 		047D048C280ED2C100891D4E /* AppleMusicSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D048B280ED2C100891D4E /* AppleMusicSwiftUIApp.swift */; };
 		047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D048D280ED2C100891D4E /* TabViewContent.swift */; };
@@ -70,6 +71,7 @@
 		0471E3C528314B1800029915 /* RockClassicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockClassicView.swift; sourceTree = "<group>"; };
 		0471E3C728314B2300029915 /* RockClassicHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockClassicHeader.swift; sourceTree = "<group>"; };
 		0471E3C928314B2D00029915 /* RockClassicCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockClassicCellTypes.swift; sourceTree = "<group>"; };
+		0471E3CB28314FAC00029915 /* SmoothJazzModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothJazzModel.swift; sourceTree = "<group>"; };
 		047BF65828122C6800F722A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		047D0488280ED2C100891D4E /* AppleMusicSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleMusicSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047D048B280ED2C100891D4E /* AppleMusicSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				0481D384282FEEDE009682E9 /* HipHopModel.swift */,
 				0481D38F28305AD7009682E9 /* PopInRussianModel.swift */,
 				0471E3C228311F1900029915 /* RockClassicModel.swift */,
+				0471E3CB28314FAC00029915 /* SmoothJazzModel.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				0471E3C12830660600029915 /* PopInRussianCellTypes.swift in Sources */,
 				044077D2282DCB2800634139 /* SongMenuButton.swift in Sources */,
 				047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */,
+				0471E3CC28314FAC00029915 /* SmoothJazzModel.swift in Sources */,
 				0481D38C282FFE8D009682E9 /* HipHopCellTypes.swift in Sources */,
 				04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */,
 				0481D37A282FA3F7009682E9 /* HitsHeader.swift in Sources */,
