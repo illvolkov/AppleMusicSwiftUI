@@ -54,7 +54,7 @@ struct FavoriteRadioStationModel {
             
             FavoriteRadioStation(genreTitle: Strings.chillOutTitle,
                                  stationImage: Icons.chillOutIcon,
-                                 destionationView: AnyView(Text("ChillOutView")))
+                                 destionationView: AnyView(ChillOutView()))
         ]
     }
 }
