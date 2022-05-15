@@ -72,7 +72,7 @@ struct CircleItemCellType: View {
                     Spacer()
                 }
             }
-            .font(.system(size: UIScreen.main.bounds.width * 0.0397))
+            .font(.system(size: UIScreen.main.bounds.width * 0.0393))
         }
         .frame(width: UIScreen.main.bounds.width * 0.29,
                height: UIScreen.main.bounds.width * 0.4)

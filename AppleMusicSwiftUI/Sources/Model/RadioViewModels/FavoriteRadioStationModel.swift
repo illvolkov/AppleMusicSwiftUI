@@ -50,7 +50,7 @@ struct FavoriteRadioStationModel {
             
             FavoriteRadioStation(genreTitle: Strings.smoothJazzTitle,
                                  stationImage: Icons.smoothJazzIcon,
-                                 destionationView: AnyView(Text("SmoothJazzView"))),
+                                 destionationView: AnyView(SmoothJazzView())),
             
             FavoriteRadioStation(genreTitle: Strings.chillOutTitle,
                                  stationImage: Icons.chillOutIcon,

@@ -10,12 +10,12 @@ struct SmoothJazzModel {
         return [
             CategorySection(sectionTitle: nil, cells: [
                 CategoryCell(title: "Pure Jazz", producerTitle: "Apple Music Джаз", cover: "pure.jazz.rectangle"),
-                CategoryCell(title: "The Chopin Project", producerTitle: "Kurt Rosenwinkel & Jean-Paul Brodbeck", cover: "the.chopin"),
+                CategoryCell(title: "The Chopin Project", producerTitle: "Kurt Rosenwinkel & Jean-Paul Brodbeck", cover: "the.chopin.rectangle"),
                 CategoryCell(title: "Black Radio III", producerTitle: "Robert Glasper", cover: "black.radio.rectangle")]),
             
             CategorySection(sectionTitle: "Плейлисты", cells: [
                 CategoryCell(title: "Успокаивающий джаз", producerTitle: "Apple Music Джаз", cover: "relax.jazz"),
-                CategoryCell(title: "Многоликий джаз", producerTitle: "Apple Music Джаз", cover: "many.sides.jazz"),
+                CategoryCell(title: "Многоликий джаз", producerTitle: "Apple Music Джаз", cover: "many.sided.jazz"),
                 CategoryCell(title: "Nduduzo Makhathini: Africa Month", producerTitle: "Apple Music Африканская", cover: "nduduzo"),
                 CategoryCell(title: "Бар с пианистом", producerTitle: "Apple Music Джаз", cover: "bar.with.piano"),
                 CategoryCell(title: "Актуальный джаз", producerTitle: "Apple Music Джаз", cover: "actual.jazz"),
@@ -37,7 +37,7 @@ struct SmoothJazzModel {
             CategorySection(sectionTitle: "Живая музыка", cells: [
                 CategoryCell(title: "Dave Brubeck Trio: Live from Vienna 1967", producerTitle: "Dave Brubeck", cover: "dave.brubeck"),
                 CategoryCell(title: "A Love Supreme: Live In Seattle", producerTitle: "Джон Колтрейн", cover: "a.love.supreme"),
-                CategoryCell(title: "Mingus At Antibes (Live)", producerTitle: "Charles Mingus", cover: "mingus"),
+                CategoryCell(title: "Mingus At Antibes (Live)", producerTitle: "Charles Mingus", cover: "mingus.at.antibes"),
                 CategoryCell(title: "The Complete Live At The Lighthouse", producerTitle: "Lee Morgan", cover: "the.complete")]),
             
             CategorySection(sectionTitle: "Легенды джаза", cells: [
@@ -64,7 +64,7 @@ struct SmoothJazzModel {
                 CategoryCell(title: "Jasmine Myra", producerTitle: nil, cover: "jasmine"),
                 CategoryCell(title: "Joel Ross", producerTitle: nil, cover: "joel"),
                 CategoryCell(title: "Cecile McLorin", producerTitle: "Salvant", cover: "cecile"),
-                CategoryCell(title: "Immanuel", producerTitle: "Wilkins", cover: "imanuel")]),
+                CategoryCell(title: "Immanuel", producerTitle: "Wilkins", cover: "immanuel")]),
             
             CategorySection(sectionTitle: "Скоро", cells: [
                 CategoryCell(title: "Forward Thinker", producerTitle: "Nimbus Sextet", cover: "forward"),
