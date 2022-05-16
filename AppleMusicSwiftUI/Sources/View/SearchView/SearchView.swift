@@ -9,12 +9,15 @@ import SwiftUI
 
 struct SearchView: View {
     
+    @State var selectedSearchLocation: SearchLocation = .appleMusic
     @State var isSearching = false
     @State var searchText = ""
     
     @ViewBuilder var viewToggle: some View {
         if isSearching {
-            Text("Поиск треков")
+            SearchableView(selectedSearchLocation: $selectedSearchLocation,
+                           isSearching: $isSearching,
+                           searchText: $searchText)
         } else {
             CategoryView()
         }
@@ -24,10 +27,12 @@ struct SearchView: View {
         NavigationView {
             VStack {
                 TextField("searchable", text: $searchText)
+                    .textInputAutocapitalization(.never)
                 viewToggle
             }
             .padding(.horizontal, 18)
             .navigationTitle("Поиск")
+            .navigationBarHidden(isSearching ? true : false)
         }
     }
 }

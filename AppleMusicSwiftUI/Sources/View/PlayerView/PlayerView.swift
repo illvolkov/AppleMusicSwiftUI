@@ -11,12 +11,12 @@ struct PlayerView: View {
     
     //MARK: - Song model
     
-    private let song = SongModel.createSongModel()
+    @StateObject var song = SongModel()
     
     //MARK: - Functions
         
-    private func createSong() -> Song {
-        let randomSong = song.randomElement()!
+    private func createSong() -> SongAtributes {
+        let randomSong = song.songs.model.randomElement()!
         return randomSong
     }
     
@@ -24,14 +24,14 @@ struct PlayerView: View {
         return isPlayInactive ? Icons.playButtonIcon : Icons.pauseButtonIcon
     }
     
-    private func changeSongState() -> Song {
+    private func changeSongState() -> SongAtributes {
         return isPlayInactive ?
-        Song(icon: Icons.notPerformedSongIcon, name: Strings.notPerformedSongTitle) : createSong()
+        SongAtributes(icon: Icons.notPerformedSongIcon, name: Strings.notPerformedSongTitle, performer: "") : createSong()
     }
     
     //MARK: - Mutational properties
     
-    @State private var randomSong: Song?
+    @State private var randomSong: SongAtributes?
     @State private var isPlayInactive = true
     
     //MARK: - Body
