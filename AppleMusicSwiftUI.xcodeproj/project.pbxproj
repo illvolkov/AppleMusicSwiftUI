@@ -22,6 +22,7 @@
 		0470BAFE283195ED0074643A /* ChillOutHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470BAFD283195ED0074643A /* ChillOutHeader.swift */; };
 		0470BB00283195F50074643A /* ChillOutCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470BAFF283195F50074643A /* ChillOutCellTypes.swift */; };
 		0470BB02283199950074643A /* SearchableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470BB01283199950074643A /* SearchableView.swift */; };
+		0470BB042832F2570074643A /* Searchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470BB032832F2570074643A /* Searchable.swift */; };
 		0471E3BD283065EE00029915 /* PopInRussianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3BC283065EE00029915 /* PopInRussianView.swift */; };
 		0471E3BF283065FB00029915 /* PopInRussianHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3BE283065FB00029915 /* PopInRussianHeader.swift */; };
 		0471E3C12830660600029915 /* PopInRussianCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C02830660600029915 /* PopInRussianCellTypes.swift */; };
@@ -76,6 +77,7 @@
 		0470BAFD283195ED0074643A /* ChillOutHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillOutHeader.swift; sourceTree = "<group>"; };
 		0470BAFF283195F50074643A /* ChillOutCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillOutCellTypes.swift; sourceTree = "<group>"; };
 		0470BB01283199950074643A /* SearchableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableView.swift; sourceTree = "<group>"; };
+		0470BB032832F2570074643A /* Searchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searchable.swift; sourceTree = "<group>"; };
 		0471E3BC283065EE00029915 /* PopInRussianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianView.swift; sourceTree = "<group>"; };
 		0471E3BE283065FB00029915 /* PopInRussianHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianHeader.swift; sourceTree = "<group>"; };
 		0471E3C02830660600029915 /* PopInRussianCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianCellTypes.swift; sourceTree = "<group>"; };
@@ -165,8 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				046D55462817F25000D05C91 /* SearchView.swift */,
+				0470BB052832F2740074643A /* SearchableView */,
 				044077CD282DB7C700634139 /* CategoryView */,
-				0470BB01283199950074643A /* SearchableView.swift */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -220,6 +222,15 @@
 				0470BAFF283195F50074643A /* ChillOutCellTypes.swift */,
 			);
 			path = ChillOutView;
+			sourceTree = "<group>";
+		};
+		0470BB052832F2740074643A /* SearchableView */ = {
+			isa = PBXGroup;
+			children = (
+				0470BB032832F2570074643A /* Searchable.swift */,
+				0470BB01283199950074643A /* SearchableView.swift */,
+			);
+			path = SearchableView;
 			sourceTree = "<group>";
 		};
 		0471E3BB283065BE00029915 /* PopInRussianView */ = {
@@ -463,6 +474,7 @@
 				0471E3BD283065EE00029915 /* PopInRussianView.swift in Sources */,
 				0470BB02283199950074643A /* SearchableView.swift in Sources */,
 				0481D378282FA3EA009682E9 /* HitsView.swift in Sources */,
+				0470BB042832F2570074643A /* Searchable.swift in Sources */,
 				0471E3C628314B1900029915 /* RockClassicView.swift in Sources */,
 				0410B5DE281D347400CAB7D6 /* RadioStationModel.swift in Sources */,
 				041C92422823DC98001DE63A /* FavoriteRadioStationView.swift in Sources */,

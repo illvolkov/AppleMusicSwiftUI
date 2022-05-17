@@ -26,8 +26,8 @@ struct SearchView: View {
     var body: some View {
         NavigationView {
             VStack {
-                TextField("searchable", text: $searchText)
-                    .textInputAutocapitalization(.never)
+                Searchable(selectedSearchLocation: $selectedSearchLocation,
+                           isSearching: $isSearching, searchText: $searchText)
                 viewToggle
             }
             .padding(.horizontal, 18)
