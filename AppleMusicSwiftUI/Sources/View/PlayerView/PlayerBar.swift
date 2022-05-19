@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//При нажатии на кнопку она становится темно-серой
 struct GrayHightlightButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -16,11 +17,9 @@ struct GrayHightlightButtonStyle: ButtonStyle {
 
 struct PlayerBar: View {
     
-    //MARK: - Song model
-    
     @StateObject var song = SongModel()
     @StateObject var playerAttributes = PlayerAttributesModel()
-    
+        
     @State private var isPresented = false
     
     //MARK: - Body
@@ -65,6 +64,7 @@ struct PlayerBar: View {
                 
                 Divider()
             }
+            //При появлении PlayerBar в экземпляр песни грузится первая песня из модели
             .onAppear() {
                 playerAttributes.attributes.song = playerAttributes.attributes.model[playerAttributes.attributes.currentIndex]
             }

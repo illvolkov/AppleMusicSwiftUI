@@ -10,6 +10,7 @@ import SwiftUI
 struct FavoriteRadioStationView: View {
     
     @StateObject var favoriteRadioStation = FavoriteModel()
+    
     private let rowsStation = [GridItem(.fixed(UIScreen.main.bounds.width))]
     
     var body: some View {

@@ -12,6 +12,7 @@ struct NextButton: View {
     @EnvironmentObject var playerAttributes: PlayerAttributesModel
     
     var body: some View {
+        //Переключение песен по порядку вместе с установкой среднего цвета бэкграунда
         Button {
             if playerAttributes.attributes.currentIndex == playerAttributes.attributes.model.count - 1 {
                 playerAttributes.attributes.currentIndex = 0

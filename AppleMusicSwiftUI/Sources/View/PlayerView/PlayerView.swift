@@ -14,6 +14,7 @@ struct PlayerView: View {
     
     @EnvironmentObject var playerAttributes: PlayerAttributesModel
     
+    //Установка background цвета в зависимости от среднего цвета обложки песни
     private func setAverageColor() {
         let uiColor = UIImage(named: playerAttributes.attributes.model[playerAttributes.attributes.currentIndex].cover)?.averageColor ?? .clear
         playerAttributes.attributes.backgroundColor = Color(uiColor)
@@ -75,6 +76,13 @@ struct PlayerView: View {
             }
             .padding(.horizontal, 25)
             .shadow(radius: 40)
+            /*При появлении PlayerView isPlayerBar false чтоб настроить цвета переиспользуемых кнопок:
+             - SongMenuButton
+             - NextButton
+             - PlayButton
+             - NextButtonReverse
+             Когда PlayerView закрывается значение isPlayerBar становится true
+             */
             .onAppear() {
                 setAverageColor()
                 playerAttributes.attributes.isPlayerBar = false
