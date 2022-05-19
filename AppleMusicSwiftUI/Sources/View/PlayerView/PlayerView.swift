@@ -1,89 +1,95 @@
 //
-//  Player.swift
+//  PlayerView.swift
 //  AppleMusicSwiftUI
 //
-//  Created by Ilya Volkov on 19.04.2022.
+//  Created by Ilya Volkov on 17.05.2022.
 //
 
 import SwiftUI
+import MarqueeText
 
 struct PlayerView: View {
     
-    //MARK: - Song model
+    @Environment(\.presentationMode) var presentationMode
     
-    @StateObject var song = SongModel()
+    @EnvironmentObject var playerAttributes: PlayerAttributesModel
     
-    //MARK: - Functions
-        
-    private func createSong() -> SongAtributes {
-        let randomSong = song.songs.model.randomElement()!
-        return randomSong
+    private func setAverageColor() {
+        let uiColor = UIImage(named: playerAttributes.attributes.model[playerAttributes.attributes.currentIndex].cover)?.averageColor ?? .clear
+        playerAttributes.attributes.backgroundColor = Color(uiColor)
     }
     
-    private func changePlayPauseButtonState() -> String {
-        return isPlayInactive ? Icons.playButtonIcon : Icons.pauseButtonIcon
+    private func adaptationForSpecificScreenSize(with specificScreen: CGFloat, and defaultScreen: CGFloat) -> CGFloat {
+        let device = UIDevice()
+        if device.name == Strings.iPodTouchName ||
+            device.name == "iPhone SE (3rd generation)" ||
+            device.name == "iPhone 8" ||
+            device.name == "iPhone 8 Plus" {
+            return specificScreen
+        } else {
+            return defaultScreen
+        }
     }
     
-    private func changeSongState() -> SongAtributes {
-        return isPlayInactive ?
-        SongAtributes(icon: Icons.notPerformedSongIcon, name: Strings.notPerformedSongTitle, performer: "") : createSong()
-    }
-    
-    //MARK: - Mutational properties
-    
-    @State private var randomSong: SongAtributes?
-    @State private var isPlayInactive = true
-    
-    //MARK: - Body
-        
     var body: some View {
-        VStack(spacing: Offsets.playerVStackOffset) {
-            HStack {
-                Image(randomSong?.icon ?? Icons.notPerformedSongIcon)
-                    .resizable()
-                    .clipShape(RoundedRectangle(cornerRadius: Offsets.offset5))
-                    .shadow(color: .gray,
-                            radius: Offsets.offset5,
-                            x: Offsets.songIconShadowXOffset,
-                            y: Offsets.songIconShadowYOffset)
-                    .frame(width: UIScreen.main.bounds.width * Sizes.songIconMultiWidthHeightSize,
-                           height: UIScreen.main.bounds.width * Sizes.songIconMultiWidthHeightSize)
-                    .padding(.trailing, Offsets.offset5)
-                    .padding([.top, .bottom], Offsets.songIconTopBottomOffset)
+        ZStack {
+            playerAttributes.attributes.backgroundColor
+                .ignoresSafeArea()
+            VStack {
+                RoundedRectangle(cornerRadius: 5)
+                    .frame(width: UIScreen.main.bounds.width * 0.1,
+                           height: UIScreen.main.bounds.width * 0.015)
+                    .foregroundColor(.white)
+                    .opacity(0.5)
+                CoverView()
+                    .padding(.vertical, adaptationForSpecificScreenSize(with: 10, and: 25))
                 
-                Text(randomSong?.name ?? Strings.notPerformedSongTitle)
-                    .font(.system(size: UIScreen.main.bounds.width * Sizes.songTextMultiFontSize))
-                    .frame(width: UIScreen.main.bounds.width * Sizes.songTextMultiWidthSize, alignment: .leading)
-                    .lineLimit(1)
-                
-                Button {
-                    isPlayInactive.toggle()
-                    randomSong = changeSongState()
-                } label: {
-                    Image(systemName: changePlayPauseButtonState())
-                        .font(.system(size: UIScreen.main.bounds.width * Sizes.playPauseButtonMultiFontSize0_07))
-                        .foregroundColor(.black)
+                HStack(alignment: .center) {
+                    SongNameView()
+                        .padding(.bottom, adaptationForSpecificScreenSize(with: 10, and: 25))
+
+                    ZStack {
+                        Circle()
+                            .foregroundColor(.white)
+                            .frame(width: UIScreen.main.bounds.width * 0.065,
+                                   height: UIScreen.main.bounds.width * 0.065)
+                            .opacity(0.2)
+                        SongMenuButton()
+                    }
                 }
-                .padding(.trailing, Offsets.playPauseButtonTrailingOffset)
                 
-                Button {
-                    randomSong = createSong()
-                } label: {
-                    Image(systemName: Icons.nextButtonIcon)
-                        .font(.system(size: UIScreen.main.bounds.width * Sizes.playPauseButtonMultiFontSize0_07))
-                        .foregroundColor(.black)
+                ProgressBarView()
+                    .padding(.bottom, adaptationForSpecificScreenSize(with: 20, and: 50))
+                
+                HStack(spacing: 85) {
+                    NextButtonReverse()
+                    PlayButton()
+                    NextButton()
                 }
+                .padding(.bottom, adaptationForSpecificScreenSize(with: 20, and: 50))
+
+                SliderView()
+                    .padding(.bottom, adaptationForSpecificScreenSize(with: 10, and: 25))
+                
+                AdditionalButtons()
             }
-            .frame(width: UIScreen.main.bounds.width)
-            .background(Color(uiColor: UIColor.systemGray6))
-            
-            Divider()
+            .padding(.horizontal, 25)
+            .shadow(radius: 40)
+            .onAppear() {
+                setAverageColor()
+                playerAttributes.attributes.isPlayerBar = false
+            }
+        }
+        .onTapGesture(count: 2) {
+            presentationMode.wrappedValue.dismiss()
+            playerAttributes.attributes.isPlayerBar = true
         }
     }
 }
 
-struct Player_Previews: PreviewProvider {
+struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
         PlayerView()
+            .environmentObject(PlayerAttributesModel())
     }
 }

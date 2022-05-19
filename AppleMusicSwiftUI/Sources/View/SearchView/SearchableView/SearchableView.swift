@@ -15,11 +15,11 @@ enum SearchLocation: String, CaseIterable, Identifiable {
 
 struct SearchableView: View {
     
+    @ObservedObject var song = SongModel()
+    
     @Binding var selectedSearchLocation: SearchLocation
     @Binding var isSearching: Bool
     @Binding var searchText: String
-    
-    @ObservedObject var song = SongModel()
     
     var body: some View {
         VStack {
@@ -34,7 +34,7 @@ struct SearchableView: View {
             ScrollView {
                 ForEach(song.songs.model.filter {$0.name.lowercased().contains(searchText) || $0.performer.lowercased().contains(searchText)}) { item in
                     HStack {
-                        Image(item.icon)
+                        Image(item.cover)
                             .resizable()
                             .frame(width: UIScreen.main.bounds.width * 0.16, height: UIScreen.main.bounds.width * 0.16)
                             .cornerRadius(5)
@@ -44,7 +44,7 @@ struct SearchableView: View {
                                     .font(.system(size: UIScreen.main.bounds.width * 0.04))
                                     .frame(width: UIScreen.main.bounds.width * 0.6, alignment: .leading)
                                     .lineLimit(1)
-                                Text(item.performer)
+                                Text("Песня · \(item.performer)")
                                     .font(.system(size: UIScreen.main.bounds.width * 0.04))
                                     .frame(width: UIScreen.main.bounds.width * 0.64, alignment: .leading)
                                     .opacity(0.5)
@@ -60,6 +60,7 @@ struct SearchableView: View {
                 }
             }
         }
+        .environmentObject(PlayerAttributesModel())
     }
 }
 

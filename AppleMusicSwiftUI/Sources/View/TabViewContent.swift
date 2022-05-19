@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TabViewContent: View {
     
+    @State var isSearching = false
+    
     init() {
         UITabBar.appearance().backgroundColor = UIColor.systemGray6
     }
@@ -26,7 +28,7 @@ struct TabViewContent: View {
                         Image(systemName: Icons.radioViewTabItemIcon)
                         Text(Strings.radioViewTabItemText)
                     }
-                SearchView()
+                SearchView(isSearching: $isSearching)
                     .tabItem {
                         Image(systemName: Icons.searchViewTabItemIcon)
                         Text(Strings.searchViewTabItemText)
@@ -36,8 +38,11 @@ struct TabViewContent: View {
             .accentColor(.red)
             VStack {
                 Spacer()
-                PlayerView()
-                    .padding(.bottom, Offsets.playerBottomOffset)
+                if !isSearching {
+                    PlayerBar()
+                        .padding(.bottom, Offsets.playerBottomOffset)
+                }
+
             }
         }
     }

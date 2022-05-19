@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SongMenuButton: View {
+    
+    @EnvironmentObject var playerAttributes: PlayerAttributesModel
+    
     var body: some View {
         Menu {
             Button {} label: {
@@ -78,7 +81,9 @@ struct SongMenuButton: View {
             }
         } label: {
             Image(systemName: "ellipsis")
-                .foregroundColor(.black)
+                .foregroundColor(playerAttributes.attributes.isPlayerBar ? .black : .white)
+                .frame(width: UIScreen.main.bounds.width * 0.06,
+                       height: UIScreen.main.bounds.width * 0.07)
         }
     }
 }
@@ -86,5 +91,6 @@ struct SongMenuButton: View {
 struct SongMenuButton_Previews: PreviewProvider {
     static var previews: some View {
         SongMenuButton()
+            .environmentObject(PlayerAttributesModel())
     }
 }

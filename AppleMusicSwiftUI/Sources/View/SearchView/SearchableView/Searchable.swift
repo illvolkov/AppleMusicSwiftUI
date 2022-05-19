@@ -43,6 +43,15 @@ struct Searchable: View {
                         .frame(height: UIScreen.main.bounds.width * 0.085)
                         .background(Color(uiColor: .systemGray6))
                         .cornerRadius(9)
+                    if !searchText.isEmpty {
+                        Button {
+                            searchText = ""
+                        } label: {
+                            Image(systemName: "xmark.circle.fill")
+                                .foregroundColor(.gray)
+                                .padding(.trailing, 6)
+                        }
+                    }
                 }
             }
             
@@ -51,6 +60,7 @@ struct Searchable: View {
                     withAnimation {
                         isSearching = false
                         searchText = ""
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     }
                 }
             }

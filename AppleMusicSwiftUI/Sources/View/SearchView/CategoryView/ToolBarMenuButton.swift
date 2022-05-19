@@ -21,7 +21,8 @@ struct ToolBarMenuButton: View {
         } label: {
             Image(systemName: "ellipsis")
                 .font(.system(size: UIScreen.main.bounds.width * 0.039))
-                .frame(width: 27, height: 27)
+                .frame(width: UIScreen.main.bounds.width * 0.07,
+                       height: UIScreen.main.bounds.width * 0.07)
                 .background(Color(uiColor: .systemGray6))
                 .clipShape(Circle())
         }

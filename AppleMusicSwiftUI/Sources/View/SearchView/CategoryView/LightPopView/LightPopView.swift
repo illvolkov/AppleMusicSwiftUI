@@ -32,6 +32,7 @@ struct LightPopView: View {
             Spacer()
                 .frame(height: UIScreen.main.bounds.width * 0.25)
         }
+        .environmentObject(PlayerAttributesModel())
         .navigationTitle("Легкий поп")
         .toolbar {
             ToolBarMenuButton()
