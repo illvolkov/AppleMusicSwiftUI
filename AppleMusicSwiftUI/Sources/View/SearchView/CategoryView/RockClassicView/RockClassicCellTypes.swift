@@ -18,13 +18,13 @@ struct RockClassicCellTypes: View {
     
     @ViewBuilder var types: some View {
         switch section.sectionTitle {
-        case "Избранные треки":
+        case Strings.favoriteTracksSectionTitle:
             ListItemCellType(cell: cell)
-        case "Наши любимые артисты":
+        case Strings.favoriteArtistsSectionTitle:
             CircleItemCellType(cell: cell)
-        case "Плейлисты",
-             "Избранные релизы",
-             "Главные альбомы":
+        case Strings.playlistsSectionTitle,
+            Strings.favoriteReleasesSectionTitle,
+            Strings.mainAlbumsSectionTitle:
             SquareItemCellType(cell: cell)
         default:
             RectangleItemCellType(cell: cell)

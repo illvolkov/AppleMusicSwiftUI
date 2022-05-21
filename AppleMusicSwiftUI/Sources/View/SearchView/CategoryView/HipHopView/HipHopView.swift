@@ -13,27 +13,27 @@ struct HipHopView: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            VStack(alignment: .leading, spacing: 25) {
+            VStack(alignment: .leading, spacing: Offsets.vStackSpacing25) {
                 ForEach(hipHopModel) { section in
                     VStack {
                         HipHopHeader(section: section)
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, Offsets.horizontalOffset18)
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: GridType.createDifferentGrids(with: section)) {
                                 ForEach(section.cells) { cell in
                                     HipHopCellTypes(section: section, cell: cell)
                                 }
                             }
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, Offsets.horizontalOffset18)
                         }
                     }
                 }
             }
             Spacer()
-                .frame(height: UIScreen.main.bounds.width * 0.25)
+                .frame(height: UIScreen.main.bounds.width * Sizes.spacerMultiplierHeightSize0_25)
         }
         .environmentObject(PlayerAttributesModel())
-        .navigationTitle("Хип-хоп")
+        .navigationTitle(Strings.hipHopTitle)
         .toolbar {
             ToolBarMenuButton()
         }

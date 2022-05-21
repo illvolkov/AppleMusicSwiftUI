@@ -30,7 +30,7 @@ struct RadioStationView: View {
                             
                             Text(item.stationSubTitle)
                                 .font(.system(size: UIScreen.main.bounds.width * Sizes.subStationSubTitleMultiplierFontSize))
-                                .opacity(Display.titleOpacity0_6)
+                                .opacity(Display.opacity0_6)
                         }
                     }
                     Divider()

@@ -17,10 +17,10 @@ struct ChillOutCellTypes: View {
     }
     
     @ViewBuilder var types: some View {
-        if section.sectionTitle == "Популярные плейлисты" ||
-            section.sectionTitle == "Время расслабиться" ||
-            section.sectionTitle == "Йога" ||
-            section.sectionTitle == "Перезагрузка" {
+        if section.sectionTitle == Strings.popularPlaylistsSectionTitle ||
+            section.sectionTitle == Strings.timeToRelaxSectionTitle ||
+            section.sectionTitle == Strings.yogaSectionTitle ||
+            section.sectionTitle == Strings.resetSectionTitle {
             SquareItemCellType(cell: cell)
         } else {
             RectangleItemCellType(cell: cell)

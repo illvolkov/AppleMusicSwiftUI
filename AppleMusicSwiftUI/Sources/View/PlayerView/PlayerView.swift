@@ -23,9 +23,9 @@ struct PlayerView: View {
     private func adaptationForSpecificScreenSize(with specificScreen: CGFloat, and defaultScreen: CGFloat) -> CGFloat {
         let device = UIDevice()
         if device.name == Strings.iPodTouchName ||
-            device.name == "iPhone SE (3rd generation)" ||
-            device.name == "iPhone 8" ||
-            device.name == "iPhone 8 Plus" {
+            device.name == Strings.iPhoneSEDeviceName ||
+            device.name == Strings.iPhone8DevaceName ||
+            device.name == Strings.iPhone8PlusDeviseName {
             return specificScreen
         } else {
             return defaultScreen
@@ -37,45 +37,45 @@ struct PlayerView: View {
             playerAttributes.attributes.backgroundColor
                 .ignoresSafeArea()
             VStack {
-                RoundedRectangle(cornerRadius: 5)
-                    .frame(width: UIScreen.main.bounds.width * 0.1,
-                           height: UIScreen.main.bounds.width * 0.015)
+                RoundedRectangle(cornerRadius: Sizes.cornerRadius5)
+                    .frame(width: UIScreen.main.bounds.width * Sizes.roundedRectangleMultiplierWidthHeightSize0_01,
+                           height: UIScreen.main.bounds.width * Sizes.roundedRectangleMultiplierHeightSize)
                     .foregroundColor(.white)
-                    .opacity(0.5)
+                    .opacity(Display.opacity0_5)
                 CoverView()
-                    .padding(.vertical, adaptationForSpecificScreenSize(with: 10, and: 25))
+                    .padding(.vertical, adaptationForSpecificScreenSize(with: Offsets.specificScreenSizeOffset, and: Offsets.defaultScreenSizeOffset))
                 
                 HStack(alignment: .center) {
                     SongNameView()
-                        .padding(.bottom, adaptationForSpecificScreenSize(with: 10, and: 25))
+                        .padding(.bottom, adaptationForSpecificScreenSize(with: Offsets.specificScreenSizeOffset, and: Offsets.defaultScreenSizeOffset))
 
                     ZStack {
                         Circle()
                             .foregroundColor(.white)
-                            .frame(width: UIScreen.main.bounds.width * 0.065,
-                                   height: UIScreen.main.bounds.width * 0.065)
-                            .opacity(0.2)
+                            .frame(width: UIScreen.main.bounds.width * Sizes.circleMultiplierWidthHeightSize0_065,
+                                   height: UIScreen.main.bounds.width * Sizes.circleMultiplierWidthHeightSize0_065)
+                            .opacity(Display.opacity0_2)
                         SongMenuButton()
                     }
                 }
                 
                 ProgressBarView()
-                    .padding(.bottom, adaptationForSpecificScreenSize(with: 20, and: 50))
+                    .padding(.bottom, adaptationForSpecificScreenSize(with: Offsets.specificScreenSizeOffsetX2, and: Offsets.defaultScreenSizeOffsetX2))
                 
-                HStack(spacing: 85) {
+                HStack(spacing: Offsets.hStackSpacing85) {
                     NextButtonReverse()
                     PlayButton()
                     NextButton()
                 }
-                .padding(.bottom, adaptationForSpecificScreenSize(with: 20, and: 50))
+                .padding(.bottom, adaptationForSpecificScreenSize(with: Offsets.specificScreenSizeOffsetX2, and: Offsets.defaultScreenSizeOffsetX2))
 
                 SliderView()
-                    .padding(.bottom, adaptationForSpecificScreenSize(with: 10, and: 25))
+                    .padding(.bottom, adaptationForSpecificScreenSize(with: Offsets.specificScreenSizeOffset, and: Offsets.defaultScreenSizeOffset))
                 
                 AdditionalButtons()
             }
-            .padding(.horizontal, 25)
-            .shadow(radius: 40)
+            .padding(.horizontal, Offsets.generalVStackHorizontalOffset)
+            .shadow(radius: Sizes.shadowRadiusSize)
             /*При появлении PlayerView isPlayerBar false чтоб настроить цвета переиспользуемых кнопок:
              - SongMenuButton
              - NextButton
@@ -88,7 +88,7 @@ struct PlayerView: View {
                 playerAttributes.attributes.isPlayerBar = false
             }
         }
-        .onTapGesture(count: 2) {
+        .onTapGesture(count: Interaction.onTapGestureCount) {
             presentationMode.wrappedValue.dismiss()
             playerAttributes.attributes.isPlayerBar = true
         }

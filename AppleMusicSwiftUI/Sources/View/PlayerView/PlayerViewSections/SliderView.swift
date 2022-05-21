@@ -12,16 +12,16 @@ struct SliderView: View {
     @EnvironmentObject var playerAttributes: PlayerAttributesModel
     
     var body: some View {
-        HStack(spacing: 10) {
-            Image(systemName: "speaker.fill")
-                .opacity(0.7)
+        HStack(spacing: Offsets.sliderHStackSpacing) {
+            Image(systemName: Icons.speakerIcon)
+                .opacity(Display.opacity0_6)
             Slider(value: $playerAttributes.attributes.volume)
-            Image(systemName: "speaker.wave.3.fill")
-                .opacity(0.7)
+            Image(systemName: Icons.speakerWithWaveIcon)
+                .opacity(Display.opacity0_6)
         }
         .foregroundColor(.white)
         .tint(.white)
-        .font(.system(size: UIScreen.main.bounds.width * 0.03))
+        .font(.system(size: UIScreen.main.bounds.width * Sizes.sliderIconsMultiplerFontFize))
     }
 }
 

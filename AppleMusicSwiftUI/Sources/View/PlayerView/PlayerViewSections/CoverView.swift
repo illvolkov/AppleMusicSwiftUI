@@ -15,12 +15,12 @@ struct CoverView: View {
         VStack {
             Image(playerAttributes.attributes.song.cover)
                 .resizable()
-                .frame(width: playerAttributes.attributes.isPlayInactive ? UIScreen.main.bounds.width * 0.6 : UIScreen.main.bounds.width * 0.87,
-                       height: playerAttributes.attributes.isPlayInactive ? UIScreen.main.bounds.width * 0.6 : UIScreen.main.bounds.width * 0.87)
-                .cornerRadius(10)
+                .frame(width: playerAttributes.attributes.isPlayInactive ? UIScreen.main.bounds.width * Sizes.coverMultiplierSize0_6 : UIScreen.main.bounds.width * Sizes.coverMultiplierSize0_87,
+                       height: playerAttributes.attributes.isPlayInactive ? UIScreen.main.bounds.width * Sizes.coverMultiplierSize0_6 : UIScreen.main.bounds.width * Sizes.coverMultiplierSize0_87)
+                .cornerRadius(Sizes.bigCoverCornerRadius)
         }
-        .frame(width: UIScreen.main.bounds.width * 0.87,
-               height: UIScreen.main.bounds.width * 0.87)
+        .frame(width: UIScreen.main.bounds.width * Sizes.coverMultiplierSize0_87,
+               height: UIScreen.main.bounds.width * Sizes.coverMultiplierSize0_87)
     }
 }
 

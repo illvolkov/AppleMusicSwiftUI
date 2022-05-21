@@ -24,7 +24,7 @@ struct FavoriteRadioStationView: View {
                         .font(.system(size: UIScreen.main.bounds.width * Sizes.favoriteTitleMultiplierFontSize,
                                       weight: .semibold))
                         .textCase(.uppercase)
-                        .opacity(Display.titleOpacity0_6)
+                        .opacity(Display.opacity0_6)
                         .padding(.bottom, Offsets.favoriteTitleBottomOffset)
                     
                     Text(item.genreTitle)
@@ -32,7 +32,7 @@ struct FavoriteRadioStationView: View {
                     
                     Text(item.stationTitle)
                         .font(.system(size: UIScreen.main.bounds.width * Sizes.titleMultiplierFontSize0_059))
-                        .opacity(Display.titleOpacity0_6)
+                        .opacity(Display.opacity0_6)
                         .padding(.bottom, Offsets.stationTitleBottomOffset)
                     
                     Image(item.stationImage)

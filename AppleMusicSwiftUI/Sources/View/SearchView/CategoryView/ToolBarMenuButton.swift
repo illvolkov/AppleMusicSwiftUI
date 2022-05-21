@@ -12,17 +12,17 @@ struct ToolBarMenuButton: View {
         Menu {
             Button {} label: {
                 HStack {
-                    Text("Поделиться редактором...")
+                    Text(Strings.shareTheEditorButtonTitle)
                     Spacer()
-                    Image(systemName: "square.and.arrow.up")
+                    Image(systemName: Icons.shareTheEditorButtonIcon)
                 }
                 .padding(.horizontal)
             }
         } label: {
-            Image(systemName: "ellipsis")
-                .font(.system(size: UIScreen.main.bounds.width * 0.039))
-                .frame(width: UIScreen.main.bounds.width * 0.07,
-                       height: UIScreen.main.bounds.width * 0.07)
+            Image(systemName: Icons.menuButtonIcon)
+                .font(.system(size: UIScreen.main.bounds.width * Sizes.menuButtonIconMultiplierFontSize))
+                .frame(width: UIScreen.main.bounds.width * Sizes.menuButtonIconMultiplierWidthHeightSize,
+                       height: UIScreen.main.bounds.width * Sizes.menuButtonIconMultiplierWidthHeightSize)
                 .background(Color(uiColor: .systemGray6))
                 .clipShape(Circle())
         }

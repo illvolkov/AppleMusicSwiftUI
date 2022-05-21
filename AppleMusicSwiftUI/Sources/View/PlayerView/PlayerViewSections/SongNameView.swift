@@ -15,21 +15,21 @@ struct SongNameView: View {
     var body: some View {
         VStack(spacing: 0) {
             MarqueeText(text: playerAttributes.attributes.song.name,
-                        font: UIFont.systemFont(ofSize: UIScreen.main.bounds.width * 0.058, weight: .semibold),
-                        leftFade: 16,
-                        rightFade: 16,
-                        startDelay: 3,
+                        font: UIFont.systemFont(ofSize: UIScreen.main.bounds.width * Sizes.marqueeTitleFontFize0_058, weight: .semibold),
+                        leftFade: Display.marqueeTitleLeftRightFade,
+                        rightFade: Display.marqueeTitleLeftRightFade,
+                        startDelay: Display.marqueeTitleStartDelay,
                         alignment: .leading)
             MarqueeText(text: playerAttributes.attributes.song.performer,
-                        font: UIFont.systemFont(ofSize: UIScreen.main.bounds.width * 0.058),
-                        leftFade: 16,
-                        rightFade: 16,
-                        startDelay: 3,
+                        font: UIFont.systemFont(ofSize: UIScreen.main.bounds.width * Sizes.marqueeTitleFontFize0_058),
+                        leftFade: Display.marqueeTitleLeftRightFade,
+                        rightFade: Display.marqueeTitleLeftRightFade,
+                        startDelay: Display.marqueeTitleStartDelay,
                         alignment: .leading)
-            .opacity(0.6)
+            .opacity(Display.opacity0_6)
         }
         .foregroundColor(.white)
-        .frame(width: UIScreen.main.bounds.width * 0.8, alignment: .leading)
+        .frame(width: UIScreen.main.bounds.width * Sizes.marqueeTitlesVStackMultiplierWidthSize, alignment: .leading)
     }
 }
 

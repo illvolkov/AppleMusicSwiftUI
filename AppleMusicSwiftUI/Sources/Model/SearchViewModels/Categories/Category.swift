@@ -26,38 +26,38 @@ struct CategoryCell: Identifiable {
         self.cover = cover
         
         switch title {
-        case "Библиотека семплов":
-            additionalTitle = "Новый плейлист".uppercased()
+        case Strings.libraryOfSamplesCellTitle:
+            additionalTitle = Strings.newPlaylistCellAdditionalTitle.uppercased()
             
-        case "Чилаут":
-            additionalTitle = "Время расслабиться".uppercased()
+        case Strings.chillOutCellTitle:
+            additionalTitle = Strings.timeToRelaxCellAdditionalTitle.uppercased()
             
-        case "Pure Jazz":
-            additionalTitle = "Международный день джаза".uppercased()
+        case Strings.pureJazzCellTitle:
+            additionalTitle = Strings.dayOfJazzCellAdditionalTitle.uppercased()
             
-        case "Journey: главное":
-            additionalTitle = "Новый сингл".uppercased()
+        case Strings.journeyMainCellTitle:
+            additionalTitle = Strings.newSingleCellAdditionalTitle.uppercased()
             
-        case "Бонни Рэйтт: интервью Зейну Лоу":
-            additionalTitle = "Избранное интервью".uppercased()
+        case Strings.bonnyRaytCellTitle:
+            additionalTitle = Strings.favoriteInterviewCellAdditionalTitle.uppercased()
             
-        case "Katana", "Vinyl #2":
-            additionalTitle = "Избранный альбом".uppercased()
+        case Strings.katanaCellTitle, Strings.vinyl2CellTitle:
+            additionalTitle = Strings.favoriteAlbumCellAdditionalTitle.uppercased()
             
-        case "Миллениум X":
-            additionalTitle = "Избранный релиз".uppercased()
+        case Strings.milleniumXCellTitle:
+            additionalTitle = Strings.favoriteReleaseCellAdditionalTitle.uppercased()
             
-        case "More About Nothing":
-            additionalTitle = "Избранный микстейп".uppercased()
+        case Strings.moreAboutNothingCellTitle:
+            additionalTitle = Strings.favoriteMixtapeCellAdditionalTitle.uppercased()
             
-        case "Золотой запас", "Акустические хиты", "Красная дорожка", "Поп на русском: главное", "Ann Wilson Essentials", "Успокаивающий джаз":
-            additionalTitle = "Избранный плейлист".uppercased()
+        case Strings.goldenSupplyCellTitle, Strings.acousticHitsCellTitle, Strings.redRoadCellTitle, Strings.mainPopInRussianCellTitel, Strings.annWilsonCellTitle, Strings.relaxJazzCellTitle:
+            additionalTitle = Strings.favoritePlaylistCellAdditionalTitle.uppercased()
             
-        case "Новинки поп-музыки", "Поп-волна", "Только хиты", "Будущие хиты", "Актуальный джаз", "Акустический чилаут":
-            additionalTitle = "Обновленный плейлист".uppercased()
+        case Strings.popMusicNoveltiesCellTitle, Strings.popWaveCellTitle, Strings.onlyHitsCellTitel, Strings.futureHitsCellTitle, Strings.actualJazzCellTitle, Strings.acousticChillCellTitle:
+            additionalTitle = Strings.updatedPlaylistCellAdditionalTitle.uppercased()
             
         default:
-            additionalTitle = "Новый альбом".uppercased()
+            additionalTitle = Strings.newAlbumCellAdditionalTitle.uppercased()
         }
     }
 }

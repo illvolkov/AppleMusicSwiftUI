@@ -23,39 +23,41 @@ struct SearchableView: View {
     
     var body: some View {
         VStack {
-            Picker("Mediafiles", selection: $selectedSearchLocation) {
+            Picker("", selection: $selectedSearchLocation) {
                 ForEach(SearchLocation.allCases) { media in
                     Text(media.rawValue)
                 }
             }
             .pickerStyle(.segmented)
-            .padding(.bottom, 5)
+            .padding(.bottom, Offsets.pickerBottomOffset)
             Divider()
             ScrollView {
+                //Поиск по названию песни или по исполнителю
                 ForEach(song.songs.model.filter {$0.name.lowercased().contains(searchText) || $0.performer.lowercased().contains(searchText)}) { item in
                     HStack {
                         Image(item.cover)
                             .resizable()
-                            .frame(width: UIScreen.main.bounds.width * 0.16, height: UIScreen.main.bounds.width * 0.16)
-                            .cornerRadius(5)
+                            .frame(width: UIScreen.main.bounds.width * Sizes.coverMultiplierWidthHeightSize,
+                                   height: UIScreen.main.bounds.width * Sizes.coverMultiplierWidthHeightSize)
+                            .cornerRadius(Sizes.smallCoverCornerRadius)
                         HStack {
-                            VStack(alignment: .leading, spacing: 3) {
+                            VStack(alignment: .leading, spacing: Offsets.songNamePerformerVStackOffset) {
                                 Text(item.name)
-                                    .font(.system(size: UIScreen.main.bounds.width * 0.04))
-                                    .frame(width: UIScreen.main.bounds.width * 0.6, alignment: .leading)
+                                    .font(.system(size: UIScreen.main.bounds.width * Sizes.songNamePerformerMultiplierFontSize0_04))
+                                    .frame(width: UIScreen.main.bounds.width * Sizes.songNameMultiplierWidthSize, alignment: .leading)
                                     .lineLimit(1)
                                 Text("Песня · \(item.performer)")
-                                    .font(.system(size: UIScreen.main.bounds.width * 0.04))
-                                    .frame(width: UIScreen.main.bounds.width * 0.64, alignment: .leading)
-                                    .opacity(0.5)
+                                    .font(.system(size: UIScreen.main.bounds.width * Sizes.songNamePerformerMultiplierFontSize0_04))
+                                    .frame(width: UIScreen.main.bounds.width * Sizes.songPerformerMultiplierWidthSize, alignment: .leading)
+                                    .opacity(Display.opacity0_5)
                                     .lineLimit(1)
                             }
                             SongMenuButton()
                         }
-                        .padding(.bottom, 6)
-                        .frame(width: UIScreen.main.bounds.width * 0.755)
+                        .padding(.bottom, Offsets.hStackBottomOffset)
+                        .frame(width: UIScreen.main.bounds.width * Sizes.hStackMultiplierWidthSize)
                     }
-                    .frame(height: UIScreen.main.bounds.width * 0.17)
+                    .frame(height: UIScreen.main.bounds.width * Sizes.generalHStackMultiplierHeightSize)
                     Divider()
                 }
             }

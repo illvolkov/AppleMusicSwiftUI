@@ -30,7 +30,7 @@ struct PlayerBar: View {
                 isPresented.toggle()
             } label: {
                 Rectangle()
-                    .frame(height: UIScreen.main.bounds.width * 0.181)
+                    .frame(height: UIScreen.main.bounds.width * Sizes.playerBarRectangleButtonMultiplierHeightSize)
             }
             .buttonStyle(GrayHightlightButtonStyle())
             .fullScreenCover(isPresented: $isPresented) {

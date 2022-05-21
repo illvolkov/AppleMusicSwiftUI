@@ -11,12 +11,12 @@ struct PopInRussianView: View {
     
     private func createDifferentGrids(with model: CategorySection) -> [GridItem] {
         switch model.sectionTitle {
-        case "Наши любимые артисты":
-            return [GridItem(.fixed(UIScreen.main.bounds.width * 0.3))]
-        case "Стоит послушать: альбомы", "Главные альбомы":
-            return Array(repeating: GridItem(.fixed(UIScreen.main.bounds.width * 0.55)), count: 2)
+        case Strings.favoriteArtistsSectionTitle:
+            return [GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_3))]
+        case Strings.worthListeningToSectionTitle, Strings.mainAlbumsSectionTitle:
+            return Array(repeating: GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_55)), count: 2)
         default:
-            return [GridItem(.fixed(UIScreen.main.bounds.width * 0.5))]
+            return [GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_5))]
         }
     }
     
@@ -24,26 +24,26 @@ struct PopInRussianView: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            VStack(alignment: .leading, spacing: 25) {
+            VStack(alignment: .leading, spacing: Offsets.vStackSpacing25) {
                 ForEach(popInRussianModel) { section in
                     VStack {
                         PopInRussianHeader(section: section)
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, Offsets.horizontalOffset18)
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: createDifferentGrids(with: section)) {
                                 ForEach(section.cells) { cell in
                                     PopInRussianCellTypes(section: section, cell: cell)
                                 }
                             }
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, Offsets.horizontalOffset18)
                         }
                     }
                 }
             }
             Spacer()
-                .frame(height: UIScreen.main.bounds.width * 0.25)
+                .frame(height: UIScreen.main.bounds.width * Sizes.spacerMultiplierHeightSize0_25)
         }
-        .navigationTitle("Поп на русском")
+        .navigationTitle(Strings.popInRussianNavigationTitle)
         .toolbar {
             ToolBarMenuButton()
         }

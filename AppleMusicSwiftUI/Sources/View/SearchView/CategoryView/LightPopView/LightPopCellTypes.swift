@@ -18,18 +18,18 @@ struct LightPopCellTypes: View {
     
     @ViewBuilder var types: some View {
         switch section.sectionTitle {
-        case "Горячие треки":
+        case Strings.hotTracksSectionTitle:
             ListItemCellType(cell: cell)
-        case "Наши любимые артисты":
+        case Strings.favoriteArtistsSectionTitle:
             CircleItemCellType(cell: cell)
-        case "Пространственное звучание",
-             "Новые релизы",
-             "Избранные альбомы и интервью",
-             "Плейлист по артистам",
-             "Видеоплейлисты",
-             "Плейлисты":
+        case Strings.spatialSoundSectionTitle,
+            Strings.newReleasesSectionTitle,
+            Strings.favoriteAlbumsAndInterviewsSectionTitle,
+            Strings.playlistByArtistSectionTitle,
+            Strings.videoPlaylistsSectionTitle,
+            Strings.playlistsSectionTitle:
             SquareItemCellType(cell: cell)
-        case "Видео":
+        case Strings.videoSectionTitle:
             VideoItemCellType(cell: cell)
         default:
             RectangleItemCellType(cell: cell)

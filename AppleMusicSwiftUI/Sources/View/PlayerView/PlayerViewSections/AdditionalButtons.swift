@@ -12,20 +12,21 @@ struct AdditionalButtons: View {
     @EnvironmentObject var playerAttributes: PlayerAttributesModel
     
     var body: some View {
-        HStack(spacing: 85) {
+        HStack(spacing: Offsets.hStackSpacing85) {
             Button {} label: {
-                Image(systemName: "quote.bubble")
+                Image(systemName: Icons.songTextButtonIcon)
             }
             Button {} label: {
-                Image(systemName: "airplayaudio")
+                Image(systemName: Icons.airplayButtonIcon)
             }
             Button {} label: {
-                Image(systemName: "list.bullet")
+                Image(systemName: Icons.playlistButtonIcon)
             }
         }
         .foregroundColor(.white)
-        .font(.system(size: UIScreen.main.bounds.width * 0.055, weight: .bold))
-        .opacity(0.6)
+        .font(.system(size: UIScreen.main.bounds.width * Sizes.additionalButtonIconsMultiplierFontSize,
+                      weight: .bold))
+        .opacity(Display.opacity0_6)
     }
 }
 

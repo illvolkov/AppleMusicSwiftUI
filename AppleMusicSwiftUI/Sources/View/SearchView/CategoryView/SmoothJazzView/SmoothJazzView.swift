@@ -11,14 +11,14 @@ struct SmoothJazzView: View {
     
     private func createDifferentGrids(with model: CategorySection) -> [GridItem] {
         switch model.sectionTitle {
-        case "Наши любимые артисты", "Легенды джаза":
-            return [GridItem(.fixed(UIScreen.main.bounds.width * 0.3))]
-        case "Горячие треки":
-            return [GridItem(.adaptive(minimum: UIScreen.main.bounds.width * 0.11))]
-        case "Плейлисты", "Главные альбомы":
-            return Array(repeating: GridItem(.fixed(UIScreen.main.bounds.width * 0.55)), count: 2)
+        case Strings.favoriteArtistsSectionTitle, Strings.legendsOfJazzSectionTitle:
+            return [GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_3))]
+        case Strings.hotTracksSectionTitle:
+            return [GridItem(.adaptive(minimum: UIScreen.main.bounds.width * Sizes.adaptiveMultiplierSize0_11))]
+        case Strings.playlistsSectionTitle, Strings.mainAlbumsSectionTitle:
+            return Array(repeating: GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_55)), count: 2)
         default:
-            return [GridItem(.fixed(UIScreen.main.bounds.width * 0.5))]
+            return [GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_5))]
         }
     }
     
@@ -26,27 +26,27 @@ struct SmoothJazzView: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            VStack(alignment: .leading, spacing: 25) {
+            VStack(alignment: .leading, spacing: Offsets.vStackSpacing25) {
                 ForEach(smoothJazzModel) { section in
                     VStack {
                         SmoothJazzHeader(section: section)
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, Offsets.horizontalOffset18)
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: createDifferentGrids(with: section)) {
                                 ForEach(section.cells) { cell in
                                     SmoothJazzCellTypes(section: section, cell: cell)
                                 }
                             }
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, Offsets.horizontalOffset18)
                         }
                     }
                 }
             }
             Spacer()
-                .frame(height: UIScreen.main.bounds.width * 0.25)
+                .frame(height: UIScreen.main.bounds.width * Sizes.spacerMultiplierHeightSize0_25)
         }
         .environmentObject(PlayerAttributesModel())
-        .navigationTitle("Смус-джаз")
+        .navigationTitle(Strings.smoothJazzTitle)
         .toolbar {
             ToolBarMenuButton()
         }

@@ -10,14 +10,14 @@ import SwiftUI
 struct GridType {
     static func createDifferentGrids(with model: CategorySection) -> [GridItem] {
         switch model.sectionTitle {
-        case "Плейлисты":
-            return Array(repeating: GridItem(.fixed(UIScreen.main.bounds.width * 0.55)), count: 2)
-        case "Горячие треки":
-            return [GridItem(.adaptive(minimum: UIScreen.main.bounds.width * 0.11))]
-        case "Наши любимые артисты", "Видео":
-            return [GridItem(.fixed(UIScreen.main.bounds.width * 0.3))]
+        case Strings.playlistsSectionTitle:
+            return Array(repeating: GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_55)), count: 2)
+        case Strings.hotTracksSectionTitle:
+            return [GridItem(.adaptive(minimum: UIScreen.main.bounds.width * Sizes.adaptiveMultiplierSize0_11))]
+        case Strings.favoriteArtistsSectionTitle, Strings.videoSectionTitle:
+            return [GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_3))]
         default:
-            return [GridItem(.fixed(UIScreen.main.bounds.width * 0.5))]
+            return [GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_5))]
         }
     }
 }
@@ -27,28 +27,28 @@ struct RectangleItemCellType: View {
     let cell: CategoryCell
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 1) {
+        VStack(alignment: .leading, spacing: Offsets.generalvStackSpacing) {
             VStack(alignment: .leading) {
                 Text(cell.additionalTitle)
-                    .font(.system(size: UIScreen.main.bounds.width * 0.0298))
+                    .font(.system(size: UIScreen.main.bounds.width * Sizes.additionalTitleMultiplierFontSize))
                     .fontWeight(.semibold)
-                    .opacity(0.7)
+                    .opacity(Display.opacity0_7)
                 Text(cell.title)
-                    .font(.system(size: UIScreen.main.bounds.width * 0.055))
+                    .font(.system(size: UIScreen.main.bounds.width * Sizes.multiplierFontSize0_055))
                 if cell.producerTitle != nil {
                     Text(cell.producerTitle ?? "")
-                        .font(.system(size: UIScreen.main.bounds.width * 0.055))
-                        .opacity(0.7)
+                        .font(.system(size: UIScreen.main.bounds.width * Sizes.multiplierFontSize0_055))
+                        .opacity(Display.opacity0_7)
                 } else {
                     Spacer()
                 }
             }
-            .padding(.vertical, 7)
+            .padding(.vertical, Offsets.vStackVerticalOffset)
             Image(cell.cover)
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width * 0.908,
-                       height: UIScreen.main.bounds.width * 0.6)
-                .cornerRadius(5)
+                .frame(width: UIScreen.main.bounds.width * Sizes.coverRectangleItemMultiplierWidthSize,
+                       height: UIScreen.main.bounds.width * Sizes.coverRectangleItemMultiplierHeightSize)
+                .cornerRadius(Sizes.cornerRadius5)
         }
     }
 }
@@ -61,9 +61,9 @@ struct CircleItemCellType: View {
         VStack {
             Image(cell.cover)
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width * 0.28,
-                       height: UIScreen.main.bounds.width * 0.28)
-                .cornerRadius(70)
+                .frame(width: UIScreen.main.bounds.width * Sizes.coverCircleItemMultiplierWidthHeightSize,
+                       height: UIScreen.main.bounds.width * Sizes.coverCircleItemMultiplierWidthHeightSize)
+                .cornerRadius(Sizes.coverCircleItemCornerRadius)
             VStack {
                 Text(cell.title)
                 if cell.producerTitle != nil {
@@ -72,10 +72,10 @@ struct CircleItemCellType: View {
                     Spacer()
                 }
             }
-            .font(.system(size: UIScreen.main.bounds.width * 0.0393))
+            .font(.system(size: UIScreen.main.bounds.width * Sizes.coverAndTitleMultiplierFontSize))
         }
-        .frame(width: UIScreen.main.bounds.width * 0.29,
-               height: UIScreen.main.bounds.width * 0.4)
+        .frame(width: UIScreen.main.bounds.width * Sizes.vStackCircleItemMultiplierWidth,
+               height: UIScreen.main.bounds.width * Sizes.vStackCircleItemMultuplierHeight)
     }
 }
 
@@ -87,24 +87,24 @@ struct SquareItemCellType: View {
         VStack(alignment: .leading) {
             Image(cell.cover)
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width * 0.445,
-                       height: UIScreen.main.bounds.width * 0.445)
-                .cornerRadius(5)
-                .padding(.bottom, -3)
+                .frame(width: UIScreen.main.bounds.width * Sizes.multiplierWidthHeightSize0_445,
+                       height: UIScreen.main.bounds.width * Sizes.multiplierWidthHeightSize0_445)
+                .cornerRadius(Sizes.cornerRadius5)
+                .padding(.bottom, Offsets.coverBottomOffset)
             VStack(alignment: .leading) {
                 Text(cell.title)
                     .lineLimit(1)
                 if cell.producerTitle != nil {
                     Text(cell.producerTitle ?? "")
-                        .opacity(0.7)
+                        .opacity(Display.opacity0_7)
                 } else {
                     Spacer()
                 }
             }
-            .font(.system(size: UIScreen.main.bounds.width * 0.038))
+            .font(.system(size: UIScreen.main.bounds.width * Sizes.vStackTitlesMultiplierFontSize))
         }
-        .frame(width: UIScreen.main.bounds.width * 0.445,
-               height: UIScreen.main.bounds.width * 0.55)
+        .frame(width: UIScreen.main.bounds.width * Sizes.multiplierWidthHeightSize0_445,
+               height: UIScreen.main.bounds.width * Sizes.generalvStackSquareItemMultiplierHeightSize)
     }
 }
 
@@ -116,32 +116,32 @@ struct ListItemCellType: View {
         HStack {
             Image(cell.cover)
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width * 0.135, height: UIScreen.main.bounds.width * 0.135)
-                .cornerRadius(5)
-            VStack(alignment: .leading, spacing: 2) {
+                .frame(width: UIScreen.main.bounds.width * Sizes.coverListItemMultiplierWidthHeightSize, height: UIScreen.main.bounds.width * Sizes.coverListItemMultiplierWidthHeightSize)
+                .cornerRadius(Sizes.cornerRadius5)
+            VStack(alignment: .leading, spacing: Offsets.vStackListItemSpacing) {
                 Divider()
-                    .padding(.bottom, 5)
+                    .padding(.bottom, Offsets.dividerListItemBottomOffset)
                 HStack {
                     VStack(alignment: .leading) {
                         Text(cell.title)
-                            .font(.system(size: UIScreen.main.bounds.width * 0.044))
-                            .frame(width: UIScreen.main.bounds.width * 0.6, alignment: .leading)
+                            .font(.system(size: UIScreen.main.bounds.width * Sizes.titleListItemMultuplierFontSize))
+                            .frame(width: UIScreen.main.bounds.width * Sizes.titleListItemMultuplierWidthSize, alignment: .leading)
                             .lineLimit(1)
                         if cell.producerTitle != nil {
                             Text(cell.producerTitle ?? "")
-                                .font(.system(size: UIScreen.main.bounds.width * 0.032))
-                                .frame(width: UIScreen.main.bounds.width * 0.64, alignment: .leading)
-                                .opacity(0.7)
+                                .font(.system(size: UIScreen.main.bounds.width * Sizes.producerTitleListItemMultiplierFontSize))
+                                .frame(width: UIScreen.main.bounds.width * Sizes.producerTitleListItemMultiplierWidthSize, alignment: .leading)
+                                .opacity(Display.opacity0_7)
                                 .lineLimit(1)
                         }
                     }
                     SongMenuButton()
                 }
             }
-            .padding(.bottom, 6)
-            .frame(width: UIScreen.main.bounds.width * 0.755)
+            .padding(.bottom, Offsets.vStackListItemBottomOffset)
+            .frame(width: UIScreen.main.bounds.width * Sizes.vStackListItemMultiplierWidthSize)
         }
-        .frame(height: UIScreen.main.bounds.width * 0.59)
+        .frame(height: UIScreen.main.bounds.width * Sizes.generalHStackListItemMiltiplierHeightSize)
     }
 }
 
@@ -153,22 +153,22 @@ struct VideoItemCellType: View {
         VStack(alignment: .leading) {
             Image(cell.cover)
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width * 0.445,
-                       height: UIScreen.main.bounds.width * 0.25)
-                .cornerRadius(5)
-                .padding(.bottom, -3)
+                .frame(width: UIScreen.main.bounds.width * Sizes.multiplierWidthHeightSize0_445,
+                       height: UIScreen.main.bounds.width * Sizes.coverVideoItemMultiplierHeightSize)
+                .cornerRadius(Sizes.cornerRadius5)
+                .padding(.bottom, Offsets.coverBottomOffset)
             VStack(alignment: .leading) {
                 Text(cell.title)
                 if cell.producerTitle != nil {
                     Text(cell.producerTitle ?? "")
-                        .opacity(0.7)
+                        .opacity(Display.opacity0_7)
                 } else {
                     Spacer()
                 }
             }
-            .font(.system(size: UIScreen.main.bounds.width * 0.038))
+            .font(.system(size: UIScreen.main.bounds.width * Sizes.vStackTitlesMultiplierFontSize))
         }
-        .frame(width: UIScreen.main.bounds.width * 0.445)
+        .frame(width: UIScreen.main.bounds.width * Sizes.multiplierWidthHeightSize0_445)
     }
 }
 

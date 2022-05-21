@@ -15,24 +15,24 @@ struct Searchable: View {
     
     private func changePlaceholder() -> Text {
         switch selectedSearchLocation {
-        case .appleMusic: return Text("Артисты, песни, тексты и др.")
-        case .yourLibrary: return Text("Ваша медиатека")
+        case .appleMusic: return Text(Strings.appleMusicPlaceholder)
+        case .yourLibrary: return Text(Strings.yourLibraryPlaceholder)
         }
     }
     
     var body: some View {
         HStack {
             ZStack {
-                RoundedRectangle(cornerRadius: 9)
+                RoundedRectangle(cornerRadius: Sizes.cornerRadius9)
                     .foregroundColor(Color(uiColor: .systemGray6))
-                    .frame(height: UIScreen.main.bounds.width * 0.085)
-                HStack(spacing: 3) {
-                    Image(systemName: "magnifyingglass")
-                        .frame(height: UIScreen.main.bounds.width * 0.085)
+                    .frame(height: UIScreen.main.bounds.width * Sizes.multiplierHeightSize0_085)
+                HStack(spacing: Offsets.searchableHStackSpacing) {
+                    Image(systemName: Icons.magnifyingglassIcon)
+                        .frame(height: UIScreen.main.bounds.width * Sizes.multiplierHeightSize0_085)
                         .background(Color(uiColor: .systemGray6))
-                        .opacity(0.3)
-                        .cornerRadius(9)
-                        .padding(.leading, 6)
+                        .opacity(Display.magnifyingglassIconOpacity)
+                        .cornerRadius(Sizes.cornerRadius9)
+                        .padding(.leading, Offsets.leadingTrailingOffset6)
                     TextField("", text: $searchText, prompt: changePlaceholder())
                         .textInputAutocapitalization(.never)
                         .onTapGesture {
@@ -40,23 +40,23 @@ struct Searchable: View {
                                 isSearching = true
                             }
                         }
-                        .frame(height: UIScreen.main.bounds.width * 0.085)
+                        .frame(height: UIScreen.main.bounds.width * Sizes.multiplierHeightSize0_085)
                         .background(Color(uiColor: .systemGray6))
-                        .cornerRadius(9)
+                        .cornerRadius(Sizes.cornerRadius9)
                     if !searchText.isEmpty {
                         Button {
                             searchText = ""
                         } label: {
-                            Image(systemName: "xmark.circle.fill")
+                            Image(systemName: Icons.circleXMarkIcon)
                                 .foregroundColor(.gray)
-                                .padding(.trailing, 6)
+                                .padding(.trailing, Offsets.leadingTrailingOffset6)
                         }
                     }
                 }
             }
             
             if isSearching {
-                Button("Отменить") {
+                Button(Strings.cancelButtonTitle) {
                     withAnimation {
                         isSearching = false
                         searchText = ""

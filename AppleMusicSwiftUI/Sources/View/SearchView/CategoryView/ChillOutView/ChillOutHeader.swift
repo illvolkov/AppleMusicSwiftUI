@@ -17,12 +17,12 @@ struct ChillOutHeader: View {
             HStack {
                 if section.sectionTitle != nil {
                     Text(section.sectionTitle ?? "")
-                        .font(.system(size: UIScreen.main.bounds.width * 0.055, weight: .bold))
-                        .frame(width: UIScreen.main.bounds.width * 0.71, alignment: .leading)
+                        .font(.system(size: UIScreen.main.bounds.width * Sizes.headerMultiplierFontSize0_055, weight: .bold))
+                        .frame(width: UIScreen.main.bounds.width * Sizes.headerMultiplierWidthSize0_71, alignment: .leading)
                     Spacer()
                     Button {} label: {
-                        Text("См. вcе")
-                            .font(.system(size: UIScreen.main.bounds.width * 0.039))
+                        Text(Strings.buttonSeeAllTitle)
+                            .font(.system(size: UIScreen.main.bounds.width * Sizes.buttonSeeAllMultiplierFontSize0_039))
                     }
                 }
             }

@@ -15,23 +15,23 @@ struct CategoryView: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            VStack(alignment: .leading, spacing: 7) {
+            VStack(alignment: .leading, spacing: Offsets.vStackSpacing) {
                 Divider()
-                Section(header: Text("Поиск по категориям")
-                    .font(.system(size: UIScreen.main.bounds.width * 0.052, weight: .bold))) {
+                Section(header: Text(Strings.categorySectionHeaderTitle)
+                    .font(.system(size: UIScreen.main.bounds.width * Sizes.categorySectionHeaderMultiplierFontSize, weight: .bold))) {
                     LazyVGrid(columns: columns) {
                         ForEach(favoriteRadioStation.model.favoriteStations) { item in
                             NavigationLink(destination: item.destionationView) {
                                 Image(item.stationImage)
                                     .resizable()
-                                    .frame(height: UIScreen.main.bounds.width * 0.3)
-                                    .cornerRadius(10)
+                                    .frame(height: UIScreen.main.bounds.width * Sizes.categoryImageMultiplierHeightSize)
+                                    .cornerRadius(Sizes.categoryImageCornerRadius)
                             }
                         }
                     }
                 }
                 Spacer()
-                    .frame(height: UIScreen.main.bounds.width * 0.2)
+                    .frame(height: UIScreen.main.bounds.width * Sizes.categorySpacerMultiplierHeightSize)
             }
         }
     }

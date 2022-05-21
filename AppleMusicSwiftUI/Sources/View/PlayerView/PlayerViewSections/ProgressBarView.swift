@@ -15,22 +15,22 @@ struct ProgressBarView: View {
         VStack {
             ZStack {
                 Circle()
-                    .frame(height: UIScreen.main.bounds.width * 0.02)
+                    .frame(height: UIScreen.main.bounds.width * Sizes.circleMultiplierHeightSize)
                     .foregroundColor(.white)
-                    .offset(x: UIScreen.main.bounds.width * -0.42, y: 0)
-                RoundedRectangle(cornerRadius: 5)
-                    .frame(height: UIScreen.main.bounds.width * 0.01)
+                    .offset(x: UIScreen.main.bounds.width * Offsets.circleMultiplerXOffset, y: 0)
+                RoundedRectangle(cornerRadius: Sizes.cornerRadius5)
+                    .frame(height: UIScreen.main.bounds.width * Sizes.roundedRectangleMultiplierHeightSize)
                     .foregroundColor(.white)
-                .opacity(0.2)
+                    .opacity(Display.opacity0_2)
             }
             HStack {
-                Text("0:00")
+                Text(Strings.timeDuration0_00)
                 Spacer()
                 Text(playerAttributes.attributes.song.duration)
             }
-            .font(.system(size: UIScreen.main.bounds.width * 0.03))
+            .font(.system(size: UIScreen.main.bounds.width * Sizes.timeDurationTitleMultiplerFontSize))
             .foregroundColor(.white)
-            .opacity(0.5)
+            .opacity(Display.opacity0_6)
         }
     }
 }

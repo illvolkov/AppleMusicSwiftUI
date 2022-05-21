@@ -31,8 +31,8 @@ struct SearchView: View {
                            isSearching: $isSearching, searchText: $searchText)
                 viewToggle
             }
-            .padding(.horizontal, 18)
-            .navigationTitle("Поиск")
+            .padding(.horizontal, Offsets.vStackHorizontalOffset)
+            .navigationTitle(Strings.searchNavigationTitle)
             .navigationBarHidden(isSearching ? true : false)
         }
     }

@@ -17,16 +17,16 @@ struct RockClassicHeader: View {
             HStack {
                 if section.sectionTitle != nil {
                     Text(section.sectionTitle ?? "")
-                        .font(.system(size: UIScreen.main.bounds.width * 0.055, weight: .bold))
-                        .frame(width: UIScreen.main.bounds.width * 0.71, alignment: .leading)
+                        .font(.system(size: UIScreen.main.bounds.width * Sizes.headerMultiplierFontSize0_055, weight: .bold))
+                        .frame(width: UIScreen.main.bounds.width * Sizes.headerMultiplierWidthSize0_71, alignment: .leading)
                     Spacer()
-                    if section.sectionTitle == "Плейлисты" ||
-                        section.sectionTitle == "Избранные треки" ||
-                        section.sectionTitle == "Главные альбомы" ||
-                        section.sectionTitle == "Наши любимые артисты" {
+                    if section.sectionTitle == Strings.playlistsSectionTitle ||
+                        section.sectionTitle == Strings.favoriteTracksSectionTitle ||
+                        section.sectionTitle == Strings.mainAlbumsSectionTitle ||
+                        section.sectionTitle == Strings.favoriteArtistsSectionTitle {
                         Button {} label: {
-                            Text("См. вcе")
-                                .font(.system(size: UIScreen.main.bounds.width * 0.039))
+                            Text(Strings.buttonSeeAllTitle)
+                                .font(.system(size: UIScreen.main.bounds.width * Sizes.buttonSeeAllMultiplierFontSize0_039))
                         }
                     }
                 }

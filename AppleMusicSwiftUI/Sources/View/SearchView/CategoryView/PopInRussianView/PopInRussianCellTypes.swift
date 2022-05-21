@@ -18,12 +18,12 @@ struct PopInRussianCellTypes: View {
     
     @ViewBuilder var types: some View {
         switch section.sectionTitle {
-        case "Наши любимые артисты":
+        case Strings.favoriteArtistsSectionTitle:
             CircleItemCellType(cell: cell)
-        case "Плейлисты",
-             "Стоит послушать: альбомы",
-             "Плейлист по артистам",
-             "Главные альбомы":
+        case Strings.playlistsSectionTitle,
+            Strings.worthListeningToSectionTitle,
+            Strings.playlistByArtistSectionTitle,
+            Strings.mainAlbumsSectionTitle:
             SquareItemCellType(cell: cell)
         default:
             RectangleItemCellType(cell: cell)

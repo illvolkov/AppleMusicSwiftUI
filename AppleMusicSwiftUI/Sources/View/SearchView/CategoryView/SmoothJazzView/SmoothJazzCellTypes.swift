@@ -18,14 +18,14 @@ struct SmoothJazzCellTypes: View {
     
     @ViewBuilder var types: some View {
         switch section.sectionTitle {
-        case "Горячие треки":
+        case Strings.hotTracksSectionTitle:
             ListItemCellType(cell: cell)
-        case "Наши любимые артисты", "Легенды джаза":
+        case Strings.favoriteArtistsSectionTitle, Strings.legendsOfJazzSectionTitle:
             CircleItemCellType(cell: cell)
-        case "Плейлисты",
-             "Живая музыка",
-             "Главные альбомы",
-             "Скоро":
+        case Strings.playlistsSectionTitle,
+            Strings.liveMusicSectionTitle,
+            Strings.mainAlbumsSectionTitle,
+            Strings.soonSectionTitle:
             SquareItemCellType(cell: cell)
         default:
             RectangleItemCellType(cell: cell)

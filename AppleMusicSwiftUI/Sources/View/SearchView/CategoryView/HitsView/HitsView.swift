@@ -11,12 +11,12 @@ struct HitsView: View {
     
     private func createDifferentGrids(with model: CategorySection) -> [GridItem] {
         switch model.sectionTitle {
-        case "Горячие треки":
-            return [GridItem(.adaptive(minimum: UIScreen.main.bounds.width * 0.11))]
-        case "Наши любимые артисты":
-            return [GridItem(.fixed(UIScreen.main.bounds.width * 0.3))]
+        case Strings.hotTracksSectionTitle:
+            return [GridItem(.adaptive(minimum: UIScreen.main.bounds.width * Sizes.adaptiveMultiplierSize0_11))]
+        case Strings.favoriteArtistsSectionTitle:
+            return [GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_3))]
         default:
-            return [GridItem(.fixed(UIScreen.main.bounds.width * 0.5))]
+            return [GridItem(.fixed(UIScreen.main.bounds.width * Sizes.fixedMultiplierSize0_5))]
         }
     }
     
@@ -24,27 +24,27 @@ struct HitsView: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            VStack(alignment: .leading, spacing: 25) {
+            VStack(alignment: .leading, spacing: Offsets.vStackSpacing25) {
                 ForEach(hitsModel) { section in
                     VStack {
                         HitsHeader(section: section)
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, Offsets.horizontalOffset18)
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: createDifferentGrids(with: section)) {
                                 ForEach(section.cells) { cell in
                                     HitsCellTypes(section: section, cell: cell)
                                 }
                             }
-                            .padding(.horizontal, 18)
+                            .padding(.horizontal, Offsets.horizontalOffset18)
                         }
                     }
                 }
             }
             Spacer()
-                .frame(height: UIScreen.main.bounds.width * 0.25)
+                .frame(height: UIScreen.main.bounds.width * Sizes.spacerMultiplierHeightSize0_25)
         }
         .environmentObject(PlayerAttributesModel())
-        .navigationTitle("Хиты")
+        .navigationTitle(Strings.hitsTitle)
         .toolbar {
             ToolBarMenuButton()
         }
