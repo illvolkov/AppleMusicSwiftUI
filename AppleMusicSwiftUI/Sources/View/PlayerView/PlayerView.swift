@@ -38,7 +38,7 @@ struct PlayerView: View {
                 .ignoresSafeArea()
             VStack {
                 RoundedRectangle(cornerRadius: Sizes.cornerRadius5)
-                    .frame(width: UIScreen.main.bounds.width * Sizes.roundedRectangleMultiplierWidthHeightSize0_01,
+                    .frame(width: UIScreen.main.bounds.width * Sizes.roundedRectangleMultuplierWidthSize,
                            height: UIScreen.main.bounds.width * Sizes.roundedRectangleMultiplierHeightSize)
                     .foregroundColor(.white)
                     .opacity(Display.opacity0_5)

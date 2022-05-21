@@ -19,7 +19,7 @@ struct ProgressBarView: View {
                     .foregroundColor(.white)
                     .offset(x: UIScreen.main.bounds.width * Offsets.circleMultiplerXOffset, y: 0)
                 RoundedRectangle(cornerRadius: Sizes.cornerRadius5)
-                    .frame(height: UIScreen.main.bounds.width * Sizes.roundedRectangleMultiplierHeightSize)
+                    .frame(height: UIScreen.main.bounds.width * Sizes.roundedRectangleMultiplierWidthHeightSize0_01)
                     .foregroundColor(.white)
                     .opacity(Display.opacity0_2)
             }

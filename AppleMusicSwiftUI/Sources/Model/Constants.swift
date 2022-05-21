@@ -48,7 +48,7 @@ enum Offsets {
     static let subStationDividerBottomOffset: CGFloat = 1.5
     
     //MARK: - ProgressBarView
-    static let circleMultiplerXOffset: CGFloat = -0.42
+    static let circleMultiplerXOffset: CGFloat = -0.43
     
     //MARK: - SliderView
     static let sliderHStackSpacing: CGFloat = 10
@@ -159,6 +159,7 @@ enum Sizes {
     
     //MARK: - PlayerView
     static let roundedRectangleMultiplierHeightSize: CGFloat = 0.015
+    static let roundedRectangleMultuplierWidthSize: CGFloat = 0.1
     static let circleMultiplierWidthHeightSize0_065: CGFloat = 0.065
     static let shadowRadiusSize: CGFloat = 40
     
