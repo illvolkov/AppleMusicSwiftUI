@@ -20,19 +20,19 @@ struct PopMusicView: View {
         }
     }
     
-    let popInMusicModel = PopInRussianModel.createModel()
+    let popInMusicModel = PopMusicModel.createModel()
     
     var body: some View {
         ScrollView(.vertical) {
             VStack(alignment: .leading, spacing: Offsets.vStackSpacing25) {
                 ForEach(popInMusicModel) { section in
                     VStack {
-                        PopInRussianHeader(section: section)
+                        PopMusicHeader(section: section)
                             .padding(.horizontal, Offsets.horizontalOffset18)
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHGrid(rows: createDifferentGrids(with: section)) {
                                 ForEach(section.cells) { cell in
-                                    PopInRussianCellTypes(section: section, cell: cell)
+                                    PopMusicCellTypes(section: section, cell: cell)
                                 }
                             }
                             .padding(.horizontal, Offsets.horizontalOffset18)
@@ -43,14 +43,14 @@ struct PopMusicView: View {
             Spacer()
                 .frame(height: UIScreen.main.bounds.width * Sizes.spacerMultiplierHeightSize0_25)
         }
-        .navigationTitle(Strings.popInRussianNavigationTitle)
+        .navigationTitle(Strings.popMusicNavigationTitle)
         .toolbar {
             ToolBarMenuButton()
         }
     }
 }
 
-struct PopInRussianView_Previews: PreviewProvider {
+struct PopMusic_Previews: PreviewProvider {
     static var previews: some View {
         PopMusicView()
     }

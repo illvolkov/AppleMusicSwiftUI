@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PopInRussianCellTypes: View {
+struct PopMusicCellTypes: View {
     
     let section: CategorySection
     let cell: CategoryCell
@@ -31,9 +31,9 @@ struct PopInRussianCellTypes: View {
     }
 }
 
-struct PopInRussianCellTypes_Previews: PreviewProvider {
+struct PopMusicCellTypes_Previews: PreviewProvider {
     static var previews: some View {
-        PopInRussianCellTypes(section: CategorySection(sectionTitle: "Наши любимые артисты", cells: [CategoryCell(title: "", producerTitle: "", cover: "")]),
+        PopMusicCellTypes(section: CategorySection(sectionTitle: "Наши любимые артисты", cells: [CategoryCell(title: "", producerTitle: "", cover: "")]),
                               cell: CategoryCell(title: "Тест", producerTitle: "Тест", cover: "Тест"))
     }
 }

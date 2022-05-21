@@ -364,7 +364,7 @@ enum Strings {
     static let shareTheEditorButtonTitle: String = "Поделиться редактором..."
     //MARK: - General for categories view
     static let buttonSeeAllTitle: String = "См. вcе"
-    static let popInRussianNavigationTitle: String = "Поп на русском"
+    static let popMusicNavigationTitle: String = "Поп-музыка"
     
     //MARK: - Category
     static let libraryOfSamplesCellTitle: String = "Библиотека семплов"

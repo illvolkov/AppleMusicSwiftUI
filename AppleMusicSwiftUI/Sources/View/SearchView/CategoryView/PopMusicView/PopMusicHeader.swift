@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PopInRussianHeader: View {
+struct PopMusicHeader: View {
     
     let section: CategorySection
     
@@ -30,9 +30,9 @@ struct PopInRussianHeader: View {
     }
 }
 
-struct PopInRussianHeader_Previews: PreviewProvider {
+struct PopMusicHeader_Previews: PreviewProvider {
     static var previews: some View {
-        PopInRussianHeader(section: CategorySection(sectionTitle: "Плейлисты", cells: [
+        PopMusicHeader(section: CategorySection(sectionTitle: "Плейлисты", cells: [
             CategoryCell(title: "Тест", producerTitle: "Тест", cover: "pop.karamel")]))
     }
 }

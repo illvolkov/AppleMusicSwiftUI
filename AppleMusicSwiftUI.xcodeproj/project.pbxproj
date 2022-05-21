@@ -36,9 +36,9 @@
 		0470BB132833B7C20074643A /* NextButtonReverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470BB122833B7C20074643A /* NextButtonReverse.swift */; };
 		0470BB152833B83A0074643A /* PlayerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470BB142833B83A0074643A /* PlayerAttributes.swift */; };
 		0470BB1B283576180074643A /* MarqueeText in Frameworks */ = {isa = PBXBuildFile; productRef = 0470BB1A283576180074643A /* MarqueeText */; };
-		0471E3BD283065EE00029915 /* PopInRussianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3BC283065EE00029915 /* PopInRussianView.swift */; };
-		0471E3BF283065FB00029915 /* PopInRussianHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3BE283065FB00029915 /* PopInRussianHeader.swift */; };
-		0471E3C12830660600029915 /* PopInRussianCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C02830660600029915 /* PopInRussianCellTypes.swift */; };
+		0471E3BD283065EE00029915 /* PopMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3BC283065EE00029915 /* PopMusicView.swift */; };
+		0471E3BF283065FB00029915 /* PopMusicHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3BE283065FB00029915 /* PopMusicHeader.swift */; };
+		0471E3C12830660600029915 /* PopMusicCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C02830660600029915 /* PopMusicCellTypes.swift */; };
 		0471E3C328311F1900029915 /* RockClassicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C228311F1900029915 /* RockClassicModel.swift */; };
 		0471E3C628314B1900029915 /* RockClassicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C528314B1800029915 /* RockClassicView.swift */; };
 		0471E3C828314B2300029915 /* RockClassicHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0471E3C728314B2300029915 /* RockClassicHeader.swift */; };
@@ -65,7 +65,7 @@
 		0481D388282FFE75009682E9 /* HipHopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D387282FFE75009682E9 /* HipHopView.swift */; };
 		0481D38A282FFE7F009682E9 /* HipHopHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D389282FFE7F009682E9 /* HipHopHeader.swift */; };
 		0481D38C282FFE8D009682E9 /* HipHopCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D38B282FFE8D009682E9 /* HipHopCellTypes.swift */; };
-		0481D39028305AD7009682E9 /* PopInRussianModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D38F28305AD7009682E9 /* PopInRussianModel.swift */; };
+		0481D39028305AD7009682E9 /* PopMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D38F28305AD7009682E9 /* PopMusicModel.swift */; };
 		04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5AF328297D1700828C43 /* CategoryView.swift */; };
 		04DD5B19282C0C3400828C43 /* LightPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B18282C0C3400828C43 /* LightPopModel.swift */; };
 		04DD5B1B282C63D000828C43 /* LightPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B1A282C63D000828C43 /* LightPopView.swift */; };
@@ -102,9 +102,9 @@
 		0470BB102833B7B40074643A /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		0470BB122833B7C20074643A /* NextButtonReverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonReverse.swift; sourceTree = "<group>"; };
 		0470BB142833B83A0074643A /* PlayerAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAttributes.swift; sourceTree = "<group>"; };
-		0471E3BC283065EE00029915 /* PopInRussianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianView.swift; sourceTree = "<group>"; };
-		0471E3BE283065FB00029915 /* PopInRussianHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianHeader.swift; sourceTree = "<group>"; };
-		0471E3C02830660600029915 /* PopInRussianCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianCellTypes.swift; sourceTree = "<group>"; };
+		0471E3BC283065EE00029915 /* PopMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopMusicView.swift; sourceTree = "<group>"; };
+		0471E3BE283065FB00029915 /* PopMusicHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopMusicHeader.swift; sourceTree = "<group>"; };
+		0471E3C02830660600029915 /* PopMusicCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopMusicCellTypes.swift; sourceTree = "<group>"; };
 		0471E3C228311F1900029915 /* RockClassicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockClassicModel.swift; sourceTree = "<group>"; };
 		0471E3C528314B1800029915 /* RockClassicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockClassicView.swift; sourceTree = "<group>"; };
 		0471E3C728314B2300029915 /* RockClassicHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockClassicHeader.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		0481D387282FFE75009682E9 /* HipHopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopView.swift; sourceTree = "<group>"; };
 		0481D389282FFE7F009682E9 /* HipHopHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopHeader.swift; sourceTree = "<group>"; };
 		0481D38B282FFE8D009682E9 /* HipHopCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopCellTypes.swift; sourceTree = "<group>"; };
-		0481D38F28305AD7009682E9 /* PopInRussianModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopInRussianModel.swift; sourceTree = "<group>"; };
+		0481D38F28305AD7009682E9 /* PopMusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopMusicModel.swift; sourceTree = "<group>"; };
 		04DD5AF328297D1700828C43 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		04DD5B18282C0C3400828C43 /* LightPopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopModel.swift; sourceTree = "<group>"; };
 		04DD5B1A282C63D000828C43 /* LightPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopView.swift; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 				04DD5B1C282CA7EE00828C43 /* LightPopView */,
 				0481D376282FA3A7009682E9 /* HitsView */,
 				0481D386282FFE45009682E9 /* HipHopView */,
-				0471E3BB283065BE00029915 /* PopInRussianView */,
+				0471E3BB283065BE00029915 /* PopMusicView */,
 				0471E3C428314AFB00029915 /* RockClassicView */,
 				0471E3CD28318BCA00029915 /* SmoothJazzView */,
 				0470BAFA283195A80074643A /* ChillOutView */,
@@ -245,7 +245,7 @@
 				04DD5B18282C0C3400828C43 /* LightPopModel.swift */,
 				044077D3282DF68E00634139 /* HitsModel.swift */,
 				0481D384282FEEDE009682E9 /* HipHopModel.swift */,
-				0481D38F28305AD7009682E9 /* PopInRussianModel.swift */,
+				0481D38F28305AD7009682E9 /* PopMusicModel.swift */,
 				0471E3C228311F1900029915 /* RockClassicModel.swift */,
 				0471E3CB28314FAC00029915 /* SmoothJazzModel.swift */,
 				0471E3D42831905600029915 /* ChillOutModel.swift */,
@@ -291,14 +291,14 @@
 			path = PlayerButtons;
 			sourceTree = "<group>";
 		};
-		0471E3BB283065BE00029915 /* PopInRussianView */ = {
+		0471E3BB283065BE00029915 /* PopMusicView */ = {
 			isa = PBXGroup;
 			children = (
-				0471E3BC283065EE00029915 /* PopInRussianView.swift */,
-				0471E3BE283065FB00029915 /* PopInRussianHeader.swift */,
-				0471E3C02830660600029915 /* PopInRussianCellTypes.swift */,
+				0471E3BC283065EE00029915 /* PopMusicView.swift */,
+				0471E3BE283065FB00029915 /* PopMusicHeader.swift */,
+				0471E3C02830660600029915 /* PopMusicCellTypes.swift */,
 			);
-			path = PopInRussianView;
+			path = PopMusicView;
 			sourceTree = "<group>";
 		};
 		0471E3C428314AFB00029915 /* RockClassicView */ = {
@@ -533,10 +533,10 @@
 				0470BAFC283195E40074643A /* ChillOutView.swift in Sources */,
 				044077D4282DF68E00634139 /* HitsModel.swift in Sources */,
 				04DD5B1E282CA8D900828C43 /* LightPopHeader.swift in Sources */,
-				0471E3BF283065FB00029915 /* PopInRussianHeader.swift in Sources */,
+				0471E3BF283065FB00029915 /* PopMusicHeader.swift in Sources */,
 				0471E3CA28314B2D00029915 /* RockClassicCellTypes.swift in Sources */,
 				0481D38A282FFE7F009682E9 /* HipHopHeader.swift in Sources */,
-				0471E3BD283065EE00029915 /* PopInRussianView.swift in Sources */,
+				0471E3BD283065EE00029915 /* PopMusicView.swift in Sources */,
 				0470BB02283199950074643A /* SearchableView.swift in Sources */,
 				0481D378282FA3EA009682E9 /* HitsView.swift in Sources */,
 				041630512835870C00E88E14 /* SliderView.swift in Sources */,
@@ -549,9 +549,9 @@
 				047D04A32810167D00891D4E /* MediaLibraryView.swift in Sources */,
 				047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */,
 				047D04A72810244100891D4E /* OptionLibraryModel.swift in Sources */,
-				0481D39028305AD7009682E9 /* PopInRussianModel.swift in Sources */,
+				0481D39028305AD7009682E9 /* PopMusicModel.swift in Sources */,
 				04DD5B20282CA9E100828C43 /* CategoryCellTypes.swift in Sources */,
-				0471E3C12830660600029915 /* PopInRussianCellTypes.swift in Sources */,
+				0471E3C12830660600029915 /* PopMusicCellTypes.swift in Sources */,
 				044077D2282DCB2800634139 /* SongMenuButton.swift in Sources */,
 				0470BB092833B4190074643A /* PlayerView.swift in Sources */,
 				047D04A9281027F500891D4E /* OptionLibraryView.swift in Sources */,
