@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PopInRussianView: View {
+struct PopMusicView: View {
     
     private func createDifferentGrids(with model: CategorySection) -> [GridItem] {
         switch model.sectionTitle {
@@ -20,12 +20,12 @@ struct PopInRussianView: View {
         }
     }
     
-    let popInRussianModel = PopInRussianModel.createModel()
+    let popInMusicModel = PopInRussianModel.createModel()
     
     var body: some View {
         ScrollView(.vertical) {
             VStack(alignment: .leading, spacing: Offsets.vStackSpacing25) {
-                ForEach(popInRussianModel) { section in
+                ForEach(popInMusicModel) { section in
                     VStack {
                         PopInRussianHeader(section: section)
                             .padding(.horizontal, Offsets.horizontalOffset18)
@@ -52,6 +52,6 @@ struct PopInRussianView: View {
 
 struct PopInRussianView_Previews: PreviewProvider {
     static var previews: some View {
-        PopInRussianView()
+        PopMusicView()
     }
 }

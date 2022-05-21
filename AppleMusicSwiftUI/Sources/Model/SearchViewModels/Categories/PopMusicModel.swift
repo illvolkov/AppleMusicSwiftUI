@@ -5,7 +5,7 @@
 //  Created by Ilya Volkov on 15.05.2022.
 //
 
-struct PopInRussianModel {
+struct PopMusicModel {
     static func createModel() -> [CategorySection] {
         return [
             CategorySection(sectionTitle: nil, cells: [
