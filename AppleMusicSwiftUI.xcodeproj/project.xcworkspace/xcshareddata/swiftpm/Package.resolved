@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "marqueetext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/joekndy/MarqueeText.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "6e2e936ba7d82388ff4b191b2c234e52ce8d9e98"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -42,6 +42,6 @@ struct RadioView: View {
 
 struct RadioView_Previews: PreviewProvider {
     static var previews: some View {
-        TabViewContent()
+        RadioView()
     }
 }

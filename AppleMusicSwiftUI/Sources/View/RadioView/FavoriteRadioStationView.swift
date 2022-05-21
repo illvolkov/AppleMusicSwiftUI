@@ -9,12 +9,13 @@ import SwiftUI
 
 struct FavoriteRadioStationView: View {
     
-    private let favoriteRadioStation = FavoriteRadioStationModel.createModel()
+    @StateObject var favoriteRadioStation = FavoriteModel()
+    
     private let rowsStation = [GridItem(.fixed(UIScreen.main.bounds.width))]
     
     var body: some View {
         LazyHGrid(rows: rowsStation) {
-            ForEach(favoriteRadioStation) { item in
+            ForEach(favoriteRadioStation.model.favoriteStations) { item in
                 VStack(alignment: .leading) {
                     Divider()
                         .padding(.bottom, Offsets.favoriteStationDividerBottomOffset)
@@ -23,7 +24,7 @@ struct FavoriteRadioStationView: View {
                         .font(.system(size: UIScreen.main.bounds.width * Sizes.favoriteTitleMultiplierFontSize,
                                       weight: .semibold))
                         .textCase(.uppercase)
-                        .opacity(Display.titleOpacity0_6)
+                        .opacity(Display.opacity0_6)
                         .padding(.bottom, Offsets.favoriteTitleBottomOffset)
                     
                     Text(item.genreTitle)
@@ -31,7 +32,7 @@ struct FavoriteRadioStationView: View {
                     
                     Text(item.stationTitle)
                         .font(.system(size: UIScreen.main.bounds.width * Sizes.titleMultiplierFontSize0_059))
-                        .opacity(Display.titleOpacity0_6)
+                        .opacity(Display.opacity0_6)
                         .padding(.bottom, Offsets.stationTitleBottomOffset)
                     
                     Image(item.stationImage)

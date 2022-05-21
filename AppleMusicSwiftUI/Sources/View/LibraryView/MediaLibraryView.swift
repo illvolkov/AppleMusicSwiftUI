@@ -21,7 +21,7 @@ struct MediaLibraryView: View {
                 .font(.system(size: UIScreen.main.bounds.width * Sizes.musicWillAppearHereTextMultiFontSize, weight: .light))
                 .multilineTextAlignment(.center)
                 .frame(width: UIScreen.main.bounds.width * Sizes.musicWillAppearHereTextMultiWidthSize)
-                .opacity(Display.musicWillAppearHereTextOpacity)
+                .opacity(Display.opacity0_5)
         }
     }
 }

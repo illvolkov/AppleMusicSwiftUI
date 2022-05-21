@@ -1,89 +1,103 @@
 //
-//  Player.swift
+//  PlayerView.swift
 //  AppleMusicSwiftUI
 //
-//  Created by Ilya Volkov on 19.04.2022.
+//  Created by Ilya Volkov on 17.05.2022.
 //
 
 import SwiftUI
+import MarqueeText
 
 struct PlayerView: View {
     
-    //MARK: - Song model
+    @Environment(\.presentationMode) var presentationMode
     
-    private let song = SongModel.createSongModel()
+    @EnvironmentObject var playerAttributes: PlayerAttributesModel
     
-    //MARK: - Functions
-        
-    private func createSong() -> Song {
-        let randomSong = song.randomElement()!
-        return randomSong
+    //Установка background цвета в зависимости от среднего цвета обложки песни
+    private func setAverageColor() {
+        let uiColor = UIImage(named: playerAttributes.attributes.model[playerAttributes.attributes.currentIndex].cover)?.averageColor ?? .clear
+        playerAttributes.attributes.backgroundColor = Color(uiColor)
     }
     
-    private func changePlayPauseButtonState() -> String {
-        return isPlayInactive ? Icons.playButtonIcon : Icons.pauseButtonIcon
+    private func adaptationForSpecificScreenSize(with specificScreen: CGFloat, and defaultScreen: CGFloat) -> CGFloat {
+        let device = UIDevice()
+        if device.name == Strings.iPodTouchName ||
+            device.name == Strings.iPhoneSEDeviceName ||
+            device.name == Strings.iPhone8DevaceName ||
+            device.name == Strings.iPhone8PlusDeviseName {
+            return specificScreen
+        } else {
+            return defaultScreen
+        }
     }
     
-    private func changeSongState() -> Song {
-        return isPlayInactive ?
-        Song(icon: Icons.notPerformedSongIcon, name: Strings.notPerformedSongTitle) : createSong()
-    }
-    
-    //MARK: - Mutational properties
-    
-    @State private var randomSong: Song?
-    @State private var isPlayInactive = true
-    
-    //MARK: - Body
-        
     var body: some View {
-        VStack(spacing: Offsets.playerVStackOffset) {
-            HStack {
-                Image(randomSong?.icon ?? Icons.notPerformedSongIcon)
-                    .resizable()
-                    .clipShape(RoundedRectangle(cornerRadius: Offsets.offset5))
-                    .shadow(color: .gray,
-                            radius: Offsets.offset5,
-                            x: Offsets.songIconShadowXOffset,
-                            y: Offsets.songIconShadowYOffset)
-                    .frame(width: UIScreen.main.bounds.width * Sizes.songIconMultiWidthHeightSize,
-                           height: UIScreen.main.bounds.width * Sizes.songIconMultiWidthHeightSize)
-                    .padding(.trailing, Offsets.offset5)
-                    .padding([.top, .bottom], Offsets.songIconTopBottomOffset)
+        ZStack {
+            playerAttributes.attributes.backgroundColor
+                .ignoresSafeArea()
+            VStack {
+                RoundedRectangle(cornerRadius: Sizes.cornerRadius5)
+                    .frame(width: UIScreen.main.bounds.width * Sizes.roundedRectangleMultuplierWidthSize,
+                           height: UIScreen.main.bounds.width * Sizes.roundedRectangleMultiplierHeightSize)
+                    .foregroundColor(.white)
+                    .opacity(Display.opacity0_5)
+                CoverView()
+                    .padding(.vertical, adaptationForSpecificScreenSize(with: Offsets.specificScreenSizeOffset, and: Offsets.defaultScreenSizeOffset))
                 
-                Text(randomSong?.name ?? Strings.notPerformedSongTitle)
-                    .font(.system(size: UIScreen.main.bounds.width * Sizes.songTextMultiFontSize))
-                    .frame(width: UIScreen.main.bounds.width * Sizes.songTextMultiWidthSize, alignment: .leading)
-                    .lineLimit(1)
-                
-                Button {
-                    isPlayInactive.toggle()
-                    randomSong = changeSongState()
-                } label: {
-                    Image(systemName: changePlayPauseButtonState())
-                        .font(.system(size: UIScreen.main.bounds.width * Sizes.playPauseButtonMultiFontSize0_07))
-                        .foregroundColor(.black)
+                HStack(alignment: .center) {
+                    SongNameView()
+                        .padding(.bottom, adaptationForSpecificScreenSize(with: Offsets.specificScreenSizeOffset, and: Offsets.defaultScreenSizeOffset))
+
+                    ZStack {
+                        Circle()
+                            .foregroundColor(.white)
+                            .frame(width: UIScreen.main.bounds.width * Sizes.circleMultiplierWidthHeightSize0_065,
+                                   height: UIScreen.main.bounds.width * Sizes.circleMultiplierWidthHeightSize0_065)
+                            .opacity(Display.opacity0_2)
+                        SongMenuButton()
+                    }
                 }
-                .padding(.trailing, Offsets.playPauseButtonTrailingOffset)
                 
-                Button {
-                    randomSong = createSong()
-                } label: {
-                    Image(systemName: Icons.nextButtonIcon)
-                        .font(.system(size: UIScreen.main.bounds.width * Sizes.playPauseButtonMultiFontSize0_07))
-                        .foregroundColor(.black)
+                ProgressBarView()
+                    .padding(.bottom, adaptationForSpecificScreenSize(with: Offsets.specificScreenSizeOffsetX2, and: Offsets.defaultScreenSizeOffsetX2))
+                
+                HStack(spacing: Offsets.hStackSpacing85) {
+                    NextButtonReverse()
+                    PlayButton()
+                    NextButton()
                 }
+                .padding(.bottom, adaptationForSpecificScreenSize(with: Offsets.specificScreenSizeOffsetX2, and: Offsets.defaultScreenSizeOffsetX2))
+
+                SliderView()
+                    .padding(.bottom, adaptationForSpecificScreenSize(with: Offsets.specificScreenSizeOffset, and: Offsets.defaultScreenSizeOffset))
+                
+                AdditionalButtons()
             }
-            .frame(width: UIScreen.main.bounds.width)
-            .background(Color(uiColor: UIColor.systemGray6))
-            
-            Divider()
+            .padding(.horizontal, Offsets.generalVStackHorizontalOffset)
+            .shadow(radius: Sizes.shadowRadiusSize)
+            /*При появлении PlayerView isPlayerBar false чтоб настроить цвета переиспользуемых кнопок:
+             - SongMenuButton
+             - NextButton
+             - PlayButton
+             - NextButtonReverse
+             Когда PlayerView закрывается значение isPlayerBar становится true
+             */
+            .onAppear() {
+                setAverageColor()
+                playerAttributes.attributes.isPlayerBar = false
+            }
+        }
+        .onTapGesture(count: Interaction.onTapGestureCount) {
+            presentationMode.wrappedValue.dismiss()
+            playerAttributes.attributes.isPlayerBar = true
         }
     }
 }
 
-struct Player_Previews: PreviewProvider {
+struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        TabViewContent()
+        PlayerView()
+            .environmentObject(PlayerAttributesModel())
     }
 }
