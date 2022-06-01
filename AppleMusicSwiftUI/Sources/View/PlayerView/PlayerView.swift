@@ -90,9 +90,9 @@ struct PlayerView: View {
                 playerAttributes.attributes.isPlayerBar = false
             }
         }
-        .frame(height: adaptationForSpecificScreenSize(with: UIScreen.main.bounds.height + 40,
+        .frame(height: adaptationForSpecificScreenSize(with: UIScreen.main.bounds.height + Sizes.addedHeightForSpecificScreenSize,
                                                        and: UIScreen.main.bounds.height))
-        .cornerRadius(30)
+        .cornerRadius(Sizes.zStackCornerRadius)
         .offset(y: dragOffset.height)
         .gesture(DragGesture()
             .onChanged({ value in
@@ -103,7 +103,7 @@ struct PlayerView: View {
             })
             .onEnded({ value in
                 withAnimation(.spring()) {
-                    if value.location.y - value.startLocation.y < UIScreen.main.bounds.height * 0.4 {
+                    if value.location.y - value.startLocation.y < UIScreen.main.bounds.height * Sizes.multipliedLocationHeightSize {
                         dragOffset = .zero
                     } else {
                         presentationMode.wrappedValue.dismiss()
