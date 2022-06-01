@@ -10,7 +10,9 @@ import MarqueeText
 
 struct PlayerView: View {
     
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) private var presentationMode
+    
+    @State private var dragOffset: CGSize = .zero
     
     @EnvironmentObject var playerAttributes: PlayerAttributesModel
     
@@ -88,10 +90,28 @@ struct PlayerView: View {
                 playerAttributes.attributes.isPlayerBar = false
             }
         }
-        .onTapGesture(count: Interaction.onTapGestureCount) {
-            presentationMode.wrappedValue.dismiss()
-            playerAttributes.attributes.isPlayerBar = true
-        }
+        .frame(height: adaptationForSpecificScreenSize(with: UIScreen.main.bounds.height + 40,
+                                                       and: UIScreen.main.bounds.height))
+        .cornerRadius(30)
+        .offset(y: dragOffset.height)
+        .gesture(DragGesture()
+            .onChanged({ value in
+                //Нельзя свайпать снизу вверх
+                guard value.translation.height >= -value.translation.height else { return }
+                
+                dragOffset = value.translation
+            })
+            .onEnded({ value in
+                withAnimation(.spring()) {
+                    if value.location.y - value.startLocation.y < UIScreen.main.bounds.height * 0.4 {
+                        dragOffset = .zero
+                    } else {
+                        presentationMode.wrappedValue.dismiss()
+                        playerAttributes.attributes.isPlayerBar = true
+                    }
+                }
+            }))
+        .ignoresSafeArea()
     }
 }
 
