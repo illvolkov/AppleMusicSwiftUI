@@ -9,11 +9,11 @@ import UIKit
 
 final class CategoryCollectionViewHeader: UICollectionViewCell {
     
-    static let identifier = "CategoryCollectionViewHeader"
+    static let identifier = Strings.headerTypeIdentifier
     
     private lazy var sectionTitle: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: contentView.frame.width * 0.05, weight: .bold)
+        label.font = .systemFont(ofSize: contentView.frame.width * Sizes.multipliedSectionTitleFontSize, weight: .bold)
         label.textColor = .black
         return label
     }()
@@ -32,9 +32,9 @@ final class CategoryCollectionViewHeader: UICollectionViewCell {
         divider.translatesAutoresizingMaskIntoConstraints = false
         divider.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         divider.widthAnchor.constraint(equalTo: contentView.widthAnchor,
-                                       multiplier: CategoryController.adaptationToiPodScreenSize(with: 0.89,
-                                                                                                   and: 0.91)).isActive = true
-        divider.heightAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.001).isActive = true
+                                       multiplier: CategoryController.adaptationToiPodScreenSize(with: Sizes.multipliedDividerWidthSpecificScreenSize,
+                                                                                                 and: Sizes.multipliedDividerWidthDefaultScreenSize)).isActive = true
+        divider.heightAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: Sizes.multipliedDividerHeightSize).isActive = true
     }
     
     func configure(with section: CategoryCollectionViewSection) {

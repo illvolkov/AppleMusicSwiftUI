@@ -37,8 +37,8 @@ final class CategoryController: UIViewController {
     private lazy var searchBar: UISearchController = {
         let search = UISearchController()
         search.searchBar.tintColor = .systemRed
-        search.searchBar.placeholder = "Артисты, песни, тексты и др."
-        search.searchBar.setValue("Отменить", forKey: "cancelButtonText")
+        search.searchBar.placeholder = Strings.appleMusicPlaceholder
+        search.searchBar.setValue(Strings.cancelButtonTitle, forKey: Strings.cancelButtonKey)
         return search
     }()
     
@@ -69,7 +69,7 @@ final class CategoryController: UIViewController {
      }
         
     private func setupNavigationController() {
-        navigationItem.title = "Поиск"
+        navigationItem.title = Strings.navigationItemTitle
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.searchController = searchBar
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -82,8 +82,8 @@ final class CategoryController: UIViewController {
     private func setupLayout() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 17).isActive = true
-        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 17).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: Offsets.leftRightOffset17).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: Offsets.leftRightOffset17).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
@@ -96,27 +96,27 @@ final class CategoryController: UIViewController {
     
     static func adaptationToiPodScreenSize(with ipodValue: CGFloat, and iPhoneValue: CGFloat) -> CGFloat {
         let device = UIDevice()
-        return device.name == "iPod touch (7th generation)" ? ipodValue : iPhoneValue
+        return device.name == Strings.iPodTouchName ? ipodValue : iPhoneValue
     }
     
     private func createCategoriesSection() -> NSCollectionLayoutSection {
-        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(view.frame.width * 0.1))
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(Sizes.fractionalWidthHeight1_0), heightDimension: .absolute(view.frame.width * Sizes.headerMultipliedHeightSize))
         let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
                                                                  elementKind: UICollectionView.elementKindSectionHeader,
                                                                  alignment: .top)
         
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(CategoryController.adaptationToiPodScreenSize(with: view.frame.width * 0.439,
-                                                                                                                        and: view.frame.width * 0.445)),
-                                              heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(CategoryController.adaptationToiPodScreenSize(with: view.frame.width * Sizes.itemMultipliedWidthSpecificSize,
+                                                                                                                      and: view.frame.width * Sizes.itemMultupliedWidthDefaultSIze)),
+                                              heightDimension: .fractionalHeight(Sizes.fractionalWidthHeight1_0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let subGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(view.frame.width * 0.296))
+        let subGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(Sizes.fractionalWidthHeight1_0), heightDimension: .absolute(view.frame.width * Sizes.subGroupMultipliedHeightSize))
         let subGroup = NSCollectionLayoutGroup.horizontal(layoutSize: subGroupSize, subitems: [item])
-        subGroup.interItemSpacing = .fixed(view.frame.width * 0.021)
+        subGroup.interItemSpacing = .fixed(view.frame.width * Offsets.groupsMultipliedItemSpacing0_021)
         
-        let mainGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(view.frame.height * 3.32))
+        let mainGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(Sizes.fractionalWidthHeight1_0), heightDimension: .absolute(view.frame.height * Sizes.mainGroupMultipliedHeightSize))
         let mainGroup = NSCollectionLayoutGroup.vertical(layoutSize: mainGroupSize, subitems: [subGroup])
-        mainGroup.interItemSpacing = .fixed(view.frame.width * 0.021)
+        mainGroup.interItemSpacing = .fixed(view.frame.width * Offsets.groupsMultipliedItemSpacing0_021)
         
         let section = NSCollectionLayoutSection(group: mainGroup)
         section.orthogonalScrollingBehavior = .paging

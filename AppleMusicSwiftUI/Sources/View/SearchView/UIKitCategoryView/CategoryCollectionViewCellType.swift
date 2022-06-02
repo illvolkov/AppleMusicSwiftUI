@@ -9,11 +9,11 @@ import UIKit
 
 final class CategoryCollectionViewCellType: UICollectionViewCell {
     
-    static let identifier = "CategoryCollectionViewCellType"
+    static let identifier = Strings.cellTypeIdentifier
     
     private lazy var categoryImage: UIImageView = {
         let image = UIImageView()
-        image.layer.cornerRadius = contentView.frame.width * 0.05
+        image.layer.cornerRadius = contentView.frame.width * Sizes.multipliedImageCornerRadius
         image.layer.masksToBounds = true
         return image
     }()
