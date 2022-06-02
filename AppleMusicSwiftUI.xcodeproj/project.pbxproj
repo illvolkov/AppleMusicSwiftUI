@@ -67,6 +67,7 @@
 		0481D38A282FFE7F009682E9 /* HipHopHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D389282FFE7F009682E9 /* HipHopHeader.swift */; };
 		0481D38C282FFE8D009682E9 /* HipHopCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D38B282FFE8D009682E9 /* HipHopCellTypes.swift */; };
 		0481D39028305AD7009682E9 /* PopMusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481D38F28305AD7009682E9 /* PopMusicModel.swift */; };
+		048B39A5284867AB00FC1879 /* CategoryCollectionViewCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B39A4284867AB00FC1879 /* CategoryCollectionViewCellType.swift */; };
 		04DD5AF428297D1700828C43 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5AF328297D1700828C43 /* CategoryView.swift */; };
 		04DD5B19282C0C3400828C43 /* LightPopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B18282C0C3400828C43 /* LightPopModel.swift */; };
 		04DD5B1B282C63D000828C43 /* LightPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD5B1A282C63D000828C43 /* LightPopView.swift */; };
@@ -135,6 +136,7 @@
 		0481D389282FFE7F009682E9 /* HipHopHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopHeader.swift; sourceTree = "<group>"; };
 		0481D38B282FFE8D009682E9 /* HipHopCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipHopCellTypes.swift; sourceTree = "<group>"; };
 		0481D38F28305AD7009682E9 /* PopMusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopMusicModel.swift; sourceTree = "<group>"; };
+		048B39A4284867AB00FC1879 /* CategoryCollectionViewCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCellType.swift; sourceTree = "<group>"; };
 		04DD5AF328297D1700828C43 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		04DD5B18282C0C3400828C43 /* LightPopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopModel.swift; sourceTree = "<group>"; };
 		04DD5B1A282C63D000828C43 /* LightPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPopView.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				046D55462817F25000D05C91 /* SearchView.swift */,
 				0470BB052832F2740074643A /* SearchableView */,
 				044077CD282DB7C700634139 /* CategoryView */,
+				048B39A3284861E900FC1879 /* UIKitCategoryView */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -447,6 +450,14 @@
 			path = HipHopView;
 			sourceTree = "<group>";
 		};
+		048B39A3284861E900FC1879 /* UIKitCategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				048B39A4284867AB00FC1879 /* CategoryCollectionViewCellType.swift */,
+			);
+			path = UIKitCategoryView;
+			sourceTree = "<group>";
+		};
 		04DD5B17282C0C1500828C43 /* SearchViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +567,7 @@
 				0470BB0C2833B62F0074643A /* UIImageAverageColor.swift in Sources */,
 				0410B5DE281D347400CAB7D6 /* RadioStationModel.swift in Sources */,
 				041C92422823DC98001DE63A /* FavoriteRadioStationView.swift in Sources */,
+				048B39A5284867AB00FC1879 /* CategoryCollectionViewCellType.swift in Sources */,
 				0481D385282FEEDE009682E9 /* HipHopModel.swift in Sources */,
 				047D04A32810167D00891D4E /* MediaLibraryView.swift in Sources */,
 				047D048E280ED2C100891D4E /* TabViewContent.swift in Sources */,
