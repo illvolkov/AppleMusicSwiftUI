@@ -29,6 +29,7 @@ struct TabViewContent: View {
                         Text(Strings.radioViewTabItemText)
                     }
                 UIKitCategoryView()
+                    .ignoresSafeArea()
                     .tabItem {
                         Image(systemName: Icons.searchViewTabItemIcon)
                         Text(Strings.searchViewTabItemText)

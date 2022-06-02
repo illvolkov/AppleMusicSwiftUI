@@ -92,7 +92,7 @@ final class CategoryController: UIViewController {
         let subGroup = NSCollectionLayoutGroup.horizontal(layoutSize: subGroupSize, subitems: [item])
         subGroup.interItemSpacing = .fixed(view.frame.width * 0.021)
         
-        let mainGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(view.frame.height * 6))
+        let mainGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(view.frame.height * 3.32))
         let mainGroup = NSCollectionLayoutGroup.vertical(layoutSize: mainGroupSize, subitems: [subGroup])
         mainGroup.interItemSpacing = .fixed(view.frame.width * 0.021)
         
