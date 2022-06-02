@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct UIKitCategoryView: UIViewControllerRepresentable {
-        
+    
+    var searching: Searching
+            
     func makeUIViewController(context: Context) -> some UIViewController {
-        let categoryController = CategoryController()
+        let categoryController = CategoryController(searching: searching)
         let navigationCategoryController = UINavigationController(rootViewController: categoryController)
         
         return navigationCategoryController

@@ -6,9 +6,19 @@
 //
 
 import UIKit
-import SwiftUI
 
 final class CategoryController: UIViewController {
+    
+    var searching: Searching
+    
+    init(searching: Searching) {
+        self.searching = searching
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
     
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero,
@@ -44,7 +54,19 @@ final class CategoryController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigationController()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification , object:nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification , object:nil)
     }
+    
+    @objc func keyBoardWillShow(notification: NSNotification) {
+        searching.isSearching = true
+    }
+
+
+    @objc func keyBoardWillHide(notification: NSNotification) {
+        searching.isSearching = false
+     }
         
     private func setupNavigationController() {
         navigationItem.title = "Поиск"
