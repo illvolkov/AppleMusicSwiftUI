@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0410B5DC281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410B5DB281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift */; };
 		0410B5DE281D347400CAB7D6 /* RadioStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410B5DD281D347400CAB7D6 /* RadioStationModel.swift */; };
+		0411B0DF2847DB6E00224E69 /* CategoryCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411B0DE2847DB6E00224E69 /* CategoryCollectionViewModel.swift */; };
 		0416304B2835852000E88E14 /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416304A2835852000E88E14 /* CoverView.swift */; };
 		0416304D283585E800E88E14 /* SongNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416304C283585E800E88E14 /* SongNameView.swift */; };
 		0416304F283586AB00E88E14 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416304E283586AB00E88E14 /* ProgressBarView.swift */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		0410B5DB281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRadioStationModel.swift; sourceTree = "<group>"; };
 		0410B5DD281D347400CAB7D6 /* RadioStationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioStationModel.swift; sourceTree = "<group>"; };
+		0411B0DE2847DB6E00224E69 /* CategoryCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewModel.swift; sourceTree = "<group>"; };
 		0416304A2835852000E88E14 /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
 		0416304C283585E800E88E14 /* SongNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongNameView.swift; sourceTree = "<group>"; };
 		0416304E283586AB00E88E14 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,14 @@
 				0410B5DB281D2ED400CAB7D6 /* FavoriteRadioStationModel.swift */,
 			);
 			path = RadioViewModels;
+			sourceTree = "<group>";
+		};
+		0411B0DD2847DAA900224E69 /* CategoryCollectionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0411B0DE2847DB6E00224E69 /* CategoryCollectionViewModel.swift */,
+			);
+			path = CategoryCollectionViewModel;
 			sourceTree = "<group>";
 		};
 		04163049283583D100E88E14 /* PlayerViewSections */ = {
@@ -398,6 +408,7 @@
 		047D049C280ED55100891D4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0411B0DD2847DAA900224E69 /* CategoryCollectionViewModel */,
 				04DD5B17282C0C1500828C43 /* SearchViewModels */,
 				041C92402823DBC1001DE63A /* LibraryViewModels */,
 				0410B5DF281D5A8500CAB7D6 /* RadioViewModels */,
@@ -586,6 +597,7 @@
 				041C92442823DE95001DE63A /* RadioStationView.swift in Sources */,
 				0471E3C828314B2300029915 /* RockClassicHeader.swift in Sources */,
 				0416304F283586AB00E88E14 /* ProgressBarView.swift in Sources */,
+				0411B0DF2847DB6E00224E69 /* CategoryCollectionViewModel.swift in Sources */,
 				0471E3CF28318C0600029915 /* SmoothJazzView.swift in Sources */,
 				047BF65928122C6800F722A9 /* Constants.swift in Sources */,
 				046D55472817F25000D05C91 /* SearchView.swift in Sources */,
