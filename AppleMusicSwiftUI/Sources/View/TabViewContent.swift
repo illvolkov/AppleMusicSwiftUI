@@ -28,7 +28,7 @@ struct TabViewContent: View {
                         Image(systemName: Icons.radioViewTabItemIcon)
                         Text(Strings.radioViewTabItemText)
                     }
-                SearchView(isSearching: $isSearching)
+                UIKitCategoryView()
                     .tabItem {
                         Image(systemName: Icons.searchViewTabItemIcon)
                         Text(Strings.searchViewTabItemText)

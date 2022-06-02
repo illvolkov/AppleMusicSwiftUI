@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class SearchCollectionViewCellType: UICollectionViewCell {
+final class CategoryCollectionViewCellType: UICollectionViewCell {
     
-    static let identifier = "SearchCollectionViewCell"
+    static let identifier = "CategoryCollectionViewCellType"
     
     private lazy var categoryImage: UIImageView = {
         let image = UIImageView()
