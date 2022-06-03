@@ -87,6 +87,10 @@ enum Offsets {
     //MARK: - General for categories view
     static let vStackSpacing25: CGFloat = 25
     static let horizontalOffset18: CGFloat = 18
+    
+    //MARK: - Category Controller
+    static let groupsMultipliedItemSpacing0_021: CGFloat = 0.021
+    static let leftRightOffset17: CGFloat = 17
 
 }
 
@@ -162,6 +166,9 @@ enum Sizes {
     static let roundedRectangleMultuplierWidthSize: CGFloat = 0.1
     static let circleMultiplierWidthHeightSize0_065: CGFloat = 0.065
     static let shadowRadiusSize: CGFloat = 40
+    static let zStackCornerRadius: CGFloat = 30
+    static let addedHeightForSpecificScreenSize: CGFloat = 40
+    static let multipliedLocationHeightSize: CGFloat = 0.4
     
     //MARK: - SearchableView
     static let coverMultiplierWidthHeightSize: CGFloat = 0.16
@@ -224,6 +231,23 @@ enum Sizes {
     static let headerMultiplierFontSize0_055: CGFloat = 0.055
     static let headerMultiplierWidthSize0_71: CGFloat = 0.71
     static let buttonSeeAllMultiplierFontSize0_039: CGFloat = 0.039
+    
+    //MARK: - CategoryController
+    static let fractionalWidthHeight1_0: CGFloat = 1.0
+    static let headerMultipliedHeightSize: CGFloat = 0.1
+    static let itemMultipliedWidthSpecificSize: CGFloat = 0.439
+    static let itemMultupliedWidthDefaultSIze: CGFloat = 0.445
+    static let subGroupMultipliedHeightSize: CGFloat = 0.296
+    static let mainGroupMultipliedHeightSize: CGFloat = 3.32
+    
+    //MARK: - CategoryCollectionViewCellType
+    static let multipliedImageCornerRadius: CGFloat = 0.05
+    
+    //MARK: - CategoryCollectionViewHeader
+    static let multipliedSectionTitleFontSize: CGFloat = 0.05
+    static let multipliedDividerWidthSpecificScreenSize: CGFloat = 0.89
+    static let multipliedDividerWidthDefaultScreenSize: CGFloat = 0.91
+    static let multipliedDividerHeightSize: CGFloat = 0.001
 }
 
 //MARK: - Strings
@@ -935,6 +959,15 @@ enum Strings {
     static let perfectBackTitle: String = "Идеальный фон"
     static let peacefulBeatsTitle: String = "Peaceful Beats"
     static let peacefulProducerTitle: String = "Peaceful Music"
+    
+    //MARK: - CategoryController
+    static let cancelButtonKey: String = "cancelButtonText"
+    static let navigationItemTitle: String = "Поиск"
+    
+    //MARK: - CategoryCollectionViewCellType
+    static let cellTypeIdentifier: String = "CategoryCollectionViewCellType"
+    //MARK: - CategoryCollectionViewHeader
+    static let headerTypeIdentifier: String = "CategoryCollectionViewHeader"
 }
 
 //MARK: - Icons
@@ -1402,6 +1435,51 @@ enum Icons {
     static let ecmIcon: String = "ecm"
     static let perfectBackIcon: String = "perfect.back"
     static let peacefulIcon: String = "peaceful"
+    
+    //MARK: - CategoryCollectionViewModel
+    static let categorySpatialAudioIcon: String = "category.spatial.audio"
+    static let categoryHitsInRussianIcon: String = "category.hits.in.russian"
+    static let categoryHipHopInRussianIcon: String = "category.hip.hop.in.russian"
+    static let categoryMizrahiIcon: String = "category.mizrahi"
+    static let categoryMainIcon: String = "category.main"
+    static let categoryRelaxIcon: String = "category.relax"
+    static let categoryForKidsIcon: String = "category.for.kids"
+    static let categorySportIcon: String = "category.sport"
+    static let categoryChartsIcon: String = "category.charts"
+    static let categorySleepIcon: String = "category.sleep"
+    static let categoryHitsIcon: String = "category.hits"
+    static let category2010Icon: String = "category.2010"
+    static let category2000Icon: String = "category.2000"
+    static let category90Icon: String = "category.90"
+    static let category80Icon: String = "category.80"
+    static let categoryDancingIcon: String = "category.dancing"
+    static let categoryKPopIcon: String = "category.k.pop"
+    static let categoryAlternativeIcon: String = "category.alternative"
+    static let categoryElectroIcon: String = "category.electro"
+    static let categoryIndiIcon: String = "category.indi"
+    static let categoryHipHopIcon: String = "category.hip.hop"
+    static let categoryPopInRussianIcon: String = "category.pop.in.russian"
+    static let categoryPopIcon: String = "category.pop"
+    static let categoryMotivationIcon: String = "category.motivation"
+    static let categoryDjMixIcon: String = "category.dj.mix"
+    static let categoryRockClassicIcon: String = "category.rock.classic"
+    static let categoryRockInRussianIcon: String = "category.rock.in.russian"
+    static let categoryRockIcon: String = "category.rock"
+    static let categoryJazzIcon: String = "category.jazz"
+    static let categoryMetalIcon: String = "category.metal"
+    static let categoryClassicIcon: String = "category.classic"
+    static let categoryRomanticIcon: String = "category.romantic"
+    static let categoryRbIcon: String = "category.rb"
+    static let category60Icon: String = "category.60"
+    static let category70Icon: String = "category.70"
+    static let categorySoundtrackIcon: String = "category.soundtrack"
+    static let categoryFromAlIcon: String = "category.from.all"
+    static let categoryMelancholyIcon: String = "category.melancholy"
+    static let categoryFeelingGoodIcon: String = "category.feeling.good"
+    static let categoryMusicForGamerIcon: String = "category.music.for.gamer"
+    static let categoryConcentrationIcon: String = "category.concentration"
+    static let categorySoulAndFunkIcon: String = "category.soul.and.funk"
+    static let categoryRetroIcon: String = "category.retro"
 }
 
 //MARK: - Display
