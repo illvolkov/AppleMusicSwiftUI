@@ -162,6 +162,9 @@ enum Sizes {
     static let roundedRectangleMultuplierWidthSize: CGFloat = 0.1
     static let circleMultiplierWidthHeightSize0_065: CGFloat = 0.065
     static let shadowRadiusSize: CGFloat = 40
+    static let zStackCornerRadius: CGFloat = 30
+    static let addedHeightForSpecificScreenSize: CGFloat = 40
+    static let multipliedLocationHeightSize: CGFloat = 0.4
     
     //MARK: - SearchableView
     static let coverMultiplierWidthHeightSize: CGFloat = 0.16
